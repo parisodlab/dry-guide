@@ -10,14 +10,15 @@ The Parisod lab [dry-lab computing guide](http://parisodlab.org/dry-guide/). The
 git clone https://github.com/ParisodLab/dry-guide.git
 ```
 
-2. Install `mkdocs` and `mike=0.4.2`, with conda and pip
+2. Install `mkdocs` and `mike=0.4.2`, with conda and pip (both)
 
 ```
 conda activate dry-guide
 
 ```
 
-3. When edits are complete, use `cd ../parisodlab.github.io/; mkdocs gh-deploy --config-file ../dry-guide/mkdocs.yml --remote-branch master`.
+3. When edits are complete, use `mike deploy [current date version] latest --update-aliases --ignore --push`.
+e.g. `mike deploy 2024-07-25 latest --update-aliases --ignore --push`	
 
 If you are making minor changes, use the same version:
 
