@@ -1,4 +1,4 @@
-## Andersen Lab Coding Best Practices
+## Parisod Lab Coding Best Practices
 
 These best practices are just a few of the important coding tips and tricks for reproducible research. If you have more ideas, contact Rimjhim!
 
