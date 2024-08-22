@@ -51,7 +51,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#r">R</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#quest">QUEST</a>
+    <li class="toctree-l2"><a class="reference internal" href="#ibu">IBU</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#python">Python</a>
     </li>
@@ -59,11 +59,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../r/">R</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../shiny/">R Shiny</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../github/">Git and Github</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IBU</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../VAST/">Data on IBU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-nextflow/">Nextflow</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-conda/">Conda</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other things</span></p>
@@ -97,10 +106,10 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="andersen_lab_coding_best_practices">Andersen Lab Coding Best Practices<a class="headerlink" href="#andersen_lab_coding_best_practices" title="Permanent link">&para;</a></h2>
-<p>These best practices are just a few of the important coding tips and tricks for reproducible research. If you have more ideas, contact Katie!</p>
+<p>These best practices are just a few of the important coding tips and tricks for reproducible research. If you have more ideas, contact Rimjhim!</p>
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
 <ul>
-<li>You should be doing most (if not all) of your analyses in <code>~/Dropbox/AndersenLab/LabFolders/YourName</code> (except for QUEST, see below)<ul>
+<li>You should be doing most (if not all) of your analyses in <code>LabDrives/YourProjectName</code> (except for IBU, see below)<ul>
 <li>This is (1) to make sure the data is backed up/saved with version history and (2) to allow other lab members to access your code/scripts when necessary</li>
 </ul>
 </li>
@@ -110,7 +119,7 @@
 </ul>
 </li>
 <li><strong>NEVER</strong> replace raw data!!!!!<ul>
-<li>You should save your raw data in the rawest format, write a script to analyze it, then if you wish, save the processed data for further use. This is important because it always allows you to go back to the original raw data in case something happens</li>
+<li>You should save your raw data in the rawest format, and submitted to ENA as soon as possible. Write a script to analyze it, then if you wish, save the processed data for further use. This is important because it always allows you to go back to the original raw data in case something happens</li>
 <li>Some suggested project folder structure might look like something below:
 <img alt="directory_structure" src="../img/directory_structure.png" /></li>
 </ul>
@@ -148,14 +157,15 @@
 </ul>
 </li>
 </ul>
-<h3 id="quest">QUEST<a class="headerlink" href="#quest" title="Permanent link">&para;</a></h3>
+<h3 id="ibu">IBU<a class="headerlink" href="#ibu" title="Permanent link">&para;</a></h3>
 <ul>
-<li>You should be doing most (if not all) of your analyses in <code>/projects/b1059/projects/yourName</code> (not your home directory (i.e. <code>/home/netid</code>))</li>
+<li>You should be doing most (if not all) of your analyses in <code>/data/projects/&lt;project_name&gt;/&lt;user_id&gt;</code> or <code>/data/users/&lt;user_id&gt;</code> (not your home directory (i.e. <code>/home/&lt;user_id&gt;</code>))</li>
 </ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Main exception: Nextflow temporary working directories should NOT be on <code>b1059</code> (it will fill us up!) but rather in the scratch space <code>b1042</code> (files get automatically deleted here every 30 days).
-A correctly designed <a href="quest-nextflow">nextflow.config</a> file will take care of this.</p>
+<p>Main exception: Snakemake and Nextflow temporary working directories should NOT be on <code>/data</code> (it will fill us up!) but rather in the scratch space (files get automatically deleted here every 30 days).
+For Snakemake, you can set the <code>--directory</code> flag to <code>/scratch/&lt;user_id&gt;/&lt;project_name&gt;</code> (or similar)
+A correctly designed <a href="IBU-nextflow">nextflow.config</a> file will take care of this.</p>
 </div>
 <h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
 <p>[ Needs filling in from someone who uses python :) ]</p>

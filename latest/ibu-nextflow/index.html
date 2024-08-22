@@ -13,7 +13,7 @@
       <script>
         // Current page data
         var mkdocs_page_name = "Nextflow";
-        var mkdocs_page_input_path = "rf-nextflow.md";
+        var mkdocs_page_input_path = "ibu-nextflow.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -49,11 +49,22 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../r/">R</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../shiny/">R Shiny</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../github/">Git and Github</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IBU</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../VAST/">Data on IBU</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Nextflow</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-conda/">Conda</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other things</span></p>
@@ -75,9 +86,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">IBU</li>
       <li class="breadcrumb-item active">Nextflow</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/rf-nextflow.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/ibu-nextflow.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -186,7 +198,7 @@ tmpDir = &quot;/path/to/scratch/storage/tmp&quot;
 <p>This configuration file does the following:</p>
 <ul>
 <li><code>executor</code> - Sets the executor to <code>slurm</code> scheduler</li>
-<li><code>queue</code> - Sets the queue/partition to <code>parallel</code> which submits jobs to Rockfish nodes.</li>
+<li><code>queue</code> - Sets the queue/partition to <code>parallel</code> which submits jobs to IBU nodes.</li>
 <li><code>clusterOptions</code> - Sets the account/allocation to <code>eande106</code>; granting access to <code>parallel</code> and other queues.</li>
 <li><code>workDir</code> - Sets the working directory to scratch space. To better organization, Please build your own folder under <code>[TBD]</code>, and define it here.</li>
 <li><code>tmpDir</code> - Creates a temporary working directory. This can be used within workflows when necessary.</li>
@@ -285,6 +297,10 @@ nextflow run andersenlab/nemascan --debut -N 8018675309@vtext.com
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../VAST/" class="btn btn-neutral float-left" title="Data on IBU"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ibu-conda/" class="btn btn-neutral float-right" title="Conda">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -310,6 +326,10 @@ nextflow run andersenlab/nemascan --debut -N 8018675309@vtext.com
         </span>
     
     
+      <span><a href="../VAST/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ibu-conda/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
