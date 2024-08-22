@@ -8,7 +8,7 @@ If you are looking for some help getting started with R or taking your R to the 
 
 * [Swirl - interactive R learning](https://swirlstats.com/students.html)
 * [Tidyverse workshop and resources](https://github.com/katiesevans/nuit_tidyverse)
-* [Andersen Lab R Knowledge base & Cheatsheet](https://github.com/AndersenLab/code_club/blob/main/R_cheatsheet.md)
+* [Parisod Lab R Knowledge base & Cheatsheet](https://github.com/Parisodlab/code_club/blob/main/R_cheatsheet.md)
 * [R-bloggers - tips and tricks](https://www.r-bloggers.com/)
 * [Using Rprojects to organize scripts](https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/)
 * [Using workflowR for reproducible work](https://www.rdocumentation.org/packages/workflowr/versions/0.7.0)

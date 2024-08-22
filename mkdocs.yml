@@ -16,14 +16,13 @@ nav:
     - Knowledge Base:
           - Best Practices: best_practices.md
           - R: r.md
-          - R Shiny: shiny.md
           - Command Line: bash.md
           - Git and Github: github.md
-#     - Rockfish:
-#           - Introduction: rf-intro.md
-#           - Data on Rockfish: VAST.md
-#           - Nextflow: rf-nextflow.md
-#           - Conda: rf-conda.md
+    - IBU:
+            - Introduction: ibu-intro.md
+            - Data on IBU: VAST.md
+            - Nextflow: ibu-nextflow.md
+            - Conda: ibu-conda.md
 #     - Quest:
 #           - Introduction: quest-intro.md
 #           - Data on b1059: b1059.md

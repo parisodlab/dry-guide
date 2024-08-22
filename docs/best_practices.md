@@ -1,16 +1,16 @@
 ## Andersen Lab Coding Best Practices
 
-These best practices are just a few of the important coding tips and tricks for reproducible research. If you have more ideas, contact Katie!
+These best practices are just a few of the important coding tips and tricks for reproducible research. If you have more ideas, contact Rimjhim!
 
 ### General
 
-* You should be doing most (if not all) of your analyses in `~/Dropbox/AndersenLab/LabFolders/YourName` (except for QUEST, see below)
+* You should be doing most (if not all) of your analyses in `LabDrives/YourProjectName` (except for IBU, see below)
 	* This is (1) to make sure the data is backed up/saved with version history and (2) to allow other lab members to access your code/scripts when necessary
 * Do **NOT** use spaces in names of files or folders. Try not to use spaces in column names too (although sometimes it is necessary for a final table output)
 	* Computers often have a hard time reading spaces and code used to ignore spaces can vary from program to program
 	* Instead, you can use `_` or `.` or `-` or capitalization (`fileName.txt`)
 * **NEVER** replace raw data!!!!!
-	* You should save your raw data in the rawest format, write a script to analyze it, then if you wish, save the processed data for further use. This is important because it always allows you to go back to the original raw data in case something happens
+	* You should save your raw data in the rawest format, and submitted to ENA as soon as possible. Write a script to analyze it, then if you wish, save the processed data for further use. This is important because it always allows you to go back to the original raw data in case something happens
 	* Some suggested project folder structure might look like something below:
 ![directory_structure](img/directory_structure.png)
 * Include a `README.md` (or `README.txt`) file in each project folder to explain where the data and scripts can be found for certain analyses. Trust me, after a few years you will definitely forget…
@@ -36,13 +36,14 @@ These best practices are just a few of the important coding tips and tricks for 
 	* This makes your code more readable 
 	* In fact, general practices state no more than 80-100 characters per line of code EVER to increase readability
 
-### QUEST
+### IBU
 
-* You should be doing most (if not all) of your analyses in `/projects/b1059/projects/yourName` (not your home directory (i.e. `/home/netid`))
+* You should be doing most (if not all) of your analyses in `/data/projects/<project_name>/<user_id>` or `/data/users/<user_id>` (not your home directory (i.e. `/home/<user_id>`))
 
 !!! Important
-	Main exception: Nextflow temporary working directories should NOT be on `b1059` (it will fill us up!) but rather in the scratch space `b1042` (files get automatically deleted here every 30 days).
-	A correctly designed [nextflow.config](quest-nextflow) file will take care of this.
+	Main exception: Snakemake and Nextflow temporary working directories should NOT be on `/data` (it will fill us up!) but rather in the scratch space (files get automatically deleted here every 30 days).
+	For Snakemake, you can set the `--directory` flag to `/scratch/<user_id>/<project_name>` (or similar)
+	A correctly designed [nextflow.config](IBU-nextflow) file will take care of this.
 
 ### Python
 

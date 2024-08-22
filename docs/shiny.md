@@ -4,43 +4,6 @@
 
 Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.
 
-## Andersen Lab Shiny Applications
-
-### PCR calculator
-
-An R shiny web app developed for calculating PCR reagents.
-
-* Link to application: [here](https://andersen-lab.shinyapps.io/PCR_calculator/)
-* Link to github page with code and explanation of functionality: NA
-
-### HTA Dilutions
-
-An R shiny web app developed to calculate drug dilutions for the high-throughput drug-response assays (sorter or imager). 
-
-* Link to application: [here](https://andersen-lab.shinyapps.io/HTA_dilutions/)
-* Link to github page with code and explanation of functionality: [here](https://github.com/AndersenLab/HTA_dilutions)
-
-### Fine-map QTL NILs
-
-An R shiny web app developed to visualize the results from the high-throughput assays (specifically NIL results for fine-mapping a QTL).
-
-* Link to application: [here](https://andersen-lab.shinyapps.io/NIL_genopheno/)
-* Link to github page with code and explanation of functionality: [here](https://github.com/katiesevans/finemap_NIL)
-
-### NIL browser
-
-An R shiny web app developed to 1) visualize NIL genotypes and 2) find existing NILs for a project.
-
-* Link to application: [here](https://andersen-lab.shinyapps.io/nil-browser/)
-* Link to github page with code and explanation of functionality: NA
-
-### Linkagemapping analysis
-
-An R shiny web app developed to visualize the results from the Andersen Lab linkagemapping experiments in 2014.
-
-* Link to application: [here](https://andersen-lab.shinyapps.io/linkagemapping/)
-* Link to github page with code and explanation of functionality: [here](https://github.com/katiesevans/LM-shiny)
-
 ---
 ## How to start a new shiny app?
 
@@ -127,4 +90,4 @@ Check out this great overview on [reactivity](https://shiny.rstudio.com/articles
 
 After testing your new shiny app in Rstudio, you might be ready to deploy to the web for other people to access! The Andersen Lab has their own shinyapps.io account, so if you are making a lab-related app it is best to use this account (for login details, ask Robyn!)
 
-Publishing is simple - press the "publish" button in the upper right-hand corner of your running application and follow the prompts to select the right account. Once published, your application will be available at `https://andersen-lab.shinyapps.io/{your_app_name}`
+Publishing is simple - press the "publish" button in the upper right-hand corner of your running application and follow the prompts to select the right account. Once published, your application will be available at `https://parisod-lab.shinyapps.io/{your_app_name}`

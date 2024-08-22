@@ -91,7 +91,7 @@ tmpDir = "/path/to/scratch/storage/tmp"
 This configuration file does the following:
 
 * `executor` - Sets the executor to `slurm` scheduler
-* `queue` - Sets the queue/partition to `parallel` which submits jobs to Rockfish nodes.
+* `queue` - Sets the queue/partition to `parallel` which submits jobs to IBU nodes.
 * `clusterOptions` - Sets the account/allocation to `eande106`; granting access to `parallel` and other queues.
 * `workDir` - Sets the working directory to scratch space. To better organization, Please build your own folder under `[TBD]`, and define it here.
 * `tmpDir` - Creates a temporary working directory. This can be used within workflows when necessary.
