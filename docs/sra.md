@@ -1,6 +1,6 @@
-# Uploading WI FASTQ sequence data to SRA
+# Uploading sequence data to SRA
 
-For each CENDR release, it is important to also upload the FASTQ files to NCBI's Sequence Read Archive (SRA). **If a bioproject already exists, you can create a new submission and link to the previous bioproject**. If there is no previous bioproject, you can create a new bioproject and add all relevant data. See below for more instructions.
+For each dataset, it is important to also upload the FASTQ files to NCBI's Sequence Read Archive (SRA) or ENA (See. __ena.md__). **If a bioproject already exists, you can create a new submission and link to the previous bioproject**. If there is no previous bioproject, you can create a new bioproject and add all relevant data. See below for more instructions.
 
 ## SRA submission
 

@@ -1,4 +1,4 @@
-# Git and Github
+# Source Control with Git and VSCode
 
 [TOC]
 

@@ -14,15 +14,39 @@ markdown_extensions:
 nav:
     - Home: index.md
     - Knowledge Base:
+          - Lab Introduction: intro.md
           - Best Practices: best_practices.md
           - R: r.md
           - Command Line: bash.md
-          - Git and Github: github.md
+          - VScode: vscode.md
+          - Source Control with Git and VScode: github.md
+    - Data Management:
+          - Data Organization: data-organization.md
+          - Data Backup: data-backup.md
+          - Data Sharing: data-sharing.md
     - IBU:
             - Introduction: ibu-intro.md
             - Data on IBU: VAST.md
             - Nextflow: ibu-nextflow.md
             - Conda: ibu-conda.md
+    - snakeGATK sequencing workflow:
+            - Overview: pipeline-overview.md
+            - Trim pipeline: pipeline-trimming.md
+            - Alignment pipeline: pipeline-alignment.md
+            - Genotyping pipeline: pipeline-GATK.md
+            - Concordance pipeline: pipeline-concordance.md
+            - Post-GATK pipeline: pipeline-postGATK.md
+            - Imputation pipeline: pipeline-impute.md
+            - Annotation pipeline: pipeline-annotation.md
+    - Other pipelines:
+            - Freebayes calling: pipeline-freebayes.md
+    - snakeRNAseq workflow:
+            - Overview: rnaseq-overview.md
+            - Trim pipeline: rnaseq-trimming.md
+            - Alignment pipeline: rnaseq-alignment.md
+            - Counting pipeline: rnaseq-counting.md
+            - Differential expression pipeline: rnaseq-diffexp.md
+            - Visualization pipeline: rnaseq-visualization.md
 #     - Quest:
 #           - Introduction: quest-intro.md
 #           - Data on b1059: b1059.md
@@ -50,7 +74,7 @@ nav:
 #         - Backup: backup.md
 #     - Cloud: cloud.md
 #     - Globus file sharing: sharing-globus.md
-          - Parisod Labsite: labsite.md
+          - Parisod Labsite: labsite_parisod.md
 # extra_css:
 # - css/version-select.css
 # extra_javascript:
