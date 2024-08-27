@@ -26,8 +26,8 @@ nav:
           - Data Sharing: data-sharing.md
     - IBU:
             - Introduction: ibu-intro.md
-            - Data on IBU: VAST.md
-            - Nextflow: ibu-nextflow.md
+            - Data on IBU: ibu-data.md
+            - Snakemake: ibu-snakemake.md
             - Conda: ibu-conda.md
     - snakeGATK sequencing workflow:
             - Overview: pipeline-overview.md

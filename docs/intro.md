@@ -1,12 +1,14 @@
-Information for all members of the Parisod lab
+# Information for all members of the Parisod lab
 
-Department of Biology, University of Fribourg
-PER23-Ecology & Evolution building, Chemin du Musée 15
-PI : Prof. Christian Parisod, PER23-102, 0 26 300 88 52, [christian.parisod@unifr.ch](mailto:christian.parisod@unifr.ch)
-Administrative assistant: Eirini Maikanti, PER23-001, 026 300 88 50, [eirini.maikanti@unifr.ch](mailto:eirini.maikanti@unifr.ch)
-Tech assistants: Dr. Boris Egger (PER05-0.340G, [boris.egger@unifr.ch](mailto:boris.egger@unifr.ch))
-Alain Werro (PER04-01.117, 026 300 88 12)
-Gardner: Alain Müller([alain.mueller@unifr.ch](mailto:alain.mueller@unifr.ch)), Benoît Clément (Alpine Plants, [benoit.clement@unifr.ch](mailto:benoit.clement@unifr.ch))
+
+!!! Important
+    Address: Department of Biology, University of Fribourg
+    PER23-Ecology & Evolution building, Chemin du Musée 15  
+    PI : Prof. Christian Parisod, PER23-102, 0 26 300 88 52, [christian.parisod@unifr.ch](mailto:christian.parisod@unifr.ch)  
+    Administrative assistant: Eirini Maikanti, PER23-001, 026 300 88 50, [eirini.maikanti@unifr.ch](mailto:eirini.maikanti@unifr.ch)  
+    Tech assistants: Dr. Boris Egger (PER05-0.340G, [boris.egger@unifr.ch](mailto:boris.egger@unifr.ch))  
+    Alain Werro (PER04-01.117, 026 300 88 12)  
+    Gardner: Alain Müller([alain.mueller@unifr.ch](mailto:alain.mueller@unifr.ch)), Benoît Clément (Alpine Plants, [benoit.clement@unifr.ch](mailto:benoit.clement@unifr.ch))  
 
 
 All HR-related matter as well as room authorizations must be coordinated with the administrative assistant. An access to **my.unifr.ch** through your campus account will simplify many administrative tasks. Also see <https://www.unifr.ch/campus/en/personal-support/administrative.html>
@@ -17,33 +19,11 @@ We use lab meetings to promote general coordination in the lab. A google-calenda
 
 Two series of scientific seminars are taking place during semesters: Departmental seminars with mostly external guests every Tuesdays (11.15 am, PER04-0.110) and Environmental Biology seminars by internal collaborators every Thursdays (15.15 pm, PER04-0.110). Your attendance and participation are welcome! Register to to such and other teaching-related activities and get information through <https://moodle.unifr.ch/>
 
-**Table of Content**
+[TOC]
 
-1. Lab members: expectations & responsibilities
-    1. Everyone
-    2. PI
-    3. Postdocs
-    4. PhD candidates
-    5. MSc students
-    6. Lab managers
-    7. Internships s.l.
-2. Code of conduct
-    1. Harassment
-    2. Reproducible research
-    3. Responsible research
-3. Organization of the lab
-    1. Access to infrastructure
-    2. Working hours
-    3. PI availability
-    4. Lab meetings
-    5. Lab travels
-    6. Lab archives & elabFTW
-    7. Lab infrastructure
-    8. Lab rules
+## 1\. Lab member expectations & responsibilities
 
-**1\. Lab member expectations & responsibilities**
-
-_1.1 Everyone (full-time, part-time, and undergraduate internship members)_
+### _1.1 Everyone (full-time, part-time, and undergraduate internship members)_
 
 Keep your lab and office space tidy on a daily basis. Take your share for team-level activities.
 
@@ -59,7 +39,7 @@ If you have an issue with another lab member that cannot be solved through direc
 
 Before quitting the lab for new adventures, sort and archive your documents appropriately, clean your lab and office space, make sure that your samples are properly stored (labelled with your name and a date!) and referenced in our database. Check with your direct supervisor. See § 4 for further details.
 
-_1.2 PI (<christian.parisod@unifr.ch>)_
+### _1.2 PI (<christian.parisod@unifr.ch>)_
 
 All of the above, plus you can expect me to:
 
@@ -71,7 +51,7 @@ Support your career development by introducing you to networks, writing recommen
 
 I am happy to discuss any concern that may be influencing your work. We can always discuss extra support related to time management and productivity and brainstorm possible solutions.
 
-_1.3 Postdocs_
+### _1.3 Postdocs_
 
 All of the above, plus you will be expected to:
 
@@ -81,7 +61,7 @@ Apply for external funding. Apply for jobs (academic or industry) as soon as you
 
 I encourage you to seek out opportunities to present your research to the department, research community, or general public. If you are going to give a presentation (including posters and talks), please request a practice presentation to the lab at least one week ahead of time.
 
-_1.4 PhD candidates_
+### _1.4 PhD candidates_
 
 All of the above, plus you will be expected to:
 
@@ -93,7 +73,7 @@ Question the type of career you want to pursue (e.g. research-focused or teachin
 
 Prioritize time for research (at the end of the training period, you need to have a completed dissertation). Stay up-to-date on any deadlines that you need to meet to fulfill departmental requirements (e.g. funding applications, master’s defense, teaching, … ).
 
-_1.5 MSc students_
+### _1.5 MSc students_
 
 All of the above, plus you will be expected to:
 
@@ -103,7 +83,7 @@ Develop your organization and skills (scientific, technical, transferable).
 
 Question the type of career you want to pursue (e.g. research-focused or teaching-focused, non-academic jobs like data science or science writing).
 
-_1.6 Lab managers_
+### _1.6 Lab managers_
 
 All of the above, plus you will be expected to:
 
@@ -115,29 +95,29 @@ Help to maintain an atmosphere of professionalism within the lab. Oversee the sc
 
 Assist other lab members with data collection, storage or analysis. Work on your own research project.
 
-_1.7 Undergraduate students and research assistants (s.l.)_
+### _1.7 Undergraduate students and research assistants (s.l.)_
 
 Undergraduate research assistants can earn credits or money for their contribution to our lab routines. Enquiries can be made by writing an e-mail to Christian or approaching a lab member.
 
 If you are hired as a research assistant (i.e. contract, for typically 4-8 weekly hours or specified time blocks), you will be under the daily supervision of a direct mentor with whom you will determine your schedule and all of the above concerns you.
 
-**2\. Code of conduct**
+## 2\. Code of conduct
 
 In addition to the general expectations laid out above, I am dedicated to making our lab a safe, inclusive, and welcoming environment for all.
 
-_2.1 Harassment_
+### _2.1 Harassment_
 
 All members of the lab, along with visitors, are expected to agree with a decent code of conduct. I expect all lab members to treat one another with respect and to be sensitive to how one’s words and actions impact others. We also know that science benefits from diverse perspectives.
 
 Members asked to stop any harassing behavior are expected to comply immediately. “Qui vient trop près va trop loin. Wer zu nah kommt, geht zu weit». If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact Christian or the UNIFR mediation department.
 
-_2.2 Reproducible research_
+### _2.2 Reproducible research_
 
 Reproducible research is research that can be exactly reproduced (i.e. replicability as the ability to generate the same results again). It is expected that all of our research can be justified, at minimum, as reproducible (incl. own testing when possible). That requires to be organized and possess sufficient foresight to document each step of your research process. See §3.6 for our internal database.
 
 Scientific integrity <https://www.unifr.ch/scimed/en/integrity>
 
-_2.3 Responsible research_
+### _2.3 Responsible research_
 
 Authorship credit should reflect the individual's contribution to the study. An author is considered anyone contributing with initial research design, data collection and analysis, manuscript drafting, and final approval. All authors assume responsibility for the publication, making sure that the data they contributed are accurate. The submitting author makes sure that all deserving authors have been credited, that all authors have given their approval; and handles responses to inquiries during and after publication.
 
@@ -147,19 +127,19 @@ As for publications out of the lab, we generally try to avoid thin slices and te
 
 For projects that have required significant lab resources, "ownership" of data to the producer can be ended on mutual agreement or maximum 2 years after collection. At that point, the PI reserves the right to re-assign the project (or not) as needed to expedite publications. This is to avoid situations of long languishing datasets, while supporting priority.
 
-**3\. Organization of the lab**
+## 3\. Organization of the lab
 
-_3.1 Access to infrastructure_
+### _3.1 Access to infrastructure_
 
 Lab safety <https://www.unifr.ch/scimed/en/safety/commissions>
 
 Authorization for staff to enable entry through the main entrance of the Ecology & Evolution building (PER23; Chemin du Musée 15) is requested through the administrative assistant. Same for physical keys. When you leave the lab, make sure to return your key (and get any deposit back).
 
-_3.2 Working hours_
+### _3.2 Working hours_
 
 One benefit of a career in academic research is typical flexibility. In your contract, 100% legally means being employed for 42 hours a week. You are typically not required to work over-time. I expect you to be in the lab, at minimum, multiple weekdays at peak hours (10am and 2pm or so) to promote interactions.
 
-_3.3 PI availability_
+### _3.3 PI availability_
 
 In addition to poking my head into the lab or your office regularly, I will be working on campus and available for meetings most days of the week. My door is semi-open when I can be available. Feel free to pop in so that we can set ad-hoc meetings to shortly discuss.
 
@@ -167,17 +147,17 @@ As I may turn my “notifications” off when concentrating on something else, y
 
 Recommendation letters: I will usually write a letter for any lab member having spent multiple months in the lab. Your request (ideally, two weeks ahead of time) should include the deadline and your current CV as well as any relevant instruction. To ensure that I do not miss any important details, I may ask you for a draft, which I would then revise consistently.
 
-_3.4 Lab meetings_
+### _3.4 Lab meetings_
 
 Lab meetings, every Tuesday (from 10.15 am, PER23) last 45minutes. If more time is necessary, we will schedule an extraordinary meeting. Every second slot will be focused on project presentations going over new data or methods. Every other slot will be a journal club with the Flatt group. All full-time lab members are expected to attend lab meetings. Part-time internships are welcome.
 
 To ensure effective lab meetings, it is recommended to adequately prepare, especially when presenting. This promotes not only your progress, but also fosters useful feedback. This is also a privileged time to set bilateral meetings and foster cooperation.
 
-_3.5 Lab travels_
+### _3.5 Lab travels_
 
 The lab will typically pay for full-time lab members to work in the lab of collaborators or to present their work at conferences (e.g. National, such as Biology’2i; International). In general, presented work should be original and appropriate for the targeted conference. Wishes must be discussed beforehand as they may depend on the availability of funds. Transparent reimbursement of your work-related costs must in all cases be justified by invoices and must be coordinated with administrative assistant based on founding source). Lab members can apply for other sources of funding available to them (e.g. Swiss Botanical Society).
 
-_3.6 Lab archives & elabFTW_
+### _3.6 Lab archives & elabFTW_
 
 We have three alternatives for data storage:
 
@@ -207,7 +187,7 @@ Parisod:Pop: Samples from natural population (collected in the wild). Each sampl
 
 Parisod:Experimental: Samples from experimental populations (crossings...). Each cross samples should be recorded in Parisod experimental with fields (collactor name, date, crossing…).
 
-_3.7 Lab rules_
+### _3.7 Lab rules_
 
 A detailed protocol is to be followed across labs at PER23. It must be read and signed beforehand. Note that the lab 305 is PCR free.
 
