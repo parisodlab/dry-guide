@@ -1,6 +1,6 @@
 # Uploading sequence data to ENA
 
-For each project, it is important to also upload the FASTQ files and other raw sequncing files to ENA as soon as the sequencing data arrives. **If the study ID already exists, you can create a new sample ID link to the existing study ID**. If there is no previous study ID, you can create a new study ID and add all relevant data. See below for more instructions.
+For each project, it is important to also upload the FASTQ files and other raw sequncing files to ENA or SRA (See: __sra.md__) as soon as the sequencing data arrives. **If the study ID already exists, you can create a new sample ID link to the existing study ID**. If there is no previous study ID, you can create a new study ID and add all relevant data. See below for more instructions.
 
 ## ENA submission
 

@@ -34,3 +34,5 @@ If you have made substantial changes to the site, like adding new sections or re
 ```bash
 mike deploy [today's date] latest --update-aliases --ignore --push
 ```
+
+If errors occur, try to reload vscode (shift-control-P to open the Command Palette then find Developer: Reload Window and press Enter).
