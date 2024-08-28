@@ -17,12 +17,12 @@
 
 ## Using Git and Github
 
-The Andersen Lab Github can be found [here](https://github.com/AndersenLab). As of the writing of this page, we have 165 "repositories" (or projects). Notice some projects are code like `NemaScan` and others are personal projects (`abamectin`) or manuscripts (`mol_eco_manuscript`). Anything can be a repo!
+The Parisod Lab Github can be found [here](https://github.com/parisodlab). As of the writing of this page, we have 165 "repositories" (or projects). Notice some projects are workflow like `snakeGATK4_v2` and others are shared projects (`codeclub`) or manuscripts (`mbe_manuscript_2024`). Anything can be a repo!
 
-There are two main ways to use Git: (1) on the command line (aka Terminal on Macs) or with a GUI (graphical user interface). Both are good and neither are "wrong". For new users, it is usually easier to start with a GUI like [Github Desktop](https://desktop.github.com/). However, only a few basic commands are really necessary to get started using git on the command line, so don't be nervous!
+There are two main ways to use Git: on the command line (aka Terminal on Macs) or with a GUI (graphical user interface). Both are good and neither are "wrong". For new users, it is usually easier to start with a GUI like the Source control extension in VSCode. However, only a few basic commands are really necessary to get started using git on the command line, so don't be nervous!
 
 !!! Important
-	Git GUI like Github Desktop **cannot** be used with repositories on QUEST. If you are building a pipeline on QUEST, it is essential to get comfortable with using Git on the command line
+	When you are working on a collaborative project with multiple people, you should always be working in a branch. This is a copy of the project that you can make changes to without affecting the main project. 
 
 ## The GitHub Flow
 
@@ -30,7 +30,7 @@ There are several different Git branching strategies, but the most popular for o
 
 ![github flow](img/github_flow.png)
 
-The following 8 steps can be done on the command line or with a GUI. Below I will show the basic `git` commands for managing a repo on the command line, for more help you can find the slides from Code club at `~/Dropbox/AndersenLab/LabMeetings/CodeClub/20210326_KSE/20210326_slides.key`
+The following 8 steps can be done on the command line or with a GUI. Below I will show the basic `git` commands for managing a repo on the command line.
 
 !!! Note
 	When you are maintaining a project repo that only you are updating, it is *less important* to follow the GitHub Flow with creating short-lived branches. However, if you are developing/maintaining code that other people will use and/or working collaboratively this is an **essential** skill to master. 
@@ -41,8 +41,8 @@ The following 8 steps can be done on the command line or with a GUI. Below I wil
 
 # Cloning - new repo
 cd < directory you want repo stored >
-git clone https://github.com/AndersenLab/code_club.git
-cd code_club
+https://github.com/parisodlab/snakeGATK4_v2
+cd snakeGATK4_v2
 
 # pulling - already cloned repo you want to get newest version of
 cd < directory of repo >
@@ -150,6 +150,35 @@ __Intermediate__
 
 !!! Note
 	GitHub Flow is not the only branching strategy out there! [This](https://www.gitkraken.com/learn/git/best-practices/git-branch-strategy#github-flow-branch-strategy) was a great article about the three most common strategies with pros and cons for why you might use each one. I challenge you to think aobut which strategy might be best for our lab moving forward and let's start a discussion about it!
+
+
+## Using Git with VSCode
+
+VSCode has a built-in source control extension that makes it easy to use git commands without the command line. This is a great way to get started with git and learn the basics of version control.
+
+1. Open the source control tab on the left side of the screen
+
+![source control](img/source_control.png)
+
+2. Click the "+" to stage changes
+
+![stage changes](img/stage_changes.png)
+
+3. Add a commit message and click the checkmark to commit changes
+
+![commit changes](img/commit_changes.png)
+
+4. Click the three dots to push changes to the remote repository
+
+![push changes](img/push_changes.png)
+
+5. Click the three dots to pull changes from the remote repository
+
+![pull changes](img/pull_changes.png)
+
+6. Click the three dots to create a new branch
+
+![new branch](img/new_branch.png)
 
 
 # Resources
