@@ -85,6 +85,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#github_flow_best_practices">GitHub Flow Best Practices</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using_git_with_vscode">Using Git with VSCode</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -194,6 +196,7 @@
 </li>
 <li><a href="#command_line_git_commands">Command Line git commands</a></li>
 <li><a href="#github_flow_best_practices">GitHub Flow Best Practices</a></li>
+<li><a href="#using_git_with_vscode">Using Git with VSCode</a></li>
 </ul>
 </li>
 <li><a href="#resources">Resources</a></li>
@@ -209,16 +212,16 @@
 <p>You must install <code>git</code> to use and create an account on Github. Check out this intro guide <a href="https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html">here</a></p>
 </div>
 <h2 id="using_git_and_github">Using Git and Github<a class="headerlink" href="#using_git_and_github" title="Permanent link">&para;</a></h2>
-<p>The Andersen Lab Github can be found <a href="https://github.com/AndersenLab">here</a>. As of the writing of this page, we have 165 "repositories" (or projects). Notice some projects are code like <code>NemaScan</code> and others are personal projects (<code>abamectin</code>) or manuscripts (<code>mol_eco_manuscript</code>). Anything can be a repo!</p>
-<p>There are two main ways to use Git: (1) on the command line (aka Terminal on Macs) or with a GUI (graphical user interface). Both are good and neither are "wrong". For new users, it is usually easier to start with a GUI like <a href="https://desktop.github.com/">Github Desktop</a>. However, only a few basic commands are really necessary to get started using git on the command line, so don't be nervous!</p>
+<p>The Parisod Lab Github can be found <a href="https://github.com/parisodlab">here</a>. As of the writing of this page, we have 165 "repositories" (or projects). Notice some projects are workflow like <code>snakeGATK4_v2</code> and others are shared projects (<code>codeclub</code>) or manuscripts (<code>mbe_manuscript_2024</code>). Anything can be a repo!</p>
+<p>There are two main ways to use Git: on the command line (aka Terminal on Macs) or with a GUI (graphical user interface). Both are good and neither are "wrong". For new users, it is usually easier to start with a GUI like the Source control extension in VSCode. However, only a few basic commands are really necessary to get started using git on the command line, so don't be nervous!</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Git GUI like Github Desktop <strong>cannot</strong> be used with repositories on QUEST. If you are building a pipeline on QUEST, it is essential to get comfortable with using Git on the command line</p>
+<p>When you are working on a collaborative project with multiple people, you should always be working in a branch. This is a copy of the project that you can make changes to without affecting the main project. </p>
 </div>
 <h2 id="the_github_flow">The GitHub Flow<a class="headerlink" href="#the_github_flow" title="Permanent link">&para;</a></h2>
 <p>There are several different Git branching strategies, but the most popular for our lab is the "GitHub Flow". This 8 step process can help keep our pipelines flowing, functional, and organized. New to the GitHub flow? I <strong>highly recommend</strong> you try out <a href="https://lab.github.com/githubtraining/introduction-to-github">this amazing tutorial</a> to practice all the steps from beginning to end. Then start putting it in use for your own pipelines!</p>
 <p><img alt="github flow" src="../img/github_flow.png" /></p>
-<p>The following 8 steps can be done on the command line or with a GUI. Below I will show the basic <code>git</code> commands for managing a repo on the command line, for more help you can find the slides from Code club at <code>~/Dropbox/AndersenLab/LabMeetings/CodeClub/20210326_KSE/20210326_slides.key</code></p>
+<p>The following 8 steps can be done on the command line or with a GUI. Below I will show the basic <code>git</code> commands for managing a repo on the command line.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When you are maintaining a project repo that only you are updating, it is <em>less important</em> to follow the GitHub Flow with creating short-lived branches. However, if you are developing/maintaining code that other people will use and/or working collaboratively this is an <strong>essential</strong> skill to master. </p>
@@ -227,8 +230,8 @@
 <pre><code>
 # Cloning - new repo
 cd &lt; directory you want repo stored &gt;
-git clone https://github.com/AndersenLab/code_club.git
-cd code_club
+https://github.com/parisodlab/snakeGATK4_v2
+cd snakeGATK4_v2
 
 # pulling - already cloned repo you want to get newest version of
 cd &lt; directory of repo &gt;
@@ -319,6 +322,32 @@ git push --set-upstream origin new_branch
 <p class="admonition-title">Note</p>
 <p>GitHub Flow is not the only branching strategy out there! <a href="https://www.gitkraken.com/learn/git/best-practices/git-branch-strategy#github-flow-branch-strategy">This</a> was a great article about the three most common strategies with pros and cons for why you might use each one. I challenge you to think aobut which strategy might be best for our lab moving forward and let's start a discussion about it!</p>
 </div>
+<h2 id="using_git_with_vscode">Using Git with VSCode<a class="headerlink" href="#using_git_with_vscode" title="Permanent link">&para;</a></h2>
+<p>VSCode has a built-in source control extension that makes it easy to use git commands without the command line. This is a great way to get started with git and learn the basics of version control.</p>
+<ol>
+<li>Open the source control tab on the left side of the screen</li>
+</ol>
+<p><img alt="source control" src="img/source_control.png" /></p>
+<ol start="2">
+<li>Click the "+" to stage changes</li>
+</ol>
+<p><img alt="stage changes" src="img/stage_changes.png" /></p>
+<ol start="3">
+<li>Add a commit message and click the checkmark to commit changes</li>
+</ol>
+<p><img alt="commit changes" src="img/commit_changes.png" /></p>
+<ol start="4">
+<li>Click the three dots to push changes to the remote repository</li>
+</ol>
+<p><img alt="push changes" src="img/push_changes.png" /></p>
+<ol start="5">
+<li>Click the three dots to pull changes from the remote repository</li>
+</ol>
+<p><img alt="pull changes" src="img/pull_changes.png" /></p>
+<ol start="6">
+<li>Click the three dots to create a new branch</li>
+</ol>
+<p><img alt="new branch" src="img/new_branch.png" /></p>
 <h1 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="https://www.edureka.co/blog/git-vs-github/">This</a> blog on the differences between <code>git</code> and <code>github</code></li>
