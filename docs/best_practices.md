@@ -41,9 +41,10 @@ These best practices are just a few of the important coding tips and tricks for 
 * You should be doing most (if not all) of your analyses in `/data/projects/<project_name>/<user_id>` or `/data/users/<user_id>` (not your home directory (i.e. `/home/<user_id>`))
 
 !!! Important
-	Main exception: Snakemake and Nextflow temporary working directories should NOT be on `/data` (it will fill us up!) but rather in the scratch space (files get automatically deleted here every 30 days).
+	Main exception: Snakemake and Nextflow temporary working directories should NOT be on `/data` (it will fill us up!) but rather in the scratch space (files get automatically deleted here every 30 days).  
+	A correctly designed [nextflow.config](IBU-nextflow) file will take care of this.  
 	For Snakemake, you can set the `--directory` flag to `/scratch/<user_id>/<project_name>` (or similar)
-	A correctly designed [nextflow.config](IBU-nextflow) file will take care of this.
+	
 
 ### Python
 

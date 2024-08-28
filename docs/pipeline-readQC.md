@@ -35,8 +35,6 @@ snakemake -np -s workflow/trim.rules --profile slurm 2>&1 | tee logs/log_trim.tx
 
 ## Running the pipeline on IBU
 
-You should run this in a screen session.
-
 *Note: if you are having issues running Snakemake or need reminders, check out the [Snakemake](ibu-snakemake.md) page.*
 
 ```

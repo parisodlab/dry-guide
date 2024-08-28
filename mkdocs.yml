@@ -31,13 +31,12 @@ nav:
             - Conda: ibu-conda.md
     - snakeGATK sequencing workflow:
             - Overview: pipeline-overview.md
+            - QC pipeline: pipeline-readQC.md
             - Trim pipeline: pipeline-trimming.md
-            - Alignment pipeline: pipeline-alignment.md
+            - Alignment pipeline: pipeline-mapping.md
             - Genotyping pipeline: pipeline-GATK.md
             - Concordance pipeline: pipeline-concordance.md
             - Post-GATK pipeline: pipeline-postGATK.md
-            - Imputation pipeline: pipeline-impute.md
-            - Annotation pipeline: pipeline-annotation.md
     - Other pipelines:
             - Freebayes calling: pipeline-freebayes.md
     - snakeRNAseq workflow:
