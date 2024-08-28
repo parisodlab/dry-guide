@@ -82,8 +82,6 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Overview</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#snakegatk4_v2">SnakeGATK4_v2</a>
-    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pipeline-readQC/">QC pipeline</a>
@@ -150,26 +148,17 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="pipeline_overview">Pipeline Overview<a class="headerlink" href="#pipeline_overview" title="Permanent link">&para;</a></h1>
-<div class="toc">
-<ul>
-<li><a href="#pipeline_overview">Pipeline Overview</a><ul>
-<li><a href="#snakegatk4_v2">SnakeGATK4_v2</a></li>
-</ul>
-</li>
-</ul>
-</div>
 <p>An overview of the sequencing pipelines is shown below. </p>
-<h2 id="snakegatk4_v2">SnakeGATK4_v2<a class="headerlink" href="#snakegatk4_v2" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The full protocol (in development) can be found <a href="https://github.com/parisodlab/snakeGATK4_v2/blob/main/README.md">here</a></p>
 </div>
 <p>The main pipeline for a project involves quality control, trimming, mapping, and variant calling using GATK4.</p>
-<p>Parameters:
+<p>Parameters:<br />
     - config_main.yaml: YAML configuration file containing project details and workflow parameters.</p>
-<p>Functions:
+<p>Functions:<br />
     - spend_time(start_time, end_time): Calculates the time spent between two given time points and returns it in the format "hours:minutes:seconds".</p>
-<p>Workflow Steps:
+<p>Workflow Steps:<br />
 1. Read the configuration file.
 2. Check if quality control is required.
     - If yes, perform quality control using Snakemake and log the running time.
