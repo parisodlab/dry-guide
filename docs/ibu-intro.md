@@ -13,7 +13,7 @@ __[IBU Documentation](https://docs.pages.bioinformatics.unibe.ch/cluster-docs/)_
 
 To gain access to IBU: 
 
-Register new user by reIBUing allocation and parisod group access to Pierre.
+Register new user by requesting IBU allocation and parisod group access to Pierre.
 		
 ## Signing into IBU
 
@@ -81,9 +81,9 @@ IBU has several partitions/queues where you can submit jobs. They have different
 If you are running a few simple commands or want to experiment with files directly you can start an interactive session on IBU. The command below (based on the `srun` command) will give you access to a node where you can run your command:
 
 ```
-interact -n 1 -c 1 -m 64G -p queue-name -t “time in minutes”
+srun -p pibu_el8 -c 4 --mem 4G --time 2-0  --pty /bin/bash
 ```
-Where `-n` is the number of nodes, `-c` is the number of cores, `-a` is the allocation ID, `-m` is the allocated memory,`-p` is the partition/queue, and `-t` is the walltime for the session.
+Where `-c` is the number of cores,  `--mem` is the allocated memory,`-p` is the partition/queue, and `--time` is the walltime for the session.
 
 !!! Important
     Do not run commands for big data directly on login node, they are not meant for running heavy-load workflows. Either open an interact session, or submit a job.
@@ -96,11 +96,11 @@ If you have ever tried to run a pipeline or script that takes a long time (think
 
 Perhaps the most common way to deal with scripts that run for a long time is [`screen`](https://linuxize.com/post/how-to-use-linux-screen/). For the most simple case use, type `screen` to open a new screen session and then run your script like normal. Below are some more intermediate commands for taking full advantage of `screen`:
 
-* `screen -S <some_descriptive_name>`: Use this command to name your screen session. Especially useful if you have several scren sessions running and/or want to get back to this particular one later.
+* `screen -R <some_descriptive_name>`: Use this command to name your screen session. Especially useful if you have several scren sessions running and/or want to get back to this particular one later.
 * `Ctrl+a` follwed by `Ctrl+d` to detach from the current screen session (NOT `Ctrl+a+d`!)
 * `exit` to end the current screen session
 * `screen -ls` lists the IDs of all screen sessions currently running 
-* `screen -r <screen_id>`: Use this command to resume a particular screen session. If you only have one session running you can simply use `screen -r`
+* `screen -R <screen_id>`: Use this command to resume a particular screen session. 
 
 !!! Important
 	When using `screen` on IBU, take note that screen sessions are only visible/available when you are logged on to the particular node it was created on. You can jump between nodes by simply typing ssh and the login node you want (_e.g._ `ssh login02`). 
@@ -110,23 +110,24 @@ Perhaps the most common way to deal with scripts that run for a long time is [`s
 Another way to avoid **SIGHUP** errors is to use [`nohup`](https://linuxhint.com/how_to_use_nohup_linux/). `nohup` is very simple to use, simply type `nohup` before your normal command and that's it!
 
 ```
-nohup nextflow run main.nf
+nohup nextflow run main.nf 2>&1 &
 ``` 
 
 Running a command with `nohup` will look a little different than usual because it will not print anything to the console. Instead, it prints all console outputs into a file in the current directory called `nohup.out`. You can redirect the output to another filename using:
 
 ```
-nohup nextflow run main.nf > {date}_output.txt
+nohup nextflow run main.nf > {date}_output.txt 2>&1 &
 ```
 
 When you exit this window and open a new session, you can always look at the contents of the output file using `cat nohup.out` to see the progress.
 
 !!! Note
 	You can also run `nohup` in the background to continue using the same window for other processes by running `nohup nextflow run main.nf &`.
+	By  2>&1 you are redirecting both stdout and stderr to the same file.
    
 ## Using packages already installed on IBU
 
-IBU has a collection of packages installed. You can run `module avail |& less` to see what packages are currently available on IBU. You can use `module load bcftools` or `module load bcftools/1.15.1` to load packages with the default or a specific version (`module add` does the same thing). If you do `echo $PATH` before and after loading modules, you can see what module does is simply appending paths to the packages into your `$PATH` so the packages can be found in your environment.
+IBU has a collection of packages installed. You can run `module avail |& less` or `module spider` to see what packages are currently available on IBU. You can use `module load bcftools` or `module load bcftools/1.15.1` to load packages with the default or a specific version (`module add` does the same thing). If you do `echo $PATH` before and after loading modules, you can see what module does is simply appending paths to the packages into your `$PATH` so the packages can be found in your environment.
 
 `module purge` will remove all loaded packages and can be helpful to try when troubleshooting.
 

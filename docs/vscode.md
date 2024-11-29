@@ -25,8 +25,19 @@ This guide will walk you through how to connect to a remote server using Visual 
 7. You can now Open a terminal on the remote server by clicking on the `Terminal` menu and selecting `New Terminal`. Now you can run commands on the remote server, while saving and editing files (e.g. README.md) in VScode.
 
 ### 3. Set keybindings to run code on the remote server
+**Unix/Linux**:  
+This step is useful if you want to document your code while you are creating and testing it.  
+1. Click on the `File` menu and select `Preferences` -> `Keyboard Shortcuts`  
+2. Search for `Terminal: Run Selected Text in Active Terminal` and click on the pen icon to add a keybinding  
+3. Enter the keybinding you want to use (e.g. `Ctrl+Enter`)
 
+**R**:
 
+1. Create a dedicated R environment on the remote server using `conda` to install packages and run R code.
+2. install.packages("languageserver") in the above R to enable code completion and syntax highlighting in VScode.
+3. Install the `R` extension `REditorSupport.r` in VScode to run R code on the remote server.
+4. Click on the `File` menu and select `Preferences` -> `Settings` and search for `@ext:REditorSupport.r R: Always use Active Terminal` and check the box.
+5. Follow the [steps here:](https://github.com/REditorSupport/vscode-R/wiki/Installation:-Linux) to make vscode mimic RStudio.
 
 
 
