@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>VScode - Parisod Lab Dry Guide</title>
+    <title>Command Line - Parisod Lab Dry Guide</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "VScode";
-        var mkdocs_page_input_path = "vscode.md";
+        var mkdocs_page_name = "Command Line";
+        var mkdocs_page_input_path = "bash.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -51,11 +51,15 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../r/">R</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">VScode</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Command Line</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#basic_commands">Basic Commands</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#more_advanced">More Advanced</a>
+    </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vscode/">VScode</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../github/">Source Control with Git and VScode</a>
                   </li>
@@ -137,9 +141,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Knowledge Base</li>
-      <li class="breadcrumb-item active">VScode</li>
+      <li class="breadcrumb-item active">Command Line</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/vscode.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/bash.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -147,55 +151,123 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <div class="toc">
+                <h1 id="command_line">Command line<a class="headerlink" href="#command_line" title="Permanent link">&para;</a></h1>
+<div class="toc">
 <ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#steps">Steps</a><ul>
-<li><a href="#1_install_the_remote_-_ssh_extension">1. Install the Remote - SSH extension</a></li>
-<li><a href="#2_connect_to_the_remote_server">2. Connect to the remote server</a></li>
-<li><a href="#3_set_keybindings_to_run_code_on_the_remote_server">3. Set keybindings to run code on the remote server</a></li>
+<li><a href="#command_line">Command line</a><ul>
+<li><a href="#basic_commands">Basic Commands</a></li>
+<li><a href="#more_advanced">More Advanced</a></li>
+</ul>
+</li>
+<li><a href="#good_guides">Good Guides</a><ul>
+<li><a href="#grep">grep</a></li>
+<li><a href="#awk">awk</a><ul>
+<li><a href="#rearranging_columns">Rearranging columns</a></li>
+<li><a href="#filtering_based_on_criteria">Filtering based on criteria</a></li>
+</ul>
+</li>
+<li><a href="#bcftools">bcftools</a></li>
+<li><a href="#screen">Screen</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This guide will walk you through how to connect to a remote server using Visual Studio Code (VScode). This is useful if you want to edit files on a remote server without having to use a terminal or a text editor like <code>vim</code> or <code>nano</code>. You can also setup keybindings to run code on the remote server, which is useful to document your code while you are creating and testing it.</p>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
-<h3 id="1_install_the_remote_-_ssh_extension">1. Install the Remote - SSH extension<a class="headerlink" href="#1_install_the_remote_-_ssh_extension" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Open VScode</li>
-<li>Click on the Extensions icon on the left-hand side of the window</li>
-<li>Search for <code>Remote - SSH</code> in the search bar</li>
-<li>Click on the green <code>Install</code> button</li>
-</ol>
-<h3 id="2_connect_to_the_remote_server">2. Connect to the remote server<a class="headerlink" href="#2_connect_to_the_remote_server" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Click on the <code>Remote Explorer</code> icon on the left-hand side of the window (it looks like a little monitor)</li>
-<li>Click on the <code>+</code> icon at the top of the window</li>
-<li>Enter the username and IP address/server id of the server you want to connect to (e.g. <code>username@ip_address</code>, e.g. <code>&lt;user_id&gt;@login8.hpc.binf.unibe.ch</code> -IBU or <code>&lt;user_id&gt;@biolpc045604</code> - p910)</li>
-<li>Select the SSH configuration file you want to use and update (e.g. <code>~/.ssh/config</code>)</li>
-<li>Once you receive Host added message, click <code>Connect</code>, you will be prompted to enter your password</li>
-<li>Once connected you need to open a folder on the remote server. Click on the <code>Open Folder</code> button and select the folder you want to open. You will be prompted to enter your password again.</li>
-<li>You can now Open a terminal on the remote server by clicking on the <code>Terminal</code> menu and selecting <code>New Terminal</code>. Now you can run commands on the remote server, while saving and editing files (e.g. README.md) in VScode.</li>
-</ol>
-<h3 id="3_set_keybindings_to_run_code_on_the_remote_server">3. Set keybindings to run code on the remote server<a class="headerlink" href="#3_set_keybindings_to_run_code_on_the_remote_server" title="Permanent link">&para;</a></h3>
-<p><strong>Unix/Linux</strong>:
-<strong>Note</strong>: This step is useful if you want to document your code while you are creating and testing it.
-1. Click on the <code>File</code> menu and select <code>Preferences</code> -&gt; <code>Keyboard Shortcuts</code>
-2. Search for <code>Terminal: Run Selected Text in Active Terminal</code> and click on the pen icon to add a keybinding
-3. Enter the keybinding you want to use (e.g. <code>Ctrl+Enter</code>)</p>
-<p><strong>R</strong>:</p>
-<ol>
-<li>Create a dedicated R environment on the remote server using <code>conda</code> to install packages and run R code.</li>
-<li>install.packages("languageserver") in the above R to enable code completion and syntax highlighting in VScode.</li>
-<li>Install the <code>R</code> extension <code>REditorSupport.r</code> in VScode to run R code on the remote server.</li>
-</ol>
+<p><a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> is the default unix shell on Mac OS and most Linux operating systems. Many bioinformatic programs are run using the command line, so becoming familiar with Bash is important.</p>
+<p>Start with this <a href="http://cs.lmu.edu/~ray/notes/bash/">introduction to bash</a>. Also check out this <a href="https://gist.github.com/ssledz/9d244e4d5898fbd217d67bb62bdc22e5">cheatsheet</a></p>
+<h2 id="basic_commands">Basic Commands<a class="headerlink" href="#basic_commands" title="Permanent link">&para;</a></h2>
+<p>You should familiarize yourself with the following commands.</p>
+<ul>
+<li><strong>alias</strong> - create a shortcut for a command</li>
+<li><strong>cat</strong> - concatenate files</li>
+<li><strong>zcat</strong> - concatenate zipped files</li>
+<li><strong>cd</strong> - change directories</li>
+<li><strong>curl</strong> - download files</li>
+<li><strong>echo</strong> - print strings</li>
+<li><strong>export</strong> - Add a variable to the global environment so that they get passed on to child processes.</li>
+<li><strong>grep</strong> - filter by pattern</li>
+<li><strong>egrep</strong> - filter by regex</li>
+<li><strong>rm</strong> - delete files</li>
+<li><strong>sudo</strong> - run as an administrator</li>
+<li><strong>sort</strong> - sorts files</li>
+<li><strong>source</strong> - runs a file</li>
+<li><strong>ssh</strong> - connect to servers</li>
+<li><strong>which</strong> - locate files on your PATH</li>
+<li><strong>uniq</strong> - get unique lines. File must be sorted.</li>
+</ul>
+<h2 id="more_advanced">More Advanced<a class="headerlink" href="#more_advanced" title="Permanent link">&para;</a></h2>
+<p>You should learn these once you have the basics down.</p>
+<ul>
+<li><strong>git</strong> - version control</li>
+<li><strong>awk</strong> - file manipulation; Filtering; Rearranging columns</li>
+<li><strong>sed</strong> - quick find/replace</li>
+</ul>
+<h1 id="good_guides">Good Guides<a class="headerlink" href="#good_guides" title="Permanent link">&para;</a></h1>
+<p>Below are some good guides for various bash utilities.</p>
+<h2 id="grep">grep<a class="headerlink" href="#grep" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://linuxhint.com/grep_egrep_regex/">using grep with regular expressions</a></li>
+<li><a href="https://linuxize.com/post/regular-expressions-in-grep/">another regex grep guide</a></li>
+</ul>
+<h2 id="awk">awk<a class="headerlink" href="#awk" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://linuxconfig.org/learning-linux-commands-awk">awk guide</a></li>
+<li><a href="https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_awk.md">awk by example</a> - hundreds of examples</li>
+</ul>
+<h3 id="rearranging_columns">Rearranging columns<a class="headerlink" href="#rearranging_columns" title="Permanent link">&para;</a></h3>
+<pre><code>cat example.tsv | awk -f OFS=&quot;\t&quot; '{ print $2, $3, $1 }'
+</code></pre>
+<p>The line above will print the second column, the third column and finally the first column.</p>
+<h3 id="filtering_based_on_criteria">Filtering based on criteria<a class="headerlink" href="#filtering_based_on_criteria" title="Permanent link">&para;</a></h3>
+<p><strong>Print only lines that start with a comment (#) character</strong></p>
+<pre><code>cat example.tsv awk '$0 ~ &quot;^#&quot; { print }'
+</code></pre>
+<h2 id="bcftools">bcftools<a class="headerlink" href="#bcftools" title="Permanent link">&para;</a></h2>
+<p><em>bcftools view</em></p>
+<ul>
+<li><strong>bcftools view <vcf></strong> - view VCF<ul>
+<li><strong>bcftools view -h <vcf></strong> - view only header of VCF</li>
+<li><strong>bcftools view -H <vcf></strong> - view VCF without header</li>
+</ul>
+</li>
+<li><strong>bcftools view -s CB4856,XZ1516,ECA701 <vcf></strong> - subset vcf for only these three samples<ul>
+<li><strong>bcftools view -S sample_file.txt <vcf></strong> - subset vcf for only samples listed in <code>sample_file.txt</code></li>
+</ul>
+</li>
+<li><strong>bcftools view -r III:1-800000 <vcf></strong> - subset vcf for a region of interest<ul>
+<li>can also just use <code>-r III</code> to get entire chromosome</li>
+<li><strong>bcftools view -R regions.txt <vcf></strong> - subset vcf for a region(s) of interest in the <code>regions.txt</code> file</li>
+</ul>
+</li>
+</ul>
+<p><em>bcftools query</em></p>
+<ul>
+<li><strong>bcftools query -l <vcf></strong> - print out list of samples in vcf</li>
+<li>Print out contents of vcf in specified format (i.e. tsv):</li>
+</ul>
+<pre><code>bcftools query -f '%CHROM\t%POS\t%REF\t%ALT[\t%SAMPLE=%GT]\n' &lt;vcf&gt; &gt; out.tsv
+</code></pre>
+<p><em>Output of above line of code:</em></p>
+<p><img alt="bcftools_out" src="../img/bcftools.png" /></p>
+<ul>
+<li><strong>bcftools query -i GT=="alt" <vcf></strong> - keep rows that include a tag (like a filter)</li>
+<li><strong>bcftools query -e GT=="ref" <vcf></strong> - remove rows that include a tag</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>bcftools query -i/e</code> are not necessarily opposites. For example, if you have three genotype options (REF, ALT, or NA), including only ALT calls is different than exluding only REF calls...</p>
+</div>
+<p>For more, check out the <a href="https://samtools.github.io/bcftools/howtos/index.html">bcftools manual</a> and <a href="https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b">this cheatsheet</a></p>
+<h2 id="screen">Screen<a class="headerlink" href="#screen" title="Permanent link">&para;</a></h2>
+<p>Screen can be used to run things in the background. It is extremely useful if you need to run things on quest without worry that they will be terminated if you log out or get kicked off. This is essential when running <strong>nextflow</strong> because pipelines can sometimes run for many hours and its likely you will be kicked off in that time or lose your connection.</p>
+<ul>
+<li><a href="https://www.linode.com/docs/networking/ssh/using-gnu-screen-to-manage-persistent-terminal-sessions">Screen basics</a></li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../bash/" class="btn btn-neutral float-left" title="Command Line"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../github/" class="btn btn-neutral float-right" title="Source Control with Git and VScode">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../r/" class="btn btn-neutral float-left" title="R"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../vscode/" class="btn btn-neutral float-right" title="VScode">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -222,10 +294,10 @@
         </span>
     
     
-      <span><a href="../bash/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../r/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../github/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../vscode/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

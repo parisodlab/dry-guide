@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>VScode - Parisod Lab Dry Guide</title>
+    <title>Uploading sequence data to SRA - Parisod Lab Dry Guide</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "VScode";
-        var mkdocs_page_input_path = "vscode.md";
+        var mkdocs_page_name = "Uploading sequence data to SRA";
+        var mkdocs_page_input_path = "sra.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,7 +44,7 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Knowledge Base</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../intro/">Lab Introduction</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../best_practices/">Best Practices</a>
@@ -53,9 +53,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">VScode</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../vscode/">VScode</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../github/">Source Control with Git and VScode</a>
                   </li>
@@ -136,10 +134,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Knowledge Base</li>
-      <li class="breadcrumb-item active">VScode</li>
+      <li class="breadcrumb-item active">Uploading sequence data to SRA</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/vscode.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/sra.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -147,56 +144,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <div class="toc">
+                <h1 id="uploading_sequence_data_to_sra">Uploading sequence data to SRA<a class="headerlink" href="#uploading_sequence_data_to_sra" title="Permanent link">&para;</a></h1>
+<p>For each dataset, it is important to also upload the FASTQ files to NCBI's Sequence Read Archive (SRA) or ENA (See. <strong>ena.md</strong>). <strong>If a bioproject already exists, you can create a new submission and link to the previous bioproject</strong>. If there is no previous bioproject, you can create a new bioproject and add all relevant data. See below for more instructions.</p>
+<h2 id="sra_submission">SRA submission<a class="headerlink" href="#sra_submission" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Begin submission</strong></li>
+</ol>
 <ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#steps">Steps</a><ul>
-<li><a href="#1_install_the_remote_-_ssh_extension">1. Install the Remote - SSH extension</a></li>
-<li><a href="#2_connect_to_the_remote_server">2. Connect to the remote server</a></li>
-<li><a href="#3_set_keybindings_to_run_code_on_the_remote_server">3. Set keybindings to run code on the remote server</a></li>
+<li>In the <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">SRA submission portal</a>, click the button for "New submission" and follow the prompts.</li>
+<li>Remember to add the previous bioproject ID if applicable to link this submission to previous submissions.</li>
+<li>Select "Model organism or animal" for biosample type, select "upload file using excel" and download the <a href="https://www.ncbi.nlm.nih.gov/biosample/docs/templates/packages/Model.organism.animal.1.0.xlsx">template</a></li>
 </ul>
-</li>
+<ol start="2">
+<li><strong>Create biosample sheet (an example can be found below)</strong></li>
+</ol>
+<ul>
+<li>An easy starting point here is the sample sheet used for <code>alignment-nf</code>. You will keep the id as the sample name (unique identifier) and strain (note strain also needs to be unique - if there are multiple library preps for the same strain, please append "-2" etc. to the strain)</li>
+<li>To these two columns, you can add bioproject, organism, developmental stage, sex, and tissue (same across all strains)</li>
+<li>Finally, join this data with the WI species master sheet to get collected by, collection date, and latitude/longitude.
+        - <em>Note: latitude/longitude need to be converted into one shared column in the format "34.89 S 56.15 W" (+ refers to North and East)</em></li>
+<li>Copy the data into the relevent columns in the <a href="https://www.ncbi.nlm.nih.gov/biosample/docs/templates/packages/Model.organism.animal.1.0.xlsx">template</a>, save, and upload to the submission portal
+<img alt="" src="../img/sra_biosample.png" /></li>
 </ul>
-</div>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This guide will walk you through how to connect to a remote server using Visual Studio Code (VScode). This is useful if you want to edit files on a remote server without having to use a terminal or a text editor like <code>vim</code> or <code>nano</code>. You can also setup keybindings to run code on the remote server, which is useful to document your code while you are creating and testing it.</p>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
-<h3 id="1_install_the_remote_-_ssh_extension">1. Install the Remote - SSH extension<a class="headerlink" href="#1_install_the_remote_-_ssh_extension" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Open VScode</li>
-<li>Click on the Extensions icon on the left-hand side of the window</li>
-<li>Search for <code>Remote - SSH</code> in the search bar</li>
-<li>Click on the green <code>Install</code> button</li>
+<ol start="3">
+<li><strong>Create SRA metadata sheet</strong></li>
 </ol>
-<h3 id="2_connect_to_the_remote_server">2. Connect to the remote server<a class="headerlink" href="#2_connect_to_the_remote_server" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Click on the <code>Remote Explorer</code> icon on the left-hand side of the window (it looks like a little monitor)</li>
-<li>Click on the <code>+</code> icon at the top of the window</li>
-<li>Enter the username and IP address/server id of the server you want to connect to (e.g. <code>username@ip_address</code>, e.g. <code>&lt;user_id&gt;@login8.hpc.binf.unibe.ch</code> -IBU or <code>&lt;user_id&gt;@biolpc045604</code> - p910)</li>
-<li>Select the SSH configuration file you want to use and update (e.g. <code>~/.ssh/config</code>)</li>
-<li>Once you receive Host added message, click <code>Connect</code>, you will be prompted to enter your password</li>
-<li>Once connected you need to open a folder on the remote server. Click on the <code>Open Folder</code> button and select the folder you want to open. You will be prompted to enter your password again.</li>
-<li>You can now Open a terminal on the remote server by clicking on the <code>Terminal</code> menu and selecting <code>New Terminal</code>. Now you can run commands on the remote server, while saving and editing files (e.g. README.md) in VScode.</li>
+<ul>
+<li>Again, select "upload a file using excel" and download the <a href="https://ftp-trace.ncbi.nlm.nih.gov/sra/metadata_table/SRA_metadata.xlsx">template</a></li>
+<li>An easy starting point here is, again, the sample sheet used for <code>alignment-nf</code>. You will keep the id as the sample name and the lb as library id. You will also keep fq1 and fq2 for filename and filename2.</li>
+<li>You will then add the rest of the columns as shown below. Note: the formatting is very specific for this sheet. The title can be found on the bioproject page. The instrument_model can be found by using the "sequencing_folder" (not shown, but part of the original sample sheet) and looking up the instrument that folder was run on in the Sequencing Runs google sheet (<a href="https://docs.google.com/spreadsheets/d/1CpSpzU1p-WtGKIMBK99DL5AeZb-A8QrHPuLkM_fAuEY/edit#gid=0">here</a>)</li>
+<li>Copy and paste the rows from this file into the <a href="https://ftp-trace.ncbi.nlm.nih.gov/sra/metadata_table/SRA_metadata.xlsx">template</a> to check for correct formatting. Then save the tab as a tsv and upload to the submission portal.
+<img alt="" src="../img/sra_metadata.png" /></li>
+</ul>
+<ol start="4">
+<li><strong>Pre-upload FASTQ files using FTP</strong></li>
 </ol>
-<h3 id="3_set_keybindings_to_run_code_on_the_remote_server">3. Set keybindings to run code on the remote server<a class="headerlink" href="#3_set_keybindings_to_run_code_on_the_remote_server" title="Permanent link">&para;</a></h3>
-<p><strong>Unix/Linux</strong>:
-<strong>Note</strong>: This step is useful if you want to document your code while you are creating and testing it.
-1. Click on the <code>File</code> menu and select <code>Preferences</code> -&gt; <code>Keyboard Shortcuts</code>
-2. Search for <code>Terminal: Run Selected Text in Active Terminal</code> and click on the pen icon to add a keybinding
-3. Enter the keybinding you want to use (e.g. <code>Ctrl+Enter</code>)</p>
-<p><strong>R</strong>:</p>
-<ol>
-<li>Create a dedicated R environment on the remote server using <code>conda</code> to install packages and run R code.</li>
-<li>install.packages("languageserver") in the above R to enable code completion and syntax highlighting in VScode.</li>
-<li>Install the <code>R</code> extension <code>REditorSupport.r</code> in VScode to run R code on the remote server.</li>
+<ul>
+<li>Create a list of files to upload to the FTP server by combining the filename1 and filename2 from the SRA metadata sheet (above).</li>
+<li>Begin submission by creating an NCBI account (or signing in -- personal account). Then follow the link to the <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">SRA submission portal</a></li>
+<li>Follow the instructions under the "FTP upload":</li>
+</ul>
+<pre><code># establish FTP connection from terminal (on QUEST!)
+# ftp &lt;address&gt;
+ftp ftp-private.ncbi.nlm.nih.gov
+
+# navigate to your account folder (i.e.)
+cd uploads/kathrynevans2015_u.northwestern.edu_YSlKSXQ4
+
+# create new folder for submission (i.e.)
+mkdir 20210121_submission
+
+# exit FTP connection
+exit
+
+# back on quest, run the following line to transfer every file with path listed in &quot;files_to_upload.tsv&quot; to that folder
+# make sure to change your upload folder and files to upload
+module load parallel
+parallel --verbose lftp -e \&quot;put -O /uploads/kathrynevans2015_u.northwestern.edu_YSlKSXQ4/20210121_submission {}\; bye\&quot; -u subftp,w4pYB9VQ ftp-private.ncbi.nlm.nih.gov &lt; files_to_upload.tsv
+</code></pre>
+<p><em>Note: it is important that this step is completely finished before you complete your SRA submission</em></p>
+<ol start="5">
+<li><strong>Complete submission</strong></li>
 </ol>
+<ul>
+<li>When finished, in the SRA portal you will be asked to select which folder you want to pull files from</li>
+<li>Review and submit! If there are any issues they will let you know.</li>
+</ul>
+<h2 id="list_of_current_bioprojects_associated_with_the_andersen_lab">List of current bioprojects associated with the Andersen Lab<a class="headerlink" href="#list_of_current_bioprojects_associated_with_the_andersen_lab" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>C. elegans</em> WI genome FASTQ - PRJNA549503 (link <a href="https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP201794&amp;o=acc_s%3Aa">here</a>)</li>
+</ul>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../bash/" class="btn btn-neutral float-left" title="Command Line"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../github/" class="btn btn-neutral float-right" title="Source Control with Git and VScode">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -222,10 +242,6 @@
         </span>
     
     
-      <span><a href="../bash/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../github/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

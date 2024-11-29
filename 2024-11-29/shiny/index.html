@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>VScode - Parisod Lab Dry Guide</title>
+    <title>R Shiny applications - Parisod Lab Dry Guide</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "VScode";
-        var mkdocs_page_input_path = "vscode.md";
+        var mkdocs_page_name = "R Shiny applications";
+        var mkdocs_page_input_path = "shiny.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,7 +44,7 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Knowledge Base</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../intro/">Lab Introduction</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../best_practices/">Best Practices</a>
@@ -53,9 +53,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">VScode</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../vscode/">VScode</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../github/">Source Control with Git and VScode</a>
                   </li>
@@ -136,10 +134,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Knowledge Base</li>
-      <li class="breadcrumb-item active">VScode</li>
+      <li class="breadcrumb-item active">R Shiny applications</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/vscode.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/shiny.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -147,56 +144,93 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <div class="toc">
+                <h1 id="r_shiny_applications">R Shiny applications<a class="headerlink" href="#r_shiny_applications" title="Permanent link">&para;</a></h1>
+<div class="toc">
 <ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#steps">Steps</a><ul>
-<li><a href="#1_install_the_remote_-_ssh_extension">1. Install the Remote - SSH extension</a></li>
-<li><a href="#2_connect_to_the_remote_server">2. Connect to the remote server</a></li>
-<li><a href="#3_set_keybindings_to_run_code_on_the_remote_server">3. Set keybindings to run code on the remote server</a></li>
+<li><a href="#r_shiny_applications">R Shiny applications</a><ul>
+<li><a href="#how_to_start_a_new_shiny_app">How to start a new shiny app?</a></li>
+<li><a href="#simple_example">Simple example</a></li>
+<li><a href="#reactivity">Reactivity</a></li>
+<li><a href="#publishing_your_shiny_app_to_shinyappsio">Publishing your shiny app to shinyapps.io</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>This guide will walk you through how to connect to a remote server using Visual Studio Code (VScode). This is useful if you want to edit files on a remote server without having to use a terminal or a text editor like <code>vim</code> or <code>nano</code>. You can also setup keybindings to run code on the remote server, which is useful to document your code while you are creating and testing it.</p>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
-<h3 id="1_install_the_remote_-_ssh_extension">1. Install the Remote - SSH extension<a class="headerlink" href="#1_install_the_remote_-_ssh_extension" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Open VScode</li>
-<li>Click on the Extensions icon on the left-hand side of the window</li>
-<li>Search for <code>Remote - SSH</code> in the search bar</li>
-<li>Click on the green <code>Install</code> button</li>
-</ol>
-<h3 id="2_connect_to_the_remote_server">2. Connect to the remote server<a class="headerlink" href="#2_connect_to_the_remote_server" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Click on the <code>Remote Explorer</code> icon on the left-hand side of the window (it looks like a little monitor)</li>
-<li>Click on the <code>+</code> icon at the top of the window</li>
-<li>Enter the username and IP address/server id of the server you want to connect to (e.g. <code>username@ip_address</code>, e.g. <code>&lt;user_id&gt;@login8.hpc.binf.unibe.ch</code> -IBU or <code>&lt;user_id&gt;@biolpc045604</code> - p910)</li>
-<li>Select the SSH configuration file you want to use and update (e.g. <code>~/.ssh/config</code>)</li>
-<li>Once you receive Host added message, click <code>Connect</code>, you will be prompted to enter your password</li>
-<li>Once connected you need to open a folder on the remote server. Click on the <code>Open Folder</code> button and select the folder you want to open. You will be prompted to enter your password again.</li>
-<li>You can now Open a terminal on the remote server by clicking on the <code>Terminal</code> menu and selecting <code>New Terminal</code>. Now you can run commands on the remote server, while saving and editing files (e.g. README.md) in VScode.</li>
-</ol>
-<h3 id="3_set_keybindings_to_run_code_on_the_remote_server">3. Set keybindings to run code on the remote server<a class="headerlink" href="#3_set_keybindings_to_run_code_on_the_remote_server" title="Permanent link">&para;</a></h3>
-<p><strong>Unix/Linux</strong>:
-<strong>Note</strong>: This step is useful if you want to document your code while you are creating and testing it.
-1. Click on the <code>File</code> menu and select <code>Preferences</code> -&gt; <code>Keyboard Shortcuts</code>
-2. Search for <code>Terminal: Run Selected Text in Active Terminal</code> and click on the pen icon to add a keybinding
-3. Enter the keybinding you want to use (e.g. <code>Ctrl+Enter</code>)</p>
-<p><strong>R</strong>:</p>
-<ol>
-<li>Create a dedicated R environment on the remote server using <code>conda</code> to install packages and run R code.</li>
-<li>install.packages("languageserver") in the above R to enable code completion and syntax highlighting in VScode.</li>
-<li>Install the <code>R</code> extension <code>REditorSupport.r</code> in VScode to run R code on the remote server.</li>
-</ol>
+<p>Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.</p>
+<hr />
+<h2 id="how_to_start_a_new_shiny_app">How to start a new shiny app?<a class="headerlink" href="#how_to_start_a_new_shiny_app" title="Permanent link">&para;</a></h2>
+<p>If you already know R, getting started in shiny just requires learning a few new concepts and some new functions/syntax. Check out this great <a href="https://shiny.rstudio.com/tutorial/">tutorial</a> to learn more (great video!)!</p>
+<p><strong>Getting started</strong></p>
+<p>You can create a shiny application in Rstudio by clicking <code>File &gt; New File &gt; Shiny Web App</code>. Rstudio will install any packages necessary (like <code>shiny</code>) and then ask if you want your application to be in one file called <code>app.R</code> or two files: <code>ui.R</code> and <code>server.R</code>. Either way is okay. If you have a large, complex application, it might be easier to split up the UI (user interface) and the server (the meat of the application).</p>
+<p>Just like with Rmarkdown, a new Rshiny application comes preloaded with some basic code for you to get a look at. To run a shiny application from Rstudio, simply press the green "run application" button in the upper right of the script panel. A new window should pop up with the application. You can also choose at this point to "open in browser" instead by selecting that button in the upper right of the shiny app.</p>
+<p>You now have the beginning of a shiny app! You can add new visual elements to your application in the <code>ui.R</code> or in the <code>shiny::ui()</code> function in <code>app.R</code> and you can create the objects, plots, and manipulate data in the <code>server</code>. Here are some of the most commonly used objects (for a full list, check out <a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/">this page</a>):</p>
+<p>**</p>
+<p><em>Inputs</em>
+You can create an input using one of the following functions in the <code>ui</code>, then use that input in the <code>sever</code> with <code>input$input_id</code>
+* <code>shiny::radioButtons()</code>
+* <code>shiny::textInput()</code>
+* <code>shiny::selectInput()</code>
+* <code>shiny::sliderInput()</code>
+* <code>shiny::fileInput()</code>
+* <code>shiny::actionButton()</code></p>
+<p><em>Outputs</em>
+You must create an output in the <code>server</code> and then display that output in the <code>ui</code>:
+| Create ouput in server | Show output in UI |
+| --- | --- |
+| <code>shiny::renderPlot()</code> | <code>shiny::plotOutput()</code> |
+| <code>shiny::renderTable()</code> | <code>shiny::tableOutput()</code> |
+| <code>shiny::renderUI()</code> | <code>shiny::uiOutput()</code> |
+| <code>shiny::renderText()</code> | <code>shiny::textOutput()</code> |</p>
+<h2 id="simple_example">Simple example<a class="headerlink" href="#simple_example" title="Permanent link">&para;</a></h2>
+<pre><code>library(shiny)
+
+# Define UI for application that draws a histogram
+ui &lt;- shiny::fluidPage(
+    # Application title
+    shiny::titlePanel(&quot;Old Faithful Geyser Data&quot;),
+
+    # Sidebar with a slider input for number of bins 
+    shiny::sidebarLayout(
+        shiny::sidebarPanel(
+            shiny::sliderInput(&quot;bins&quot;,
+                        &quot;Number of bins:&quot;,
+                        min = 1,
+                        max = 50,
+                        value = 30)
+        ),
+
+        # Show a plot of the generated distribution
+        shiny::mainPanel(
+            shiny::plotOutput(&quot;distPlot&quot;)
+        )
+    )
+)
+
+# Define server logic required to draw a histogram
+server &lt;- function(input, output) {
+
+    output$distPlot &lt;- shiny::renderPlot({
+        # generate bins based on input$bins from ui.R
+        x    &lt;- faithful[, 2]
+        bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)
+
+        # draw the histogram with the specified number of bins
+        hist(x, breaks = bins, col = 'darkgray', border = 'white')
+    })
+}
+
+# Run the application 
+shiny::shinyApp(ui = ui, server = server)
+
+</code></pre>
+<h2 id="reactivity">Reactivity<a class="headerlink" href="#reactivity" title="Permanent link">&para;</a></h2>
+<p>Check out this great overview on <a href="https://shiny.rstudio.com/articles/reactivity-overview.html">reactivity</a>, the cornerstone of shiny applications. It talks about how the inputs are related to outputs and when outputs update in response to inputs.</p>
+<h2 id="publishing_your_shiny_app_to_shinyappsio">Publishing your shiny app to shinyapps.io<a class="headerlink" href="#publishing_your_shiny_app_to_shinyappsio" title="Permanent link">&para;</a></h2>
+<p>After testing your new shiny app in Rstudio, you might be ready to deploy to the web for other people to access! The Andersen Lab has their own shinyapps.io account, so if you are making a lab-related app it is best to use this account (for login details, ask Robyn!)</p>
+<p>Publishing is simple - press the "publish" button in the upper right-hand corner of your running application and follow the prompts to select the right account. Once published, your application will be available at <code>https://parisod-lab.shinyapps.io/{your_app_name}</code></p>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../bash/" class="btn btn-neutral float-left" title="Command Line"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../github/" class="btn btn-neutral float-right" title="Source Control with Git and VScode">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -222,10 +256,6 @@
         </span>
     
     
-      <span><a href="../bash/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../github/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
