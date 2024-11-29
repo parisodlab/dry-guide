@@ -1,4 +1,4 @@
-
+# Code in VScode
 [TOC]
 
 ## Overview
@@ -6,6 +6,7 @@
 This guide will walk you through how to connect to a remote server using Visual Studio Code (VScode). This is useful if you want to edit files on a remote server without having to use a terminal or a text editor like `vim` or `nano`. You can also setup keybindings to run code on the remote server, which is useful to document your code while you are creating and testing it.
 
 ## Steps
+
 
 ### 1. Install the Remote - SSH extension
 
@@ -51,10 +52,10 @@ If you want to avoid entering your password every time you connect to the remote
 
 2. Add the following configuration for your remote server:
    ```plaintext
-   Host <myhost>
+   Host <host>
      HostName <host>
      User <username>
-     IdentityFile "path/to/.ssh/keys/<myhost>_rsa"
+     IdentityFile "path/to/.ssh/keys/<host>_rsa"
    ```
    Replace the placeholders:
    - `<host>`: The remote server's hostname or IP address.
@@ -96,14 +97,14 @@ You can use any method to transfer the public key to the remote server:
 2. Set up the public key for SSH authentication:
    ```bash
    mkdir -p ~/.ssh
-   cat ~/myhost_rsa.pub >> ~/.ssh/authorized_keys
+   cat ~/host_rsa.pub >> ~/.ssh/authorized_keys
    chmod 700 ~/.ssh
    chmod 600 ~/.ssh/authorized_keys
    ```
 
    If `authorized_keys` doesn’t exist:
    ```bash
-   mv ~/myhost_rsa.pub ~/.ssh/authorized_keys
+   mv ~/host_rsa.pub ~/.ssh/authorized_keys
    chmod 600 ~/.ssh/authorized_keys
    ```
 
