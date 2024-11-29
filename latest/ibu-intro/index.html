@@ -193,7 +193,7 @@
 </div>
 <h2 id="new_users">New Users<a class="headerlink" href="#new_users" title="Permanent link">&para;</a></h2>
 <p>To gain access to IBU: </p>
-<p>Register new user by reIBUing allocation and parisod group access to Pierre.</p>
+<p>Register new user by requesting IBU allocation and parisod group access to Pierre.</p>
 <h2 id="signing_into_ibu">Signing into IBU<a class="headerlink" href="#signing_into_ibu" title="Permanent link">&para;</a></h2>
 <p>After you gain access to the cluster you can login using:</p>
 <pre><code>ssh &lt;user_id&gt;@login8.hpc.binf.unibe.ch
@@ -235,9 +235,9 @@
 </div>
 <h2 id="request_interact_sessions_on_ibu">Request 'interact' sessions on IBU<a class="headerlink" href="#request_interact_sessions_on_ibu" title="Permanent link">&para;</a></h2>
 <p>If you are running a few simple commands or want to experiment with files directly you can start an interactive session on IBU. The command below (based on the <code>srun</code> command) will give you access to a node where you can run your command:</p>
-<pre><code>interact -n 1 -c 1 -m 64G -p queue-name -t “time in minutes”
+<pre><code>srun -p pibu_el8 -c 4 --mem 4G --time 2-0  --pty /bin/bash
 </code></pre>
-<p>Where <code>-n</code> is the number of nodes, <code>-c</code> is the number of cores, <code>-a</code> is the allocation ID, <code>-m</code> is the allocated memory,<code>-p</code> is the partition/queue, and <code>-t</code> is the walltime for the session.</p>
+<p>Where <code>-c</code> is the number of cores,  <code>--mem</code> is the allocated memory,<code>-p</code> is the partition/queue, and <code>--time</code> is the walltime for the session.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Do not run commands for big data directly on login node, they are not meant for running heavy-load workflows. Either open an interact session, or submit a job.</p>
@@ -247,11 +247,11 @@
 <p><strong>screen</strong></p>
 <p>Perhaps the most common way to deal with scripts that run for a long time is <a href="https://linuxize.com/post/how-to-use-linux-screen/"><code>screen</code></a>. For the most simple case use, type <code>screen</code> to open a new screen session and then run your script like normal. Below are some more intermediate commands for taking full advantage of <code>screen</code>:</p>
 <ul>
-<li><code>screen -S &lt;some_descriptive_name&gt;</code>: Use this command to name your screen session. Especially useful if you have several scren sessions running and/or want to get back to this particular one later.</li>
+<li><code>screen -R &lt;some_descriptive_name&gt;</code>: Use this command to name your screen session. Especially useful if you have several scren sessions running and/or want to get back to this particular one later.</li>
 <li><code>Ctrl+a</code> follwed by <code>Ctrl+d</code> to detach from the current screen session (NOT <code>Ctrl+a+d</code>!)</li>
 <li><code>exit</code> to end the current screen session</li>
 <li><code>screen -ls</code> lists the IDs of all screen sessions currently running </li>
-<li><code>screen -r &lt;screen_id&gt;</code>: Use this command to resume a particular screen session. If you only have one session running you can simply use <code>screen -r</code></li>
+<li><code>screen -R &lt;screen_id&gt;</code>: Use this command to resume a particular screen session. </li>
 </ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -259,18 +259,19 @@
 </div>
 <p><strong>nohup</strong></p>
 <p>Another way to avoid <strong>SIGHUP</strong> errors is to use <a href="https://linuxhint.com/how_to_use_nohup_linux/"><code>nohup</code></a>. <code>nohup</code> is very simple to use, simply type <code>nohup</code> before your normal command and that's it!</p>
-<pre><code>nohup nextflow run main.nf
+<pre><code>nohup nextflow run main.nf 2&gt;&amp;1 &amp;
 </code></pre>
 <p>Running a command with <code>nohup</code> will look a little different than usual because it will not print anything to the console. Instead, it prints all console outputs into a file in the current directory called <code>nohup.out</code>. You can redirect the output to another filename using:</p>
-<pre><code>nohup nextflow run main.nf &gt; {date}_output.txt
+<pre><code>nohup nextflow run main.nf &gt; {date}_output.txt 2&gt;&amp;1 &amp;
 </code></pre>
 <p>When you exit this window and open a new session, you can always look at the contents of the output file using <code>cat nohup.out</code> to see the progress.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can also run <code>nohup</code> in the background to continue using the same window for other processes by running <code>nohup nextflow run main.nf &amp;</code>.</p>
+<p>You can also run <code>nohup</code> in the background to continue using the same window for other processes by running <code>nohup nextflow run main.nf &amp;</code>.
+By  2&gt;&amp;1 you are redirecting both stdout and stderr to the same file.</p>
 </div>
 <h2 id="using_packages_already_installed_on_ibu">Using packages already installed on IBU<a class="headerlink" href="#using_packages_already_installed_on_ibu" title="Permanent link">&para;</a></h2>
-<p>IBU has a collection of packages installed. You can run <code>module avail |&amp; less</code> to see what packages are currently available on IBU. You can use <code>module load bcftools</code> or <code>module load bcftools/1.15.1</code> to load packages with the default or a specific version (<code>module add</code> does the same thing). If you do <code>echo $PATH</code> before and after loading modules, you can see what module does is simply appending paths to the packages into your <code>$PATH</code> so the packages can be found in your environment.</p>
+<p>IBU has a collection of packages installed. You can run <code>module avail |&amp; less</code> or <code>module spider</code> to see what packages are currently available on IBU. You can use <code>module load bcftools</code> or <code>module load bcftools/1.15.1</code> to load packages with the default or a specific version (<code>module add</code> does the same thing). If you do <code>echo $PATH</code> before and after loading modules, you can see what module does is simply appending paths to the packages into your <code>$PATH</code> so the packages can be found in your environment.</p>
 <p><code>module purge</code> will remove all loaded packages and can be helpful to try when troubleshooting.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
