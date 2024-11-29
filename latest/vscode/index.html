@@ -222,10 +222,10 @@ This step is useful if you want to document your code while you are creating and
 <li>
 <p>Add the following configuration for your remote server:
    <code>plaintext
-   Host &lt;myhost&gt;
+   Host &lt;host&gt;
      HostName &lt;host&gt;
      User &lt;username&gt;
-     IdentityFile "path/to/.ssh/keys/&lt;myhost&gt;_rsa"</code>
+     IdentityFile "path/to/.ssh/keys/&lt;host&gt;_rsa"</code>
    Replace the placeholders:
    - <code>&lt;host&gt;</code>: The remote server's hostname or IP address.
    - <code>&lt;username&gt;</code>: Your username on the remote server.</p>
@@ -264,14 +264,14 @@ This step is useful if you want to document your code while you are creating and
 <p>Set up the public key for SSH authentication:
    <code>bash
    mkdir -p ~/.ssh
-   cat ~/myhost_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+   cat ~/host_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
    chmod 700 ~/.ssh
    chmod 600 ~/.ssh/authorized_keys</code></p>
 </li>
 </ol>
 <p>If <code>authorized_keys</code> doesn’t exist:
    <code>bash
-   mv ~/myhost_rsa.pub ~/.ssh/authorized_keys
+   mv ~/host_rsa.pub ~/.ssh/authorized_keys
    chmod 600 ~/.ssh/authorized_keys</code></p>
 <p><strong>5. Test SSH Connection</strong>  </p>
 <ol>
