@@ -40,4 +40,96 @@ This step is useful if you want to document your code while you are creating and
 5. Follow the [steps here:](https://github.com/REditorSupport/vscode-R/wiki/Installation:-Linux) to make vscode mimic RStudio.
 
 
+### 4. Passwordless SSH Access in VS Code
+
+If you want to avoid entering your password every time you connect to the remote server, you can set up passwordless SSH access. This involves generating SSH keys and configuring your local and remote machines to use them for authentication.
+
+**1. Configure Your Local SSH Client**  
+
+1. Open your SSH configuration file, from vscode. Go to Yiew -> Command Palette -> type `Remote-SSH: Open SSH Configuration File` and select the file you want to edit.  
+   If the file doesn't exist, create it.
+
+2. Add the following configuration for your remote server:
+   ```plaintext
+   Host <myhost>
+     HostName <host>
+     User <username>
+     IdentityFile "path/to/.ssh/keys/<myhost>_rsa"
+   ```
+   Replace the placeholders:
+   - `<host>`: The remote server's hostname or IP address.
+   - `<username>`: Your username on the remote server.
+
+**2. Generate SSH Keys**  
+
+1. Generate a public/private key pair:
+   ```bash
+   ssh-keygen -q -b 2048 -P "" -f path/to/.ssh/keys/<host>_rsa -t rsa
+   ```
+   This creates:
+   - `path/to/.ssh/keys/<host>_rsa` (private key)
+   - `path/to/.ssh/keys/<host>_rsa.pub` (public key)
+
+2. Ensure the keys are stored securely:
+   ```bash
+   chmod 700 path/to/.ssh
+   chmod 600 path/to/.ssh/keys/<host>_rsa
+   ```
+
+**3. Copy the Public Key to the Remote Server**  
+
+You can use any method to transfer the public key to the remote server:  
+
+**Using `scp`**  
+   ```bash
+   scp path/to/.ssh/keys/<host>_rsa.pub <username>@<host>:~/
+   ```
+
+
+**4. Configure the Remote Server**  
+
+1. Log in to the remote server:
+   ```bash
+   ssh <username>@<host>
+   ```
+
+2. Set up the public key for SSH authentication:
+   ```bash
+   mkdir -p ~/.ssh
+   cat ~/myhost_rsa.pub >> ~/.ssh/authorized_keys
+   chmod 700 ~/.ssh
+   chmod 600 ~/.ssh/authorized_keys
+   ```
+
+   If `authorized_keys` doesn’t exist:
+   ```bash
+   mv ~/myhost_rsa.pub ~/.ssh/authorized_keys
+   chmod 600 ~/.ssh/authorized_keys
+   ```
+
+**5. Test SSH Connection**  
+
+1. On your local machine, test the connection:
+   ```bash
+   ssh <username>@<host>
+   ```
+   If configured correctly, you should log in without entering a password.
+
+**6. Set Up VS Code**  
+
+1. Open VS Code and install the **Remote - SSH** extension from the Extensions Marketplace.
+
+2. Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and select:
+   ```
+   Remote-SSH: Connect to Host...
+   ```
+
+3. Choose the host configured in `path/to/.ssh/config`. You should connect to your server without entering a password.
+
+**Troubleshooting**  
+
+- **Permission Issues:** Ensure that `.ssh` and key files have the correct permissions:
+   - `.ssh`: `700`
+   - Private key: `600`
+   - `authorized_keys`: `600`
 
