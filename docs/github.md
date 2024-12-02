@@ -26,7 +26,7 @@ There are two main ways to use Git: on the command line (aka Terminal on Macs) o
 
 ## The GitHub Flow
 
-There are several different Git branching strategies, but the most popular for our lab is the "GitHub Flow". This 8 step process can help keep our pipelines flowing, functional, and organized. New to the GitHub flow? I **highly recommend** you try out [this amazing tutorial](https://lab.github.com/githubtraining/introduction-to-github) to practice all the steps from beginning to end. Then start putting it in use for your own pipelines!
+There are several different Git branching strategies, but the most popular for our lab is the "GitHub Flow". This 8 step process can help keep our pipelines flowing, functional, and organized. 
 
 ![github flow](img/github_flow.png)
 

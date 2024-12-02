@@ -132,15 +132,15 @@ __Example__:
 
 ```
 ---
-title: "Katie's paper accepted at <em>G3</em>!"
-subtitle: "Correlations of geneotype with climate parameters suggest <em>Caenorhabditis elegans</em> niche adaptations"
+title: "Sandra's paper accepted at <em>G3</em>!"
+subtitle: "Ice age-driven range shifts of diploids and expanding autotetraploids of <em>Biscutella laevigata</em> within a conserved niche."
 layout: post
 tags: news
 published: true
-PMID: 27866149
+PMID: 39253771
 ---
 
-Congratulations to Katie for her paper accepted at G3!
+Congratulations to Sandra for her paper accepted at G3!
 ```
 
 ## Lab members
@@ -183,17 +183,17 @@ Lab members can be moved to the bottom of the people page under the 'former memb
 For example:
 
 ```
-- first_name: Mostafa
+- first_name: Manuel
   pub_names: 
-    - Zamanian M
-  last_name: Zamanian
+    - Poretti M
+  last_name: Poretti
   description: My research broadly spans "neglected disease" genomics and drug discovery. I am currently working to uncover new genetic determinants of anthelmintic resistance and to develop genome editing technology for human pathogenic helminths.
-  title: Postdoctoral Researcher, 2015-2017
-  photo: Mostafa2014.jpg
+  title: Postdoctoral Researcher, 2021-2024
+  photo: manuel.jpg
   former: true
-  github: mzamanian
-  email: zamanian@northwestern.edu
-  current_status: Assistant Professor at UW Madison -- <a href='http://www.zamanianlab.org/'>Zamanian Lab Website</a>
+  github: mporetti
+  email: manuel.poretti@unifr.ch
+  current_status: Postdoc at University of Melbourne -- <a href='https://ch.linkedin.com/in/manuelporetti'>Manuel's Linkedin Profile</a>
 ```
 
 ### Remove lab members
@@ -209,14 +209,8 @@ To update funding simply place the logo of the institution providing funding in 
 This file is structured as a set of `basename: url` pairs:
 
 ```
-nigms: https://www.nigms.nih.gov/Pages/default.aspx
-acs: http://www.cancer.org/
-pew: http://www.pewtrusts.org/en
-niaid: https://www.niaid.nih.gov/
 aws: https://aws.amazon.com/
-weinberg: http://www.weinberg.northwestern.edu/
-mod: http://www.marchofdimes.org/
-cbc: http://www.chicagobiomedicalconsortium.org/
+snf: http://www.snf.ch/en/Pages/default.aspx
 ```
 
 Each acronym above corresponds with an image file in the `current/` or `past/` folder. Notice that the extension (e.g. jpeg/png, etc) does not matter. Just use the basename of the file and its associated link here.
@@ -228,7 +222,7 @@ Protocols are stored in the `protocols/` folder and their titles and pdfs are ma
 ```
 - Name: Title of Protocol
   file: filename_of_protocol_in_protocols_folder.pdf
-  group: <em>C. elegans</em> Phenotyping methods
+  group: <em>Biscutella</em> Phenotyping methods
 ```
 
 * `name` - The name of the protocol
@@ -236,18 +230,12 @@ Protocols are stored in the `protocols/` folder and their titles and pdfs are ma
 * `group` - The grouping of the protocol; It will be nested under this grouping on the protocols page.
 
 ```
-- name: Semi-Quantitative Brood Assay
-  file: SemiQuantitativeBroodAssay.pdf
-  group: <em>C. elegans</em> Phenotyping Methods
-- name: <em>Pseudomonas aeruginosa</em> Fast-killing assay</a>
-  file: FKAprotocol.pdf
-  group: <em>C. elegans</em> Phenotyping Methods
-- name: <em>Staphylococcus aureus</em> killing assay</a>
-  file: Staphaureus_Protocol.pdf
-  group: <em>C. elegans</em> Phenotyping Methods
-- name: <em>Bacillus thuringiensis</em> toxin assay on plates</a>
-  file: Bacillus-thuringiensis-toxin-plate-assay.pdf
-  group: <em>C. elegans</em> Phenotyping Methods
+- name: Semi-Quantitative Biomass Assay
+  file: SemiQuantitativeBiomassAssay.pdf
+  group: <em>Biscutella</em> Phenotyping Methods
+- name: <em>Putella</em> Culture</a>
+  file: PutellaCultureprotocol.pdf
+  group: <em>Biscutella</em> Phenotyping Methods
 ```
 
 To remove a protocol, delete the pdf and remove the corresponding lines.
@@ -261,14 +249,12 @@ The research portion of the site is structured as a set of sections - each devot
 
 ```
 ---
-title: High-throughput approaches to understand conserved drug responses
-image: worms_drugs2.jpg
+title: Description of the project
+image: project_image.jpg
 order: 1
 ---
 
-Because of the efforts of a number of highly dedicated scientists and citizen volunteers...
-
-To this end, we deep sequenced all of these strains...
+Research content goes here.
 ```
 
 The page includes a header (the items located between `---`) which includes a number of important items.
@@ -311,39 +297,46 @@ __(3) Edit `_data/pubs_data.yaml`__
 The publication should now be added either manually or automatically to `_data/pubs_data.yaml` and should look something like this:
 
 ```
-- Authors: [Laricchia KM, Zdraljevic S, Cook DE, Parisod EC]
-  Citations: 0
-  DOI: 10.1093/molbev/msx155
-  Journal: Molecular Biology and Evolution
-  PMID: 28486636
-  Title: Natural variation in the distribution and abundance of transposable elements
-    across the Caenorhabditis elegans species
+- Authors:
+  - "Gr\xFCnig S"
+  - Patsiou T
+  - Parisod C
+  DOI: 10.1111/nph.20103
+  Journal: New Phytol
+  PMC: null
+  PMID: '39253771'
+  Title: Ice age-driven range shifts of diploids and expanding autotetraploids of
+    Biscutella laevigata within a conserved niche
+
 ```
 
 You will need to add a few things:
   - Add a `PDF:` line to associate the publication with the correct PDF and its thumbnail. This is the same `tag` you used above.
   - If there is no `Date_Published:` line you will want to add that. The format is `YYYY-month_abbr-DD` (e.g. `2017 Aug 17`).
-  - Add `<em>` tags around items you want to italicize: `<em>Caenorhabditis elegans</em>`
+  - Add `<em>` tags around items you want to italicize: `<em>Biscutella laevigata</em>`
 
 Final result:
 
 ```
-- Authors: [Laricchia KM, Zdraljevic S, Cook DE, Parisod EC]
-  Citations: 0
-  DOI: 10.1093/molbev/msx155
-  Date_Published: 2017 May 09
-  Journal: Molecular Biology and Evolution
-  PMID: 28486636
-  Title: Natural variation in the distribution and abundance of transposable elements
-    across the <em>Caenorhabditis elegans</em> species
-  PDF: 2017Laricchia
+- Authors:
+  - "Gr\xFCnig S"
+  - Patsiou T
+  - Parisod C
+  DOI: 10.1111/nph.20103
+  Date_Published: 2024 September 16
+  Journal: New Phytol
+  PMC: null
+  PMID: '39253771'
+  Title: Ice age-driven range shifts of diploids and expanding autotetraploids of
+    <em>Biscutella laevigata</em> within a conserved niche
+  PDF: 2024BiscutellaNewPhytol.pdf
 ```
 
 __(4) Add supplementary data__
 
-Supplemental data and figures are stored in `publications/[pdf_name]`. For example, `2017Laricchia` has an associated folder in `publications/` where supplemental data and figures are stored: `publications/2017Laricchia/<supplemental files>`
+Supplemental data and figures are stored in `publications/[pdf_name]`. For example, `2024BiscutellaNewPhytol` has an associated folder in `publications/` where supplemental data and figures are stored: `publications/2024BiscutellaNewPhytol/<supplemental files>`
 
-Once you have added supplemental files, you'll need to add some information to `_data/pubs_data.yaml` to describe them. These are the lines that were added for `2017Laricchia`:
+Once you have added supplemental files, you'll need to add some information to `_data/pubs_data.yaml` to describe them. These are the lines that were added for `2024BiscutellaNewPhytol`:
 
 ```
   pub_data:
@@ -375,7 +368,7 @@ __(1) Place images in a folder and name it according to the following schema:__
 
 `YYYY-MM-DD-title`
 
-For example, `2017-08-05-Hawaii Trip`.
+For example, `2024-06-05-Manuel-Farewell`.
 
 __(2) Move that folder to `/people/albums/`__
 
