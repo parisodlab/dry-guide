@@ -230,8 +230,7 @@
 <ul>
 <li>For Nextflow pipelines, you can include <code>renv::activate()</code> at the beginning of your R scripts to make sure the correct environment is loaded:</li>
 </ul>
-<p><code>bash
-   echo "renv::activate()" | cat - ${workflow.projectDir}/bin/Script.R &gt; Script.R
+<p><code>echo "renv::activate()" | cat - ${workflow.projectDir}/bin/Script.R &gt; Script.R
    Rscript --vanilla Script.R</code></p>
 <h2 id="running_rstudio_on_ibu">Running Rstudio on IBU<a class="headerlink" href="#running_rstudio_on_ibu" title="Permanent link">&para;</a></h2>
 <p>The IBU allow users with active IBU allocations to use RStudio from a web browser. See <a href="https://docs.pages.bioinformatics.unibe.ch/cluster-docs/documentation/resources/rstudio_server/">IBU Rstudio Server</a> for an overview of the system.</p>
