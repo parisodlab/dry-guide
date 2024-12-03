@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>R - Parisod Lab Dry Guide</title>
+    <title>Command Line - Parisod Lab Dry Guide</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "R";
-        var mkdocs_page_input_path = "r.md";
+        var mkdocs_page_name = "Command Line";
+        var mkdocs_page_input_path = "bash.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -49,17 +49,15 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../best_practices/">Best Practices</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">R</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../r/">R</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Command Line</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#general_r_resources">General R resources</a>
+    <li class="toctree-l2"><a class="reference internal" href="#basic_commands">Basic Commands</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#using_r_on_ibu">Using R on IBU</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#running_rstudio_on_ibu">Running Rstudio on IBU</a>
+    <li class="toctree-l2"><a class="reference internal" href="#more_advanced">More Advanced</a>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../vscode/">VScode</a>
                   </li>
@@ -143,9 +141,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Knowledge Base</li>
-      <li class="breadcrumb-item active">R</li>
+      <li class="breadcrumb-item active">Command Line</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/r.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/bash.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -153,104 +151,123 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="r">R<a class="headerlink" href="#r" title="Permanent link">&para;</a></h1>
+                <h1 id="command_line">Command line<a class="headerlink" href="#command_line" title="Permanent link">&para;</a></h1>
 <div class="toc">
 <ul>
-<li><a href="#r">R</a><ul>
-<li><a href="#general_r_resources">General R resources</a></li>
-<li><a href="#using_r_on_ibu">Using R on IBU</a></li>
-<li><a href="#running_rstudio_on_ibu">Running Rstudio on IBU</a></li>
+<li><a href="#command_line">Command line</a><ul>
+<li><a href="#basic_commands">Basic Commands</a></li>
+<li><a href="#more_advanced">More Advanced</a></li>
+</ul>
+</li>
+<li><a href="#good_guides">Good Guides</a><ul>
+<li><a href="#grep">grep</a></li>
+<li><a href="#awk">awk</a><ul>
+<li><a href="#rearranging_columns">Rearranging columns</a></li>
+<li><a href="#filtering_based_on_criteria">Filtering based on criteria</a></li>
+</ul>
+</li>
+<li><a href="#bcftools">bcftools</a></li>
+<li><a href="#screen">Screen</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="general_r_resources">General R resources<a class="headerlink" href="#general_r_resources" title="Permanent link">&para;</a></h2>
-<p>If you are looking for some help getting started with R or taking your R to the next level, check out these useful resources:</p>
+<p><a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> is the default unix shell on Mac OS and most Linux operating systems. Many bioinformatic programs are run using the command line, so becoming familiar with Bash is important.</p>
+<p>Start with this <a href="http://cs.lmu.edu/~ray/notes/bash/">introduction to bash</a>. Also check out this <a href="https://gist.github.com/ssledz/9d244e4d5898fbd217d67bb62bdc22e5">cheatsheet</a></p>
+<h2 id="basic_commands">Basic Commands<a class="headerlink" href="#basic_commands" title="Permanent link">&para;</a></h2>
+<p>You should familiarize yourself with the following commands.</p>
 <ul>
-<li><a href="https://swirlstats.com/students.html">Swirl - interactive R learning</a></li>
-<li><a href="https://github.com/katiesevans/nuit_tidyverse">Tidyverse workshop and resources</a></li>
-<li><a href="https://github.com/Parisodlab/code_club/blob/main/R_cheatsheet.md">Parisod Lab R Knowledge base &amp; Cheatsheet</a></li>
-<li><a href="https://www.r-bloggers.com/">R-bloggers - tips and tricks</a></li>
-<li><a href="https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/">Using Rprojects to organize scripts</a></li>
-<li><a href="https://www.rdocumentation.org/packages/workflowr/versions/0.7.0">Using workflowR for reproducible work</a></li>
-<li><a href="https://rmarkdown.rstudio.com/articles_intro.html">Using Rmarkdown to generate reports</a></li>
-<li>Also check out the <code>lab_code</code> slack channel for help/ibuions!</li>
+<li><strong>alias</strong> - create a shortcut for a command</li>
+<li><strong>cat</strong> - concatenate files</li>
+<li><strong>zcat</strong> - concatenate zipped files</li>
+<li><strong>cd</strong> - change directories</li>
+<li><strong>curl</strong> - download files</li>
+<li><strong>echo</strong> - print strings</li>
+<li><strong>export</strong> - Add a variable to the global environment so that they get passed on to child processes.</li>
+<li><strong>grep</strong> - filter by pattern</li>
+<li><strong>egrep</strong> - filter by regex</li>
+<li><strong>rm</strong> - delete files</li>
+<li><strong>sudo</strong> - run as an administrator</li>
+<li><strong>sort</strong> - sorts files</li>
+<li><strong>source</strong> - runs a file</li>
+<li><strong>ssh</strong> - connect to servers</li>
+<li><strong>which</strong> - locate files on your PATH</li>
+<li><strong>uniq</strong> - get unique lines. File must be sorted.</li>
 </ul>
-<h2 id="using_r_on_ibu">Using R on IBU<a class="headerlink" href="#using_r_on_ibu" title="Permanent link">&para;</a></h2>
-<p>Making sure everyone has the same version of several different R packages (specifically Tidyverse) can be a nightmare for software development. Fortunately, there are several ways to get around this issue:</p>
+<h2 id="more_advanced">More Advanced<a class="headerlink" href="#more_advanced" title="Permanent link">&para;</a></h2>
+<p>You should learn these once you have the basics down.</p>
 <ul>
-<li>
-<p><strong>Docker/singularity container</strong> - instead of using conda environments (or maybe in addition to), a docker/singularity image can be generated with R packages installed. The benefit is that singularity images can be used on IBU or locally and minimal set up is required. The downside is that on some occasions there can be errors generating the docker image with incompatible package versions.</p>
+<li><strong>git</strong> - version control</li>
+<li><strong>awk</strong> - file manipulation; Filtering; Rearranging columns</li>
+<li><strong>sed</strong> - quick find/replace</li>
+</ul>
+<h1 id="good_guides">Good Guides<a class="headerlink" href="#good_guides" title="Permanent link">&para;</a></h1>
+<p>Below are some good guides for various bash utilities.</p>
+<h2 id="grep">grep<a class="headerlink" href="#grep" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://linuxhint.com/grep_egrep_regex/">using grep with regular expressions</a></li>
+<li><a href="https://linuxize.com/post/regular-expressions-in-grep/">another regex grep guide</a></li>
+</ul>
+<h2 id="awk">awk<a class="headerlink" href="#awk" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://linuxconfig.org/learning-linux-commands-awk">awk guide</a></li>
+<li><a href="https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_awk.md">awk by example</a> - hundreds of examples</li>
+</ul>
+<h3 id="rearranging_columns">Rearranging columns<a class="headerlink" href="#rearranging_columns" title="Permanent link">&para;</a></h3>
+<pre><code>cat example.tsv | awk -f OFS=&quot;\t&quot; '{ print $2, $3, $1 }'
+</code></pre>
+<p>The line above will print the second column, the third column and finally the first column.</p>
+<h3 id="filtering_based_on_criteria">Filtering based on criteria<a class="headerlink" href="#filtering_based_on_criteria" title="Permanent link">&para;</a></h3>
+<p><strong>Print only lines that start with a comment (#) character</strong></p>
+<pre><code>cat example.tsv awk '$0 ~ &quot;^#&quot; { print }'
+</code></pre>
+<h2 id="bcftools">bcftools<a class="headerlink" href="#bcftools" title="Permanent link">&para;</a></h2>
+<p><em>bcftools view</em></p>
+<ul>
+<li><strong>bcftools view <vcf></strong> - view VCF<ul>
+<li><strong>bcftools view -h <vcf></strong> - view only header of VCF</li>
+<li><strong>bcftools view -H <vcf></strong> - view VCF without header</li>
+</ul>
 </li>
-<li>
-<p><strong>Using <code>renv</code> for R Package Management</strong>: Renv is a package that allows you to create a project-specific library for R packages. This is useful for ensuring that all users have the same version of R packages. To use renv, you need to install the package and then run <code>renv::init()</code> in your R project. This will create a <code>renv.lock</code> file that lists all the packages you have installed in your project. When you share your project with someone else, they can run <code>renv::restore()</code> to install the same versions of the packages you have. This is a good way to ensure that everyone is using the same versions of R packages.</p>
+<li><strong>bcftools view -s CB4856,XZ1516,ECA701 <vcf></strong> - subset vcf for only these three samples<ul>
+<li><strong>bcftools view -S sample_file.txt <vcf></strong> - subset vcf for only samples listed in <code>sample_file.txt</code></li>
+</ul>
+</li>
+<li><strong>bcftools view -r III:1-800000 <vcf></strong> - subset vcf for a region of interest<ul>
+<li>can also just use <code>-r III</code> to get entire chromosome</li>
+<li><strong>bcftools view -R regions.txt <vcf></strong> - subset vcf for a region(s) of interest in the <code>regions.txt</code> file</li>
+</ul>
 </li>
 </ul>
-<p><strong>Setting Up <code>renv</code></strong>: </p>
-<ol>
-<li><strong>Install <code>renv</code></strong>:
-   First, you'll need to install <code>renv</code> if it isn't already installed.</li>
-</ol>
-<p><code>R
-   install.packages("renv")</code></p>
-<ol start="2">
-<li><strong>Initialize <code>renv</code></strong>:
-   Navigate to your project directory and initialize <code>renv</code>. This will create a project-specific library and an <code>renv.lock</code> file that captures the versions of the packages you are using.</li>
-</ol>
-<p><code>R
-   renv::init()</code></p>
-<p>This will snapshot the current state of your R environment, saving the versions of all packages currently installed and used in the project.</p>
-<ol start="3">
-<li><strong>Install Packages</strong>:
-   You can install any required packages as usual, and <code>renv</code> will manage them within the project’s library.</li>
-</ol>
-<p><code>R
-   renv::install("tidyverse")</code></p>
-<ol start="4">
-<li><strong>Snapshot Dependencies</strong>:
-   Whenever you make changes to your package dependencies, update the lock file to reflect these changes.</li>
-</ol>
-<p><code>R
-   renv::snapshot()</code></p>
-<p>The <code>renv.lock</code> file can be committed to your version control system to ensure that anyone else using the project can recreate the exact same environment.</p>
-<ol start="5">
-<li><strong>Restoring the Environment</strong>:
-   When someone else clones your project repository, they can restore the project environment using the <code>renv.lock</code> file.</li>
-</ol>
-<p><code>R
-   renv::restore()</code></p>
-<p>This will install the exact versions of the packages as specified in the <code>renv.lock</code> file, ensuring consistent environments across different users and systems.</p>
-<p><strong>Using <code>renv</code> in Scripts and Pipelines</strong>:</p>
+<p><em>bcftools query</em></p>
 <ul>
-<li>You can add the following lines to your scripts to ensure the <code>renv</code> environment is automatically activated when running the script:</li>
+<li><strong>bcftools query -l <vcf></strong> - print out list of samples in vcf</li>
+<li>Print out contents of vcf in specified format (i.e. tsv):</li>
 </ul>
-<p><code>R
-   if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
-   renv::activate()</code></p>
+<pre><code>bcftools query -f '%CHROM\t%POS\t%REF\t%ALT[\t%SAMPLE=%GT]\n' &lt;vcf&gt; &gt; out.tsv
+</code></pre>
+<p><em>Output of above line of code:</em></p>
+<p><img alt="bcftools_out" src="../img/bcftools.png" /></p>
 <ul>
-<li>For Nextflow pipelines, you can include <code>renv::activate()</code> at the beginning of your R scripts to make sure the correct environment is loaded:</li>
+<li><strong>bcftools query -i GT=="alt" <vcf></strong> - keep rows that include a tag (like a filter)</li>
+<li><strong>bcftools query -e GT=="ref" <vcf></strong> - remove rows that include a tag</li>
 </ul>
-<p><code>bash
-   echo "renv::activate()" | cat - ${workflow.projectDir}/bin/Script.R &gt; Script.R
-   Rscript --vanilla Script.R</code></p>
-<h2 id="running_rstudio_on_ibu">Running Rstudio on IBU<a class="headerlink" href="#running_rstudio_on_ibu" title="Permanent link">&para;</a></h2>
-<p>The IBU allow users with active IBU allocations to use RStudio from a web browser. See <a href="https://docs.pages.bioinformatics.unibe.ch/cluster-docs/documentation/resources/rstudio_server/">IBU Rstudio Server</a> for an overview of the system.</p>
-<p>Go to the https://rstudio.bioinformatics.unibe.ch/users/$USER_NAME/ (Do not forget the “/” at the end). Log in with your netid and password just like you would on IBU.
-<em>make sure you are connected with VPN if you are off campus</em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The version of R on the Rstudio browser is currently 4.1.1, which is likely different from the version of R you run on IBU. Therefore, you will need to re-install any packages you want to use in the browser.</p>
+<p><code>bcftools query -i/e</code> are not necessarily opposites. For example, if you have three genotype options (REF, ALT, or NA), including only ALT calls is different than exluding only REF calls...</p>
 </div>
-<p>You can set the working directory with <code>setwd("path_to_directory")</code> and then open and save files and data in Rstudio just like you were using it locally on your computer -- but with data and files on IBU!!</p>
-<p>To link RStudio server to the filesystem:
-1. create an RSTUDIO directory in the project root (e.g. /data/projects/$PROJECT_ID/) or at the user level (/data/users/$USERNAME/)
-2. the folder will appear in your RStudio home directory (check the files pane). Note: this may take up to 10' (worst case scenario)</p>
+<p>For more, check out the <a href="https://samtools.github.io/bcftools/howtos/index.html">bcftools manual</a> and <a href="https://gist.github.com/elowy01/93922762e131d7abd3c7e8e166a74a0b">this cheatsheet</a></p>
+<h2 id="screen">Screen<a class="headerlink" href="#screen" title="Permanent link">&para;</a></h2>
+<p>Screen can be used to run things in the background. It is extremely useful if you need to run things on quest without worry that they will be terminated if you log out or get kicked off. This is essential when running <strong>nextflow</strong> because pipelines can sometimes run for many hours and its likely you will be kicked off in that time or lose your connection.</p>
+<ul>
+<li><a href="https://www.linode.com/docs/networking/ssh/using-gnu-screen-to-manage-persistent-terminal-sessions">Screen basics</a></li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../best_practices/" class="btn btn-neutral float-left" title="Best Practices"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../bash/" class="btn btn-neutral float-right" title="Command Line">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../r/" class="btn btn-neutral float-left" title="R"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../vscode/" class="btn btn-neutral float-right" title="VScode">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -277,10 +294,10 @@
         </span>
     
     
-      <span><a href="../best_practices/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../r/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../bash/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../vscode/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

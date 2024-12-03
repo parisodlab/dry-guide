@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>R - Parisod Lab Dry Guide</title>
+    <title>Best Practices - Parisod Lab Dry Guide</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "R";
-        var mkdocs_page_input_path = "r.md";
+        var mkdocs_page_name = "Best Practices";
+        var mkdocs_page_input_path = "best_practices.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -47,17 +47,19 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../intro/">Lab Introduction</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../best_practices/">Best Practices</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">R</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Best Practices</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#general_r_resources">General R resources</a>
+    <li class="toctree-l2"><a class="reference internal" href="#general">General</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#using_r_on_ibu">Using R on IBU</a>
+    <li class="toctree-l2"><a class="reference internal" href="#r">R</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#running_rstudio_on_ibu">Running Rstudio on IBU</a>
+    <li class="toctree-l2"><a class="reference internal" href="#ibu">IBU</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#python">Python</a>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../r/">R</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
                   </li>
@@ -143,9 +145,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Knowledge Base</li>
-      <li class="breadcrumb-item active">R</li>
+      <li class="breadcrumb-item active">Best Practices</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/r.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/best_practices.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -153,104 +155,76 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="r">R<a class="headerlink" href="#r" title="Permanent link">&para;</a></h1>
-<div class="toc">
+                <h2 id="parisod_lab_coding_best_practices">Parisod Lab Coding Best Practices<a class="headerlink" href="#parisod_lab_coding_best_practices" title="Permanent link">&para;</a></h2>
+<p>These best practices are just a few of the important coding tips and tricks for reproducible research. If you have more ideas, contact Rimjhim!</p>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="#r">R</a><ul>
-<li><a href="#general_r_resources">General R resources</a></li>
-<li><a href="#using_r_on_ibu">Using R on IBU</a></li>
-<li><a href="#running_rstudio_on_ibu">Running Rstudio on IBU</a></li>
+<li>You should be doing most (if not all) of your analyses in <code>LabDrives/YourProjectName</code> (except for IBU, see below)<ul>
+<li>This is (1) to make sure the data is backed up/saved with version history and (2) to allow other lab members to access your code/scripts when necessary</li>
+</ul>
+</li>
+<li>Do <strong>NOT</strong> use spaces in names of files or folders. Try not to use spaces in column names too (although sometimes it is necessary for a final table output)<ul>
+<li>Computers often have a hard time reading spaces and code used to ignore spaces can vary from program to program</li>
+<li>Instead, you can use <code>_</code> or <code>.</code> or <code>-</code> or capitalization (<code>fileName.txt</code>)</li>
+</ul>
+</li>
+<li><strong>NEVER</strong> replace raw data!!!!!<ul>
+<li>You should save your raw data in the rawest format, and submitted to ENA as soon as possible. Write a script to analyze it, then if you wish, save the processed data for further use. This is important because it always allows you to go back to the original raw data in case something happens</li>
+<li>Some suggested project folder structure might look like something below:
+<img alt="directory_structure" src="../img/directory_structure.png" /></li>
+</ul>
+</li>
+<li>Include a <code>README.md</code> (or <code>README.txt</code>) file in each project folder to explain where the data and scripts can be found for certain analyses. Trust me, after a few years you will definitely forget…<ul>
+<li>And don’t forget to update the <code>README</code> regularly, an old <code>README</code> doesn’t do anyone good!</li>
+</ul>
+</li>
+<li>Either use full path names in scripts or be explicit about where the working directory is<ul>
+<li>This is important to allow other people to run your code (or might even be helpful for you if you ever reorganize folders one day)</li>
+</ul>
+</li>
+<li>Date your files, especially when you update an existing file. Write dates in <code>YYYYMMDD</code> format</li>
+<li>As much as possible, ensure that your processed data is “tidy” (see below). This doesn’t work for all complex data types, but it should be a general norm to follow.<ul>
+<li>Each variable must have its own column</li>
+<li>Each observation must have its own row</li>
+<li>Each value must have its own cell</li>
+<li>No color or highlighting </li>
+<li>No empty cells (fill with <code>NA</code> if necessary)</li>
+<li>Save data as plain text files (<code>.csv</code>, <code>.tsv</code>, <code>.txt</code> etc. -- NOT <code>.xls</code>!!!)</li>
 </ul>
 </li>
 </ul>
+<h3 id="r">R<a class="headerlink" href="#r" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ALWAYS</strong> use namespaces before functions from packages (i.e. <code>dplyr::filter()</code> instead of <code>filter()</code>)<ul>
+<li>This includes <code>ggplot2</code> and especially <code>dplyr</code>!!!</li>
+<li>Some packages have functions with the same name, so adding a namespace is crucial for reproducibility.</li>
+<li>Also, this helps other people read your code by knowing which functions came from which packages</li>
+</ul>
+</li>
+<li>When piping with Tidyverse (<code>%&gt;%</code>), press <code>&lt;Enter&gt;</code> to go to the next line after a pipe<ul>
+<li>This makes your code more readable </li>
+<li>In fact, general practices state no more than 80-100 characters per line of code EVER to increase readability</li>
+</ul>
+</li>
+</ul>
+<h3 id="ibu">IBU<a class="headerlink" href="#ibu" title="Permanent link">&para;</a></h3>
+<ul>
+<li>You should be doing most (if not all) of your analyses in <code>/data/projects/&lt;project_name&gt;/&lt;user_id&gt;</code> or <code>/data/users/&lt;user_id&gt;</code> (not your home directory (i.e. <code>/home/&lt;user_id&gt;</code>))</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Main exception: Snakemake and Nextflow temporary working directories should NOT be on <code>/data</code> (it will fill us up!) but rather in the scratch space (files get automatically deleted here every 30 days).<br />
+A correctly designed <a href="IBU-nextflow">nextflow.config</a> file will take care of this.<br />
+For Snakemake, you can set the <code>--directory</code> flag to <code>/scratch/&lt;user_id&gt;/&lt;project_name&gt;</code> (or similar)</p>
 </div>
-<h2 id="general_r_resources">General R resources<a class="headerlink" href="#general_r_resources" title="Permanent link">&para;</a></h2>
-<p>If you are looking for some help getting started with R or taking your R to the next level, check out these useful resources:</p>
-<ul>
-<li><a href="https://swirlstats.com/students.html">Swirl - interactive R learning</a></li>
-<li><a href="https://github.com/katiesevans/nuit_tidyverse">Tidyverse workshop and resources</a></li>
-<li><a href="https://github.com/Parisodlab/code_club/blob/main/R_cheatsheet.md">Parisod Lab R Knowledge base &amp; Cheatsheet</a></li>
-<li><a href="https://www.r-bloggers.com/">R-bloggers - tips and tricks</a></li>
-<li><a href="https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/">Using Rprojects to organize scripts</a></li>
-<li><a href="https://www.rdocumentation.org/packages/workflowr/versions/0.7.0">Using workflowR for reproducible work</a></li>
-<li><a href="https://rmarkdown.rstudio.com/articles_intro.html">Using Rmarkdown to generate reports</a></li>
-<li>Also check out the <code>lab_code</code> slack channel for help/ibuions!</li>
-</ul>
-<h2 id="using_r_on_ibu">Using R on IBU<a class="headerlink" href="#using_r_on_ibu" title="Permanent link">&para;</a></h2>
-<p>Making sure everyone has the same version of several different R packages (specifically Tidyverse) can be a nightmare for software development. Fortunately, there are several ways to get around this issue:</p>
-<ul>
-<li>
-<p><strong>Docker/singularity container</strong> - instead of using conda environments (or maybe in addition to), a docker/singularity image can be generated with R packages installed. The benefit is that singularity images can be used on IBU or locally and minimal set up is required. The downside is that on some occasions there can be errors generating the docker image with incompatible package versions.</p>
-</li>
-<li>
-<p><strong>Using <code>renv</code> for R Package Management</strong>: Renv is a package that allows you to create a project-specific library for R packages. This is useful for ensuring that all users have the same version of R packages. To use renv, you need to install the package and then run <code>renv::init()</code> in your R project. This will create a <code>renv.lock</code> file that lists all the packages you have installed in your project. When you share your project with someone else, they can run <code>renv::restore()</code> to install the same versions of the packages you have. This is a good way to ensure that everyone is using the same versions of R packages.</p>
-</li>
-</ul>
-<p><strong>Setting Up <code>renv</code></strong>: </p>
-<ol>
-<li><strong>Install <code>renv</code></strong>:
-   First, you'll need to install <code>renv</code> if it isn't already installed.</li>
-</ol>
-<p><code>R
-   install.packages("renv")</code></p>
-<ol start="2">
-<li><strong>Initialize <code>renv</code></strong>:
-   Navigate to your project directory and initialize <code>renv</code>. This will create a project-specific library and an <code>renv.lock</code> file that captures the versions of the packages you are using.</li>
-</ol>
-<p><code>R
-   renv::init()</code></p>
-<p>This will snapshot the current state of your R environment, saving the versions of all packages currently installed and used in the project.</p>
-<ol start="3">
-<li><strong>Install Packages</strong>:
-   You can install any required packages as usual, and <code>renv</code> will manage them within the project’s library.</li>
-</ol>
-<p><code>R
-   renv::install("tidyverse")</code></p>
-<ol start="4">
-<li><strong>Snapshot Dependencies</strong>:
-   Whenever you make changes to your package dependencies, update the lock file to reflect these changes.</li>
-</ol>
-<p><code>R
-   renv::snapshot()</code></p>
-<p>The <code>renv.lock</code> file can be committed to your version control system to ensure that anyone else using the project can recreate the exact same environment.</p>
-<ol start="5">
-<li><strong>Restoring the Environment</strong>:
-   When someone else clones your project repository, they can restore the project environment using the <code>renv.lock</code> file.</li>
-</ol>
-<p><code>R
-   renv::restore()</code></p>
-<p>This will install the exact versions of the packages as specified in the <code>renv.lock</code> file, ensuring consistent environments across different users and systems.</p>
-<p><strong>Using <code>renv</code> in Scripts and Pipelines</strong>:</p>
-<ul>
-<li>You can add the following lines to your scripts to ensure the <code>renv</code> environment is automatically activated when running the script:</li>
-</ul>
-<p><code>R
-   if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
-   renv::activate()</code></p>
-<ul>
-<li>For Nextflow pipelines, you can include <code>renv::activate()</code> at the beginning of your R scripts to make sure the correct environment is loaded:</li>
-</ul>
-<p><code>bash
-   echo "renv::activate()" | cat - ${workflow.projectDir}/bin/Script.R &gt; Script.R
-   Rscript --vanilla Script.R</code></p>
-<h2 id="running_rstudio_on_ibu">Running Rstudio on IBU<a class="headerlink" href="#running_rstudio_on_ibu" title="Permanent link">&para;</a></h2>
-<p>The IBU allow users with active IBU allocations to use RStudio from a web browser. See <a href="https://docs.pages.bioinformatics.unibe.ch/cluster-docs/documentation/resources/rstudio_server/">IBU Rstudio Server</a> for an overview of the system.</p>
-<p>Go to the https://rstudio.bioinformatics.unibe.ch/users/$USER_NAME/ (Do not forget the “/” at the end). Log in with your netid and password just like you would on IBU.
-<em>make sure you are connected with VPN if you are off campus</em></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The version of R on the Rstudio browser is currently 4.1.1, which is likely different from the version of R you run on IBU. Therefore, you will need to re-install any packages you want to use in the browser.</p>
-</div>
-<p>You can set the working directory with <code>setwd("path_to_directory")</code> and then open and save files and data in Rstudio just like you were using it locally on your computer -- but with data and files on IBU!!</p>
-<p>To link RStudio server to the filesystem:
-1. create an RSTUDIO directory in the project root (e.g. /data/projects/$PROJECT_ID/) or at the user level (/data/users/$USERNAME/)
-2. the folder will appear in your RStudio home directory (check the files pane). Note: this may take up to 10' (worst case scenario)</p>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
+<p>[ Needs filling in from someone who uses python :) ]</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../best_practices/" class="btn btn-neutral float-left" title="Best Practices"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../bash/" class="btn btn-neutral float-right" title="Command Line">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../intro/" class="btn btn-neutral float-left" title="Lab Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../r/" class="btn btn-neutral float-right" title="R">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -277,10 +251,10 @@
         </span>
     
     
-      <span><a href="../best_practices/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../intro/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../bash/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../r/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
