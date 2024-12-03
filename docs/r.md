@@ -21,38 +21,6 @@ Making sure everyone has the same version of several different R packages (speci
 
 * __Docker/singularity container__ - instead of using conda environments (or maybe in addition to), a docker/singularity image can be generated with R packages installed. The benefit is that singularity images can be used on IBU or locally and minimal set up is required. The downside is that on some occasions there can be errors generating the docker image with incompatible package versions.
 
-* __Library Paths__ - For several recent pipelines on IBU, we can get around using a docker container for R packages by installing the proper versions of R packages to a shared location (`/projects/b1059/software/R_lib_3.6.0`). With the following code, any lab member can load the R package version from that location when running the pipeline, causing no errors, even if they don't have the package installed in their local R. 
-
-```
-# to manually install a package to this specific folder
-# make sure to first load the correct R version, our pipelines are currently using 3.6.0
-module load R/3.6.0
-
-# open R
-R
-
-# install package
-install.packages("tidyverse", lib = "/projects/b1059/software/R_lib_3.6.0")
-
-# if you load the package normally, it won't work (unless you also have it installed in your path)
-library(tidyverse) # won't work
-
-# load the package from the specific folder
-library(tidyverse, lib.loc = "/projects/b1059/software/R_lib_3.6.0")
-
-# or add the path to your local R library to make for easier loading
-.libPaths(c("/projects/b1059/software/R_lib_3.6.0", .libPaths() ))
-library(tidyverse) # works
-
-# you can add the following lines to a nextflow script to use these R packages
-# set a parameter for R library path in case it updates in the future
-params.R_libpath = "/projects/b1059/software/R_lib_3.6.0"
-
-# add the .libPaths to the top of the script dynamically (we don't want it statically in case someone wants to use the pipeline outside of ibu)
-echo ".libPaths(c(\\"${params.R_libpath}\\", .libPaths() ))" | cat - ${workflow.projectDir}/bin/Script.R > Script.R
-Rscript --vanilla Script.R
-
-```
 
 * __Using `renv` for R Package Management__: Renv is a package that allows you to create a project-specific library for R packages. This is useful for ensuring that all users have the same version of R packages. To use renv, you need to install the package and then run `renv::init()` in your R project. This will create a `renv.lock` file that lists all the packages you have installed in your project. When you share your project with someone else, they can run `renv::restore()` to install the same versions of the packages you have. This is a good way to ensure that everyone is using the same versions of R packages.
 
@@ -117,13 +85,17 @@ Rscript --vanilla Script.R
 
 ## Running Rstudio on IBU
 
-The IBU Analytics Nodes allow users with active IBU allocations to use RStudio from a web browser. See [Research Computing: IBU Analytics Nodes](https://kb.northwestern.edu/ibu-rstudio) for an overview of the system.
+The IBU allow users with active IBU allocations to use RStudio from a web browser. See [IBU Rstudio Server](https://docs.pages.bioinformatics.unibe.ch/cluster-docs/documentation/resources/rstudio_server/) for an overview of the system.
 
-Go to the [Rstudio browser](https://rstudio.ibuanalytics.northwestern.edu) (*make sure you are connected with VPN if you are off campus*). Log in with your netid and password just like you would on IBU.
+Go to the https://rstudio.bioinformatics.unibe.ch/users/$USER_NAME/ (Do not forget the “/” at the end). Log in with your netid and password just like you would on IBU.
+*make sure you are connected with VPN if you are off campus*
 
 !!! Note
 	The version of R on the Rstudio browser is currently 4.1.1, which is likely different from the version of R you run on IBU. Therefore, you will need to re-install any packages you want to use in the browser.
 
 You can set the working directory with `setwd("path_to_directory")` and then open and save files and data in Rstudio just like you were using it locally on your computer -- but with data and files on IBU!!
 
+To link RStudio server to the filesystem:
+1. create an RSTUDIO directory in the project root (e.g. /data/projects/$PROJECT_ID/) or at the user level (/data/users/$USERNAME/)
+2. the folder will appear in your RStudio home directory (check the files pane). Note: this may take up to 10' (worst case scenario)
 
