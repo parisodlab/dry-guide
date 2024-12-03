@@ -19,24 +19,26 @@ If you are looking for some help getting started with R or taking your R to the 
 
 Making sure everyone has the same version of several different R packages (specifically Tidyverse) can be a nightmare for software development. Fortunately, there are several ways to get around this issue:
 
-* __Docker/singularity container__ - instead of using conda environments (or maybe in addition to), a docker/singularity image can be generated with R packages installed. The benefit is that singularity images can be used on IBU or locally and minimal set up is required. The downside is that on some occasions there can be errors generating the docker image with incompatible package versions.
+### __Docker/singularity container__:
+Instead of using conda environments (or maybe in addition to), a docker/singularity image can be generated with R packages installed. The benefit is that singularity images can be used on IBU or locally and minimal set up is required. The downside is that on some occasions there can be errors generating the docker image with incompatible package versions.
 
 
-* __Using `renv` for R Package Management__: Renv is a package that allows you to create a project-specific library for R packages. This is useful for ensuring that all users have the same version of R packages. To use renv, you need to install the package and then run `renv::init()` in your R project. This will create a `renv.lock` file that lists all the packages you have installed in your project. When you share your project with someone else, they can run `renv::restore()` to install the same versions of the packages you have. This is a good way to ensure that everyone is using the same versions of R packages.
+### __Using `renv` for R Package Management__: 
+Renv is a package that allows you to create a project-specific library for R packages. This is useful for ensuring that all users have the same version of R packages. To use renv, you need to install the package and then run `renv::init()` in your R project. This will create a `renv.lock` file that lists all the packages you have installed in your project. When you share your project with someone else, they can run `renv::restore()` to install the same versions of the packages you have. This is a good way to ensure that everyone is using the same versions of R packages.
 
 **Setting Up `renv`**: 
 
 1. **Install `renv`**:
    First, you'll need to install `renv` if it isn't already installed.
 
-   ```R
+   ```
    install.packages("renv")
    ```
 
 2. **Initialize `renv`**:
    Navigate to your project directory and initialize `renv`. This will create a project-specific library and an `renv.lock` file that captures the versions of the packages you are using.
 
-   ```R
+   ```
    renv::init()
    ```
 
@@ -45,14 +47,14 @@ Making sure everyone has the same version of several different R packages (speci
 3. **Install Packages**:
    You can install any required packages as usual, and `renv` will manage them within the project’s library.
 
-   ```R
+   ```
    renv::install("tidyverse")
    ```
 
 4. **Snapshot Dependencies**:
    Whenever you make changes to your package dependencies, update the lock file to reflect these changes.
 
-   ```R
+   ```
    renv::snapshot()
    ```
 
@@ -61,7 +63,7 @@ Making sure everyone has the same version of several different R packages (speci
 5. **Restoring the Environment**:
    When someone else clones your project repository, they can restore the project environment using the `renv.lock` file.
 
-   ```R
+   ```
    renv::restore()
    ```
 
@@ -71,14 +73,14 @@ Making sure everyone has the same version of several different R packages (speci
 
 - You can add the following lines to your scripts to ensure the `renv` environment is automatically activated when running the script:
 
-   ```R
+   ```
    if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
    renv::activate()
    ```
 
 - For Nextflow pipelines, you can include `renv::activate()` at the beginning of your R scripts to make sure the correct environment is loaded:
 
-   ```bash
+   ```
    echo "renv::activate()" | cat - ${workflow.projectDir}/bin/Script.R > Script.R
    Rscript --vanilla Script.R
    ```
@@ -95,7 +97,7 @@ Go to the https://rstudio.bioinformatics.unibe.ch/users/$USER_NAME/ (Do not forg
 
 You can set the working directory with `setwd("path_to_directory")` and then open and save files and data in Rstudio just like you were using it locally on your computer -- but with data and files on IBU!!
 
-To link RStudio server to the filesystem:
-1. create an RSTUDIO directory in the project root (e.g. /data/projects/$PROJECT_ID/) or at the user level (/data/users/$USERNAME/)
-2. the folder will appear in your RStudio home directory (check the files pane). Note: this may take up to 10' (worst case scenario)
+To link RStudio server to the filesystem:  
+1. create an RSTUDIO directory in the project root (e.g. /data/projects/$PROJECT_ID/) or at the user level (/data/users/$USERNAME/)  
+2. the folder will appear in your RStudio home directory (check the files pane). Note: this may take up to 10' (worst case scenario)  
 

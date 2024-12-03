@@ -141,7 +141,7 @@ Jobs on IBU are managed by [SLURM](https://slurm.schedmd.com/). While most of ou
 ```
 #!/bin/bash
 #SBATCH -J name                # Name of job
-#SBATCH -p parallel            # Parition/Queue
+#SBATCH -p pibu_el8            # Parition/Queue
 #SBATCH -t 24:00:00            # Walltime/duration of the job (hh:mm:ss)
 #SBATCH --cpus-per-task=1      # Number of cores (= processors = cpus) for each task
 #SBATCH --mem-per-cpu=3G       # Memory per core needed for a job
@@ -151,7 +151,7 @@ Jobs on IBU are managed by [SLURM](https://slurm.schedmd.com/). While most of ou
 # this script will run a parallel process for each file in this list
 name_list=(*.bam)
 
-# take the nth ($SGE_TASK_ID-th) file in name_list
+# take the nth ($SLURM_ARRAY_TASK_ID-th) file in name_list
 # don't change this line
 Input=${name_list[$SLURM_ARRAY_TASK_ID]} 
 
