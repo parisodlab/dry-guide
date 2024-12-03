@@ -13,7 +13,7 @@ If you are looking for some help getting started with R or taking your R to the 
 * [Using Rprojects to organize scripts](https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/)
 * [Using workflowR for reproducible work](https://www.rdocumentation.org/packages/workflowr/versions/0.7.0)
 * [Using Rmarkdown to generate reports](https://rmarkdown.rstudio.com/articles_intro.html)
-* Also check out the `lab_code` slack channel for help/ibuions!
+* Also check out the `lab_code` slack channel for help!
 
 ## Using R on IBU
 
