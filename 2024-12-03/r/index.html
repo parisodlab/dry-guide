@@ -55,7 +55,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#using_r_on_ibu">Using R on IBU</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#dockersingularity_container_-">Docker/singularity container -</a>
+    <li class="toctree-l3"><a class="reference internal" href="#dockersingularity_container">Docker/singularity container:</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#using_renv_for_r_package_management">Using renv for R Package Management:</a>
     </li>
@@ -165,7 +165,7 @@
 <li><a href="#r">R</a><ul>
 <li><a href="#general_r_resources">General R resources</a></li>
 <li><a href="#using_r_on_ibu">Using R on IBU</a><ul>
-<li><a href="#dockersingularity_container_-">Docker/singularity container -</a></li>
+<li><a href="#dockersingularity_container">Docker/singularity container:</a></li>
 <li><a href="#using_renv_for_r_package_management">Using renv for R Package Management:</a></li>
 </ul>
 </li>
@@ -188,7 +188,7 @@
 </ul>
 <h2 id="using_r_on_ibu">Using R on IBU<a class="headerlink" href="#using_r_on_ibu" title="Permanent link">&para;</a></h2>
 <p>Making sure everyone has the same version of several different R packages (specifically Tidyverse) can be a nightmare for software development. Fortunately, there are several ways to get around this issue:</p>
-<h3 id="dockersingularity_container_-"><strong>Docker/singularity container</strong> -<a class="headerlink" href="#dockersingularity_container_-" title="Permanent link">&para;</a></h3>
+<h3 id="dockersingularity_container"><strong>Docker/singularity container</strong>:<a class="headerlink" href="#dockersingularity_container" title="Permanent link">&para;</a></h3>
 <p>Instead of using conda environments (or maybe in addition to), a docker/singularity image can be generated with R packages installed. The benefit is that singularity images can be used on IBU or locally and minimal set up is required. The downside is that on some occasions there can be errors generating the docker image with incompatible package versions.</p>
 <h3 id="using_renv_for_r_package_management"><strong>Using <code>renv</code> for R Package Management</strong>:<a class="headerlink" href="#using_renv_for_r_package_management" title="Permanent link">&para;</a></h3>
 <p>Renv is a package that allows you to create a project-specific library for R packages. This is useful for ensuring that all users have the same version of R packages. To use renv, you need to install the package and then run <code>renv::init()</code> in your R project. This will create a <code>renv.lock</code> file that lists all the packages you have installed in your project. When you share your project with someone else, they can run <code>renv::restore()</code> to install the same versions of the packages you have. This is a good way to ensure that everyone is using the same versions of R packages.</p>
@@ -197,41 +197,35 @@
 <li><strong>Install <code>renv</code></strong>:
    First, you'll need to install <code>renv</code> if it isn't already installed.</li>
 </ol>
-<p><code>R
-   install.packages("renv")</code></p>
+<p><code>install.packages("renv")</code></p>
 <ol start="2">
 <li><strong>Initialize <code>renv</code></strong>:
    Navigate to your project directory and initialize <code>renv</code>. This will create a project-specific library and an <code>renv.lock</code> file that captures the versions of the packages you are using.</li>
 </ol>
-<p><code>R
-   renv::init()</code></p>
+<p><code>renv::init()</code></p>
 <p>This will snapshot the current state of your R environment, saving the versions of all packages currently installed and used in the project.</p>
 <ol start="3">
 <li><strong>Install Packages</strong>:
    You can install any required packages as usual, and <code>renv</code> will manage them within the project’s library.</li>
 </ol>
-<p><code>R
-   renv::install("tidyverse")</code></p>
+<p><code>renv::install("tidyverse")</code></p>
 <ol start="4">
 <li><strong>Snapshot Dependencies</strong>:
    Whenever you make changes to your package dependencies, update the lock file to reflect these changes.</li>
 </ol>
-<p><code>R
-   renv::snapshot()</code></p>
+<p><code>renv::snapshot()</code></p>
 <p>The <code>renv.lock</code> file can be committed to your version control system to ensure that anyone else using the project can recreate the exact same environment.</p>
 <ol start="5">
 <li><strong>Restoring the Environment</strong>:
    When someone else clones your project repository, they can restore the project environment using the <code>renv.lock</code> file.</li>
 </ol>
-<p><code>R
-   renv::restore()</code></p>
+<p><code>renv::restore()</code></p>
 <p>This will install the exact versions of the packages as specified in the <code>renv.lock</code> file, ensuring consistent environments across different users and systems.</p>
 <p><strong>Using <code>renv</code> in Scripts and Pipelines</strong>:</p>
 <ul>
 <li>You can add the following lines to your scripts to ensure the <code>renv</code> environment is automatically activated when running the script:</li>
 </ul>
-<p><code>R
-   if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+<p><code>if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
    renv::activate()</code></p>
 <ul>
 <li>For Nextflow pipelines, you can include <code>renv::activate()</code> at the beginning of your R scripts to make sure the correct environment is loaded:</li>
