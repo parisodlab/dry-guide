@@ -187,7 +187,7 @@ For example:
   pub_names: 
     - Poretti M
   last_name: Poretti
-  description: My research broadly spans "neglected disease" genomics and drug discovery. I am currently working to uncover new genetic determinants of anthelmintic resistance and to develop genome editing technology for human pathogenic helminths.
+  description: My research broadly spans... I am currently working to uncover... and to develop ....
   title: Postdoctoral Researcher, 2021-2024
   photo: manuel.jpg
   former: true
@@ -209,7 +209,7 @@ To update funding simply place the logo of the institution providing funding in 
 This file is structured as a set of `basename: url` pairs:
 
 ```
-aws: https://aws.amazon.com/
+veluxstiftung: https://veluxstiftung.ch
 snf: http://www.snf.ch/en/Pages/default.aspx
 ```
 
@@ -233,8 +233,8 @@ Protocols are stored in the `protocols/` folder and their titles and pdfs are ma
 - name: Semi-Quantitative Biomass Assay
   file: SemiQuantitativeBiomassAssay.pdf
   group: <em>Biscutella</em> Phenotyping Methods
-- name: <em>Putella</em> Culture</a>
-  file: PutellaCultureprotocol.pdf
+- name: Crab Spider Culture</a>
+  file: CrabSpiderCultureprotocol.pdf
   group: <em>Biscutella</em> Phenotyping Methods
 ```
 
