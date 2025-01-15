@@ -1,6 +1,6 @@
-# [Parisod Lab Dry Guide](http://parisodlab.org/dry-guide/)
+# [Parisod Lab Dry Guide](https://parisodlab.github.io/dry-guide/latest/)
 
-The Parisod lab [dry-lab computing guide](http://parisodlab.org/dry-guide/). The guide is built with [mkdocs](http://www.mkdocs.org/).
+The Parisod lab [dry-lab computing guide](https://parisodlab.github.io/dry-guide/latest/). The guide is built with [mkdocs](http://www.mkdocs.org/).
 
 ## Editing the site
 
