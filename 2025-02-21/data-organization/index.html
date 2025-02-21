@@ -161,7 +161,7 @@
 <li><strong>Include Metadata:</strong> Make sure to attach all necessary metadata.</li>
 <li><strong>Set an Embargo:</strong> Apply an embargo if needed, as soon as possible.</li>
 </ul>
-<p>Check out SRA Guidelines: (<strong>sra.md</strong>) and ENA Guidelines: ((<strong>ena.md</strong>)) for detailed instructions on how to submit data to NCBI SRA or ENA.</p>
+<p>Check out <a href="../sra/">SRA Guidelines</a> and <a href="../ena/">ENA Guidelines</a> for detailed instructions on how to submit data to NCBI SRA or ENA.</p>
 <hr />
 <h2 id="2_data_storage_requirements">2. Data Storage Requirements<a class="headerlink" href="#2_data_storage_requirements" title="Permanent link">&para;</a></h2>
 <ul>
@@ -178,18 +178,16 @@
 <li>Create and maintain analysis scripts and pipelines, and always use <strong>version control on the ParisodLab GitHub</strong>.</li>
 </ul>
 <hr />
-<h2 id="4_server_usage_guidelines">4. Server Usage Guidelines<a class="headerlink" href="#4_server_usage_guidelines" title="Permanent link">&para;</a></h2>
+<h2 id="3_server_usage_guidelines">3. Server Usage Guidelines<a class="headerlink" href="#3_server_usage_guidelines" title="Permanent link">&para;</a></h2>
 <h3 id="using_p910">Using p910<a class="headerlink" href="#using_p910" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Purpose:</strong>  </li>
-<li>
-<p>The <strong>p910</strong> server is <strong>only</strong> to be used as a gateway to connect to the following network drives provided by UniFR:</p>
-<ul>
+<li><strong>Purpose:</strong><br />
+  The <strong>p910</strong> server is <strong>only</strong> to be used as a gateway to connect to the following network drives provided by UniFR:</li>
 <li><strong>BigData</strong></li>
 <li><strong>Common</strong></li>
 <li><strong>OneCopy</strong></li>
-<li>Other designated network drives</li>
-</ul>
+<li>
+<p>Other designated network drives</p>
 </li>
 <li>
 <p><strong>What Not to Do on p910:</strong>  </p>
@@ -204,21 +202,21 @@
 </ul>
 </li>
 <li>
-<p><strong>Documentation:</strong>  </p>
+<p><strong>Documentation:</strong><br />
+  The p910 server is also used by the system administrator to manage lab documentation, which is always version controlled on the <strong>ParisodLab GitHub</strong>.</p>
 </li>
-<li>The p910 server is also used by the system administrator to manage lab documentation, which is always version controlled on the <strong>ParisodLab GitHub</strong>.</li>
 </ul>
 <hr />
-<h2 id="5_backup_guidelines_using_p910">5. Backup Guidelines (Using p910)<a class="headerlink" href="#5_backup_guidelines_using_p910" title="Permanent link">&para;</a></h2>
+<h2 id="4_backup_guidelines_using_p910">4. Backup Guidelines (Using p910)<a class="headerlink" href="#4_backup_guidelines_using_p910" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Precious Data:</strong>  </li>
 <li>
-<p>If you have valuable data that is not considered temporary, please move it to BigData as soon as possible.</p>
+<p><strong>Precious Data:</strong><br />
+  If you have valuable data that is not considered temporary, please move it to BigData as soon as possible.</p>
 </li>
 <li>
-<p><strong>BACKUP Folder (for p910):</strong>  </p>
+<p><strong>BACKUP Folder (for p910):</strong><br />
+  A folder named <strong>"BACKUP"</strong> is provided at the base of each drive on the <strong>p910</strong> server.</p>
 </li>
-<li>A folder named <strong>"BACKUP"</strong> is provided at the base of each drive on the <strong>p910</strong> server.</li>
 <li><strong>Important:</strong> Only data stored in this BACKUP folder on p910 will be automatically backed up.</li>
 <li>Create a subfolder within <strong>BACKUP</strong> with your name and place all critical files there.</li>
 <li>An <strong>automatic backup script</strong> will copy data from the BACKUP folder to BigData every evening at <strong>5 PM</strong>.</li>
@@ -226,13 +224,13 @@
 <p>We <strong>do not guarantee backups</strong> for any data stored elsewhere.</p>
 </li>
 <li>
-<p><strong>Backup Quota:</strong>  </p>
+<p><strong>Backup Quota:</strong><br />
+  Each user is allowed a maximum backup of <strong>1TB</strong>.<br />
+  If you require additional storage space, please contact the lab administrator.</p>
 </li>
-<li>Each user is allowed a maximum backup of <strong>1TB</strong>.  </li>
-<li>If you require additional storage space, please contact the lab administrator.</li>
 </ul>
 <hr />
-<h2 id="key_takeaways">Key Takeaways<a class="headerlink" href="#key_takeaways" title="Permanent link">&para;</a></h2>
+<h2 id="5_key_takeaways">5. Key Takeaways<a class="headerlink" href="#5_key_takeaways" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Submit raw NGS data</strong> with complete metadata and embargo settings to ENA/NCBI as soon as possible.</li>
 <li><strong>Ensure metadata</strong> for DNA/RNA samples is detailed and includes:</li>
