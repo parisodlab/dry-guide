@@ -63,6 +63,20 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Data Organization Guidelines</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1_data_submission">1. Data Submission</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2_data_storage_requirements">2. Data Storage Requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3_server_usage_guidelines">3. Server Usage Guidelines</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using_p910">Using p910</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4_backup_guidelines_using_p910">4. Backup Guidelines (Using p910)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5_key_takeaways">5. Key Takeaways</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ena/">Data Submission on ENA</a>
@@ -114,27 +128,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <p>This page outlines how to handle, store, and back up your NGS data to ensure that everyone in the lab has access to well-organized and secure data.</p>
+                <h1 id="data_organization_guidelines">Data Organization Guidelines<a class="headerlink" href="#data_organization_guidelines" title="Permanent link">&para;</a></h1>
+<p>This page outlines how to handle, store, and back up your NGS data so that everyone in the lab has access to well-organized and secure data.</p>
 <hr />
 <h2 id="1_data_submission">1. Data Submission<a class="headerlink" href="#1_data_submission" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Submit Raw Data Promptly:</strong><br />
-  When you receive raw data from the NGS facility, submit it to either the <strong>ENA</strong> or <strong>NCBI</strong>.  </li>
-<li><strong>Include Metadata:</strong> Make sure to attach all necessary metadata.</li>
+  When you receive raw data from the NGS facility, submit it to either <strong>ENA</strong> or <strong>NCBI</strong>.</li>
+<li><strong>Include Metadata:</strong> Attach all necessary metadata.</li>
 <li><strong>Set an Embargo:</strong> Apply an embargo if needed, as soon as possible.</li>
+<li>Check out <a href="../sra/">SRA Guidelines</a> and <a href="../ena/">ENA Guidelines</a> for detailed instructions on how to submit data to NCBI SRA or ENA.</li>
 </ul>
-<p>Check out <a href="../sra/">SRA Guidelines</a> and <a href="../ena/">ENA Guidelines</a> for detailed instructions on how to submit data to NCBI SRA or ENA.</p>
 <hr />
 <h2 id="2_data_storage_requirements">2. Data Storage Requirements<a class="headerlink" href="#2_data_storage_requirements" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>BigData Server:</strong>  </li>
 <li>Store <strong>raw data</strong> and <strong>final unfiltered results</strong> (e.g., unfiltered VCF files and other outputs) on the BigData server as soon as they are ready.</li>
-<li>
-<p>Move <strong>final filtered results</strong> to the BigData server promptly.</p>
-</li>
-<li>
-<p><strong>IBU Account for Long-Term Users:</strong>  </p>
-</li>
+<li>Move <strong>final filtered results</strong> to the BigData server promptly.</li>
+<li><strong>IBU Account for Long-Term Users:</strong>  </li>
 <li>All long-term users of the Parisod lab should obtain an <strong>IBU account</strong> as soon as possible.</li>
 <li><strong>Transfer raw data</strong> to your IBU account.</li>
 <li>Create and maintain analysis scripts and pipelines, and always use <strong>version control on the ParisodLab GitHub</strong>.</li>
@@ -170,27 +181,23 @@
 </ul>
 <hr />
 <h2 id="4_backup_guidelines_using_p910">4. Backup Guidelines (Using p910)<a class="headerlink" href="#4_backup_guidelines_using_p910" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Precious Data</p>
+<p>If you have valuable data that is not considered temporary, please move it to BigData as soon as possible.</p>
+</div>
 <ul>
-<li>
-<p><strong>Precious Data:</strong><br />
-  If you have valuable data that is not considered temporary, please move it to BigData as soon as possible.</p>
-</li>
-<li>
-<p><strong>BACKUP Folder (for p910):</strong><br />
-  A folder named <strong>"BACKUP"</strong> is provided at the base of each drive on the <strong>p910</strong> server.</p>
-</li>
+<li><strong>BACKUP Folder (for p910):</strong><br />
+  A folder named <strong>"BACKUP"</strong> is provided at the base of each drive on the <strong>p910</strong> server.</li>
 <li><strong>Important:</strong> Only data stored in this BACKUP folder on p910 will be automatically backed up.</li>
 <li>Create a subfolder within <strong>BACKUP</strong> with your name and place all critical files there.</li>
 <li>An <strong>automatic backup script</strong> will copy data from the BACKUP folder to BigData every evening at <strong>5 PM</strong>.</li>
-<li>
-<p>We <strong>do not guarantee backups</strong> for any data stored elsewhere.</p>
-</li>
-<li>
-<p><strong>Backup Quota:</strong><br />
-  Each user is allowed a maximum backup of <strong>1TB</strong>.<br />
-  If you require additional storage space, please contact the lab administrator.</p>
-</li>
+<li>We <strong>do not guarantee backups</strong> for any data stored elsewhere.</li>
 </ul>
+<div class="admonition important">
+<p class="admonition-title">Backup Quota</p>
+<p>Each user is allowed a maximum backup of <strong>1TB</strong>.<br />
+If you require additional storage space, please contact the lab administrator.</p>
+</div>
 <hr />
 <h2 id="5_key_takeaways">5. Key Takeaways<a class="headerlink" href="#5_key_takeaways" title="Permanent link">&para;</a></h2>
 <ul>
