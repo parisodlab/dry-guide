@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>QC pipeline - Parisod Lab Dry Guide</title>
+    <title>trim.rules - Parisod Lab Dry Guide</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "QC pipeline";
+        var mkdocs_page_name = "trim.rules";
         var mkdocs_page_input_path = "pipeline-readQC.md";
         var mkdocs_page_url = null;
       </script>
@@ -63,10 +63,6 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../data-organization/">Data Organization Guidelines</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../data-backup.md">Data Backup</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../data-sharing.md">Data Sharing</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../ena/">Data Submission on ENA</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sra/">Data Submission on SRA</a>
@@ -76,50 +72,14 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../ibu-intro/">Introduction</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../ibu-data.md">Data on IBU</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../ibu-snakemake.md">Snakemake</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../ibu-conda/">Conda</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">snakeGATK sequencing workflow</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../pipeline-overview/">Overview</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">QC pipeline</a>
-    <ul class="current">
-    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pipeline-trimming/">Trim pipeline</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../pipeline-mapping/">Alignment pipeline</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../pipeline-GATK.md">Genotyping pipeline</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../pipeline-concordance.md">Concordance pipeline</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../pipeline-postGATK.md">Post-GATK pipeline</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Other pipelines</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="../pipeline-freebayes.md">Freebayes calling</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">snakeRNAseq workflow</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="../rnaseq-overview.md">Overview</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../rnaseq-trimming.md">Trim pipeline</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../rnaseq-alignment.md">Alignment pipeline</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../rnaseq-counting.md">Counting pipeline</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../rnaseq-diffexp.md">Differential expression pipeline</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../rnaseq-visualization.md">Visualization pipeline</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other things</span></p>
@@ -141,8 +101,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">snakeGATK sequencing workflow</li>
-      <li class="breadcrumb-item active">QC pipeline</li>
+      <li class="breadcrumb-item active">trim.rules</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/pipeline-readQC.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
@@ -192,10 +151,6 @@ The pipeline contains the rules for trimming fastq files using Trimmomatic in a 
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../pipeline-overview/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../pipeline-trimming/" class="btn btn-neutral float-right" title="Trim pipeline">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -221,10 +176,6 @@ The pipeline contains the rules for trimming fastq files using Trimmomatic in a 
         </span>
     
     
-      <span><a href="../pipeline-overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../pipeline-trimming/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
