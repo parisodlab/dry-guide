@@ -21,9 +21,11 @@ nav:
           - VScode: vscode.md
           - Source Control with Git and VScode: github.md
     - Data Management:
-          - Data Organization: data-organization.md
+          - Data Organization Guidelines: data-organization.md
           - Data Backup: data-backup.md
           - Data Sharing: data-sharing.md
+          - Data Submission on ENA: ena.md
+          - Data Submission on SRA: sra.md
     - IBU:
             - Introduction: ibu-intro.md
             - Data on IBU: ibu-data.md

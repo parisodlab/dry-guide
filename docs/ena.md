@@ -2,63 +2,94 @@
 
 For each project, it is important to also upload the FASTQ files and other raw sequncing files to ENA or SRA (See: __sra.md__) as soon as the sequencing data arrives. **If the study ID already exists, you can create a new sample ID link to the existing study ID**. If there is no previous study ID, you can create a new study ID and add all relevant data. See below for more instructions.
 
-## ENA submission
+## ENA submission: Important Metadata for DNA and RNA Samples
 
-1. **Begin submission**
+For plant ecology and evolution studies, providing detailed metadata is crucial. Below are recommended metadata fields:
 
-* In the [SRA submission portal](https://submit.ncbi.nlm.nih.gov/subs/sra/), click the button for "New submission" and follow the prompts.
-* Remember to add the previous study ID if applicable to link this submission to previous submissions.
-* Select "Model organism or animal" for biosample type, select "upload file using excel" and download the [template](https://www.ncbi.nlm.nih.gov/biosample/docs/templates/packages/Model.organism.animal.1.0.xlsx)
+### Basic Metadata (For Both DNA and RNA)
+- **Sample ID:** Unique identifier for each sample.
+- **Collection Date:** Date when the sample was collected.
+- **Collection Location:** GPS coordinates (latitude and longitude) and a brief description.
+- **Collected By:** Name of the person(s) who collected the sample.
+- **Species Information:** Scientific name, common name, and additional taxonomic details.
+- **Subspecies Information:** Information on subspecies, variety.
+- **Population Information:** Details about the population from which the sample originates.
+- **Subspecific Genetic Lineage Rank & Name:** Further details on infraspecific classification (e.g., ecotype, cultivar).
+- **Altitude:** Altitude of the collection site (in meters).
+- **Geographic Location (Region and Locality):** Detailed geographic origin of the sample.
+- **Tissue Type:** Type of tissue sampled (e.g., leaf, root, stem).
+- **Developmental Stage:** Growth or developmental stage of the organism.
+- **Storage Conditions:** How and where the sample was stored (e.g., temperature, preservation method).
+- **Extraction Method:** Protocol or kit used for DNA/RNA extraction.
+- **Ploidy:** Ploidy level of the genome (e.g., diploid, triploid, tetraploid).
+- **Library Preparation:** Details on how the sequencing library was prepared (including kit information).
 
-2. **Create biosample sheet (an example can be found below)**
+### Additional Metadata (From the ENA Plant Sample Checklist)
+- **Propagation:** Type of reproduction from the parent stock (e.g., sexual/asexual).
+- **Soil Classification (FAO):** Soil type based on the FAO World Reference Database for Soil Resources.
+- **Soil pH:** pH measurement of the soil at the collection site (e.g., 6.2).
+- **Growth Facility:** Type of facility where the plant was grown.
+- **Sample Health State:** Overall health status of the subject at the time of collection.
+- **Sample Disease Status:** List any diseases diagnosed at the time of collection.
+- **Estimated Genome Size:** Estimated size of the genome (in base pairs).
+- **Source Material Identifiers:** Unique identifiers assigned to the material sample for traceability, Check the Sample collection list of ParisodLab.
 
-* An easy starting point here is the sample sheet used for `alignment-nf`. You will keep the id as the sample name (unique identifier) and strain (note strain also needs to be unique - if there are multiple library preps for the same strain, please append "-2" etc. to the strain)
-* To these two columns, you can add bioproject, organism, developmental stage, sex, and tissue (same across all strains)
-* Finally, join this data with the WI species master sheet to get collected by, collection date, and latitude/longitude.
-        - *Note: latitude/longitude need to be converted into one shared column in the format "34.89 S 56.15 W" (+ refers to North and East)*
-* Copy the data into the relevent columns in the [template](https://www.ncbi.nlm.nih.gov/biosample/docs/templates/packages/Model.organism.animal.1.0.xlsx), save, and upload to the submission portal
-![](img/sra_biosample.png)
+---
 
-3. **Create SRA metadata sheet**
+### Extended Metadata (Optional but Recommended)
 
-* Again, select "upload a file using excel" and download the [template](https://ftp-trace.ncbi.nlm.nih.gov/sra/metadata_table/SRA_metadata.xlsx)
-* An easy starting point here is, again, the sample sheet used for `alignment-nf`. You will keep the id as the sample name and the lb as library id. You will also keep fq1 and fq2 for filename and filename2.
-* You will then add the rest of the columns as shown below. Note: the formatting is very specific for this sheet. The title can be found on the bioproject page. The instrument_model can be found by using the "sequencing_folder" (not shown, but part of the original sample sheet) and looking up the instrument that folder was run on in the Sequencing Runs google sheet ([here](https://docs.google.com/spreadsheets/d/1CpSpzU1p-WtGKIMBK99DL5AeZb-A8QrHPuLkM_fAuEY/edit#gid=0))
-* Copy and paste the rows from this file into the [template](https://ftp-trace.ncbi.nlm.nih.gov/sra/metadata_table/SRA_metadata.xlsx) to check for correct formatting. Then save the tab as a tsv and upload to the submission portal.
-![](img/sra_metadata.png)
+When available, include the following additional fields to capture detailed environmental, collection, and treatment information:
 
-4. **Pre-upload FASTQ files using FTP**
+- **Observed Biotic Relationship:** Describe interactions between the subject organism and other organisms (e.g., parasite on species X; mutualist with species Y).
+- **Sample Collection Method:** The method employed for collecting the sample (can include a PMID, DOI, URL, or descriptive text).
+- **Sample Storage Temperature:** Temperature at which the sample was stored (e.g., -80°C).
+- **Sample Storage Location:** Name of the freezer or storage room.
+- **Soil Taxonomic / Local Classification:** Local soil classification details.
+- **Soil Taxonomic / Local Classification Method:** Reference or method used for local soil classification.
+- **Soil Type & Method:** Soil classification using accepted terms (e.g., from ENVO) and the method used.
+- **Soil Texture Measurement & Method:** Proportions of sand, silt, and clay (e.g., 40% sand, 30% silt, 30% clay) along with the method used.
+- **Sampled Age:** Age of the subject at the time of collection.
+- **Sample Disease Stage:** Stage of disease at the time of collection (if applicable).
+- **Broad-scale Environmental Context:** Major environmental system of the sample site (e.g., desert, rainforest).
+- **Local Environmental Context:** Immediate environmental conditions or influencing entities.
+- **Amount or Size of Sample Collected:** Total volume, mass, or area of the sample.
+- **Sampling Time Point:** Date/time of collection (ISO 8601 format recommended).
+- **Biological Status:** Nature of the sample (e.g., wild, natural, inbred, hybrid).
+- **Growth Habit:** General growth form or habit of the plant.
+- **Climate, Gaseous, & Seasonal Environment:** Details on the climate, gas concentrations, and season at the time of sampling.
+- **Source Material Description:** Additional context clarifying the nature of the source material.
+- **Organism Phenotype:** Key phenotypic traits of the organism.
+- **Sample Material Processing:** Any processing applied to the sample after collection.
+- **Treatment Regimens:**  
+  - **Treatment Type:** Type of treatment applied to the sample.
+        - **Treatment Duration:** Duration of the treatment.
+        - **Treatment Concentration:** Concentration of the treatment.
+        - **Treatment Timing:** Timing of the treatment.
+        - **Treatment Description:** Detailed description of the treatment.
 
-* Create a list of files to upload to the FTP server by combining the filename1 and filename2 from the SRA metadata sheet (above).
-* Begin submission by creating an NCBI account (or signing in -- personal account). Then follow the link to the [SRA submission portal](https://submit.ncbi.nlm.nih.gov/subs/sra/)
-* Follow the instructions under the "FTP upload":
 
-```
-# establish FTP connection from terminal (on QUEST!)
-# ftp <address>
-ftp ftp-private.ncbi.nlm.nih.gov
+---
 
-# navigate to your account folder (i.e.)
-cd uploads/kathrynevans2015_u.northwestern.edu_YSlKSXQ4
+### Sequencing Library Metadata (Mandatory Fields)
 
-# create new folder for submission (i.e.)
-mkdir 20210121_submission
+For ENA/NCBI submissions, the following sequencing and library metadata fields are **mandatory**:
 
-# exit FTP connection
-exit
+- **sample:** Unique identifier for the sample.
+- **study:** Identifier for the study.
+- **instrument_model:** Model of the instrument used for sequencing (permitted values as specified by ENA).
+- **library_name:** Name of the sequencing library.
+- **library_source:** Source of the library (permitted values).
+- **library_selection:** Method used for library selection (permitted values).
+- **library_strategy:** Strategy used for library preparation (permitted values).
+- **library_layout:** Layout of the library (permitted values).
+- **file_name:** File name for reads.
+- **file_md5:** MD5 checksum for the file.
 
-# back on quest, run the following line to transfer every file with path listed in "files_to_upload.tsv" to that folder
-# make sure to change your upload folder and files to upload
-module load parallel
-parallel --verbose lftp -e \"put -O /uploads/kathrynevans2015_u.northwestern.edu_YSlKSXQ4/20210121_submission {}\; bye\" -u subftp,w4pYB9VQ ftp-private.ncbi.nlm.nih.gov < files_to_upload.tsv
-```
-    
-*Note: it is important that this step is completely finished before you complete your SRA submission*
 
-5. **Complete submission**
+### Additional Library Metadata (Optional)
+- **library_design:** Details regarding the library design.
+- **library_construction_protocol:** Protocol used for library construction.
+- **design_description:** Description of the experimental design.
+- **insert_size:** Insert size of the library.
 
-* When finished, in the SRA portal you will be asked to select which folder you want to pull files from
-* Review and submit! If there are any issues they will let you know.
-
-## List of current bioprojects associated with the Andersen Lab
-* *C. elegans* WI genome FASTQ - PRJNA549503 (link [here](https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP201794&o=acc_s%3Aa))
+---
