@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Data Organization Guidelines - Parisod Lab Dry Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data Organization Guidelines";
+        var mkdocs_page_input_path = "data-organization.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Parisod Lab Dry Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Knowledge Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../intro/">Lab Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../best_practices/">Best Practices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../r/">R</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vscode/">VScode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Source Control with Git and VScode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Management</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Data Organization Guidelines</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../data-backup.md">Data Backup</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../data-sharing.md">Data Sharing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ena/">Data Submission on ENA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sra/">Data Submission on SRA</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IBU</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-intro/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ibu-data.md">Data on IBU</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../ibu-snakemake.md">Snakemake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-conda/">Conda</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">snakeGATK sequencing workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-readQC/">QC pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-trimming/">Trim pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-mapping/">Alignment pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../pipeline-GATK.md">Genotyping pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../pipeline-concordance.md">Concordance pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../pipeline-postGATK.md">Post-GATK pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../pipeline-freebayes.md">Freebayes calling</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">snakeRNAseq workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../rnaseq-overview.md">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../rnaseq-trimming.md">Trim pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../rnaseq-alignment.md">Alignment pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../rnaseq-counting.md">Counting pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../rnaseq-diffexp.md">Differential expression pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../rnaseq-visualization.md">Visualization pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other things</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../labsite/">Parisod Labsite</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Parisod Lab Dry Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Data Management</li>
+      <li class="breadcrumb-item active">Data Organization Guidelines</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/data-organization.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>This page outlines how to handle, store, and back up your NGS data to ensure that everyone in the lab has access to well-organized and secure data.</p>
+<hr />
+<h2 id="1_data_submission">1. Data Submission<a class="headerlink" href="#1_data_submission" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Submit Raw Data Promptly:</strong><br />
+  When you receive raw data from the NGS facility, submit it to either the <strong>ENA</strong> or <strong>NCBI</strong>.  </li>
+<li><strong>Include Metadata:</strong> Make sure to attach all necessary metadata.</li>
+<li><strong>Set an Embargo:</strong> Apply an embargo if needed, as soon as possible.</li>
+</ul>
+<p>Check out SRA Guidelines: (<strong>sra.md</strong>) and ENA Guidelines: ((<strong>ena.md</strong>)) for detailed instructions on how to submit data to NCBI SRA or ENA.</p>
+<hr />
+<h2 id="2_data_storage_requirements">2. Data Storage Requirements<a class="headerlink" href="#2_data_storage_requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>BigData Server:</strong>  </li>
+<li>Store <strong>raw data</strong> and <strong>final unfiltered results</strong> (e.g., unfiltered VCF files and other outputs) on the BigData server as soon as they are ready.</li>
+<li>
+<p>Move <strong>final filtered results</strong> to the BigData server promptly.</p>
+</li>
+<li>
+<p><strong>IBU Account for Long-Term Users:</strong>  </p>
+</li>
+<li>All long-term users of the Parisod lab should obtain an <strong>IBU account</strong> as soon as possible.</li>
+<li><strong>Transfer raw data</strong> to your IBU account.</li>
+<li>Create and maintain analysis scripts and pipelines, and always use <strong>version control on the ParisodLab GitHub</strong>.</li>
+</ul>
+<hr />
+<h2 id="4_server_usage_guidelines">4. Server Usage Guidelines<a class="headerlink" href="#4_server_usage_guidelines" title="Permanent link">&para;</a></h2>
+<h3 id="using_p910">Using p910<a class="headerlink" href="#using_p910" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Purpose:</strong>  </li>
+<li>
+<p>The <strong>p910</strong> server is <strong>only</strong> to be used as a gateway to connect to the following network drives provided by UniFR:</p>
+<ul>
+<li><strong>BigData</strong></li>
+<li><strong>Common</strong></li>
+<li><strong>OneCopy</strong></li>
+<li>Other designated network drives</li>
+</ul>
+</li>
+<li>
+<p><strong>What Not to Do on p910:</strong>  </p>
+</li>
+<li><strong>Do not store data long term</strong> on the <code>/media/Data</code> drives.</li>
+<li>
+<p>These drives are meant for:</p>
+<ul>
+<li>Testing scripts</li>
+<li>Temporary storage for short-term users (or those without IBU access)</li>
+<li>Managing data transfers between sequencing servers and BigData</li>
+</ul>
+</li>
+<li>
+<p><strong>Documentation:</strong>  </p>
+</li>
+<li>The p910 server is also used by the system administrator to manage lab documentation, which is always version controlled on the <strong>ParisodLab GitHub</strong>.</li>
+</ul>
+<hr />
+<h2 id="5_backup_guidelines_using_p910">5. Backup Guidelines (Using p910)<a class="headerlink" href="#5_backup_guidelines_using_p910" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Precious Data:</strong>  </li>
+<li>
+<p>If you have valuable data that is not considered temporary, please move it to BigData as soon as possible.</p>
+</li>
+<li>
+<p><strong>BACKUP Folder (for p910):</strong>  </p>
+</li>
+<li>A folder named <strong>"BACKUP"</strong> is provided at the base of each drive on the <strong>p910</strong> server.</li>
+<li><strong>Important:</strong> Only data stored in this BACKUP folder on p910 will be automatically backed up.</li>
+<li>Create a subfolder within <strong>BACKUP</strong> with your name and place all critical files there.</li>
+<li>An <strong>automatic backup script</strong> will copy data from the BACKUP folder to BigData every evening at <strong>5 PM</strong>.</li>
+<li>
+<p>We <strong>do not guarantee backups</strong> for any data stored elsewhere.</p>
+</li>
+<li>
+<p><strong>Backup Quota:</strong>  </p>
+</li>
+<li>Each user is allowed a maximum backup of <strong>1TB</strong>.  </li>
+<li>If you require additional storage space, please contact the lab administrator.</li>
+</ul>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Submit raw NGS data</strong> with complete metadata and embargo settings to ENA/NCBI as soon as possible.</li>
+<li><strong>Ensure metadata</strong> for DNA/RNA samples is detailed and includes:</li>
+<li>Basic information (population, subspecies, elevation, etc.)</li>
+<li>Additional fields from the ENA checklist (propagation, soil properties, health status, etc.)</li>
+<li>Extended metadata when available (environmental context, collection methods, treatment regimens, and sample measurements).</li>
+<li><strong>Mandatory sequencing library metadata</strong> (sample, study, instrument model, library details, file names, checksums, and design specifications).</li>
+<li><strong>Store data on BigData</strong> and use your IBU account for transferring raw data and developing analysis pipelines.</li>
+<li><strong>Use p910 only to access network drives;</strong> do not store long-term data on the <code>/media/Data</code> drives.</li>
+<li><strong>Back up important data</strong> using the BACKUP folder on p910 to ensure secure, automated backups.</li>
+</ul>
+<p>Following these guidelines helps maintain data integrity, ensures reproducibility, and makes data management more efficient for everyone in the lab. For any questions or additional support, please reach out to your lab administrator.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../github/" class="btn btn-neutral float-left" title="Source Control with Git and VScode"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ena/" class="btn btn-neutral float-right" title="Data Submission on ENA">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/parisodlab/dry-guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../github/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ena/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
