@@ -67,7 +67,7 @@ Check out SRA Guidelines: (__sra.md__) and ENA Guidelines: ((__ena.md__)) for de
 
 ---
 
-## Summary
+## Key Takeaways
 
 - **Submit raw NGS data** with complete metadata and embargo settings to ENA/NCBI as soon as possible.
 - **Ensure metadata** for DNA/RNA samples is detailed and includes:
@@ -79,4 +79,3 @@ Check out SRA Guidelines: (__sra.md__) and ENA Guidelines: ((__ena.md__)) for de
 - **Use p910 only to access network drives;** do not store long-term data on the `/media/Data` drives.
 - **Back up important data** using the BACKUP folder on p910 to ensure secure, automated backups.
 
-Following these guidelines helps maintain data integrity, ensures reproducibility, and makes data management more efficient for everyone in the lab. For any questions or additional support, please reach out to your lab administrator.
