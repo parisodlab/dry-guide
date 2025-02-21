@@ -22,32 +22,32 @@ nav:
           - Source Control with Git and VScode: github.md
     - Data Management:
           - Data Organization Guidelines: data-organization.md
-        #   - Data Backup: data-backup.md
-        #   - Data Sharing: data-sharing.md
+          - Data Backup: data-backup.md
+          - Data Sharing: data-sharing.md
           - Data Submission on ENA: ena.md
           - Data Submission on SRA: sra.md
     - IBU:
             - Introduction: ibu-intro.md
-        #     - Data on IBU: ibu-data.md
-        #     - Snakemake: ibu-snakemake.md
-        #     - Conda: ibu-conda.md
+            - Data on IBU: ibu-data.md
+            - Snakemake: ibu-snakemake.md
+            - Conda: ibu-conda.md
     - snakeGATK sequencing workflow:
             - Overview: pipeline-overview.md
-        #     - QC pipeline: pipeline-readQC.md
+            - QC pipeline: pipeline-readQC.md
             - Trim pipeline: pipeline-trimming.md
             - Alignment pipeline: pipeline-mapping.md
-        #     - Genotyping pipeline: pipeline-GATK.md
-        #     - Concordance pipeline: pipeline-concordance.md
-        #     - Post-GATK pipeline: pipeline-postGATK.md
-#     - Other pipelines:
-#             - Freebayes calling: pipeline-freebayes.md
-#     - snakeRNAseq workflow:
-#             - Overview: rnaseq-overview.md
-#             - Trim pipeline: rnaseq-trimming.md
-#             - Alignment pipeline: rnaseq-alignment.md
-#             - Counting pipeline: rnaseq-counting.md
-#             - Differential expression pipeline: rnaseq-diffexp.md
-#             - Visualization pipeline: rnaseq-visualization.md
+            - Genotyping pipeline: pipeline-GATK.md
+            - Concordance pipeline: pipeline-concordance.md
+            - Post-GATK pipeline: pipeline-postGATK.md
+    - Other pipelines:
+            - Freebayes calling: pipeline-freebayes.md
+    - snakeRNAseq workflow:
+            - Overview: rnaseq-overview.md
+            - Trim pipeline: rnaseq-trimming.md
+            - Alignment pipeline: rnaseq-alignment.md
+            - Counting pipeline: rnaseq-counting.md
+            - Differential expression pipeline: rnaseq-diffexp.md
+            - Visualization pipeline: rnaseq-visualization.md
 #     - Quest:
 #           - Introduction: quest-intro.md
 #           - Data on b1059: b1059.md
