@@ -13,19 +13,20 @@ markdown_extensions:
 
 nav:
     - Home: index.md
-    - Knowledge Base:
-          - Lab Introduction: intro.md
+    - Lab Introduction: intro.md
           - Best Practices: best_practices.md
-          - R: r.md
-          - Command Line: bash.md
-          - VScode: vscode.md
-          - Source Control with Git and VScode: github.md
     - Data Management:
           - Data Organization Guidelines: data-organization.md
+          - Folder Organization Best Practices: best_practices.md
         #   - Data Backup: data-backup.md
         #   - Data Sharing: data-sharing.md
           - Data Submission on ENA: ena.md
-          - Data Submission on SRA: sra.md
+        #  - Data Submission on SRA: sra.md
+    - Coding Knowledge Base:
+          - VScode: vscode.md
+          - R: r.md
+          - Command Line: bash.md
+          - Source Control with Git and VScode: github.md
     - IBU:
             - Introduction: ibu-intro.md
         #     - Data on IBU: ibu-data.md

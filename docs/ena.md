@@ -2,7 +2,47 @@
 
 For each project, it is important to also upload the FASTQ files and other raw sequncing files to ENA or SRA (See: __sra.md__) as soon as the sequencing data arrives. **If the study ID already exists, you can create a new sample ID link to the existing study ID**. If there is no previous study ID, you can create a new study ID and add all relevant data. See below for more instructions.
 
-## ENA submission: Important Metadata for DNA and RNA Samples
+## Steps to Upload Data to ENA
+
+1. **Create a New Study:**
+    - Log in to the ENA Webin submission system.
+    - Click on the "Submit Data" tab.
+    - Click on "Create a new study."
+    - Fill in the required fields (e.g., study title, abstract, etc.).
+    - Click "Save."
+
+2. **Batch Upload Samples:**
+    - Click on the "Samples" tab.
+    - Click on "Download spreadsheet to register samples."
+    - Select the spreadsheet for plant samples.
+    - Fill in the required metadata fields for each sample.
+    - Save the spreadsheet.
+
+3. **Upload Samples:**
+    - Click on "Upload filled spreadsheet to register samples."
+    - Select the spreadsheet you filled out.
+    - Click "Upload."
+
+4. **Upload Sequencing Files using CLI:**
+    - Use the ENA Webin CLI tool to upload sequencing files.
+    - The script `upload_ftp.sh` is the main script, use it like so:
+      ```sh
+      ./upload_ftp.sh $HOST $USER $PASS $FILE $DIR
+      ```
+      Where `$HOST` is the host address (starting with `ftp`), `$USER` is the username, `$PASS` the password, `$FILE` the file you are uploading, and dir in which directory of the ftp server you want to upload (use `./` if you want to upload to the base directory).  
+
+
+5. **Embargo Data:**
+    - If needed, set an embargo date for the data.
+    - Click "Save."
+
+6. **Check Submission Status:**
+    - Monitor the submission status in the ENA Webin submission system.
+    - Once the submission is complete, you will receive a confirmation email.
+
+
+
+## Important Metadata for DNA and RNA Samples
 
 For plant ecology and evolution studies, providing detailed metadata is crucial. Below are recommended metadata fields:
 

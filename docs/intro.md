@@ -5,6 +5,7 @@
     Address: Department of Biology, University of Fribourg
     PER23-Ecology & Evolution building, Chemin du Musée 15  
     PI : Prof. Christian Parisod, PER23-102, 0 26 300 88 52, [christian.parisod@unifr.ch](mailto:christian.parisod@unifr.ch)  
+    Dry-lab manager: Dr. Rimjhim Roy Choudhury, PER23-001, 026 300 8686, [rimjhim.choudhury@unifr.ch](mailto:rimjhim.choudhury@unifr.ch)
     Administrative assistant: Eirini Maikanti, PER23-001, 026 300 88 50, [eirini.maikanti@unifr.ch](mailto:eirini.maikanti@unifr.ch)  
     Tech assistants: Dr. Boris Egger (PER05-0.340G, [boris.egger@unifr.ch](mailto:boris.egger@unifr.ch))  
     Alain Werro (PER04-01.117, 026 300 88 12)  
@@ -191,6 +192,6 @@ Parisod:Experimental: Samples from experimental populations (crossings...). Each
 
 A detailed protocol is to be followed across labs at PER23. It must be read and signed beforehand. Note that the lab 305 is PCR free.
 
-Programming of conditions in the LED growth chamber (PER23-104) and growth cabinets (PER23-205a): Patrick Favre.
+Programming of conditions in the LED growth chamber (PER23-104) and growth cabinets (PER23-205a): 
 
 Greenhouses: Keys available PER23-008. Programming of conditions: Alain Werro.
