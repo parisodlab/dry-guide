@@ -28,7 +28,7 @@ nav:
           - Command Line: bash.md
           - Source Control with Git and VScode: github.md
     - IBU:
-            - Introduction: ibu-intro.md
+            - How to access: ibu-intro.md
         #     - Data on IBU: ibu-data.md
         #     - Snakemake: ibu-snakemake.md
         #     - Conda: ibu-conda.md
