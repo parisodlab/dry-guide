@@ -5,7 +5,7 @@ For each project, it is important to also upload the FASTQ files and other raw s
 ## Steps to Upload Data to ENA
 
 1. **Create a New Study:**
-    - Log in to the ENA Webin submission system.
+    - Log in to the ENA Webin submission system. The user id is Webin-60428. Ask the system administrator for the password.
     - Click on the "Submit Data" tab.
     - Click on "Create a new study."
     - Fill in the required fields (e.g., study title, abstract, etc.).
