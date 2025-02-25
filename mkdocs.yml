@@ -14,7 +14,7 @@ markdown_extensions:
 nav:
     - Home: index.md
     - Lab Introduction: intro.md
-          - Best Practices: best_practices.md
+    # - Best Practices: best_practices.md
     - Data Management:
           - Data Organization Guidelines: data-organization.md
           - Folder Organization Best Practices: best_practices.md
