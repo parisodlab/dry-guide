@@ -21,17 +21,18 @@ nav:
         #   - Data Backup: data-backup.md
         #   - Data Sharing: data-sharing.md
           - Data Submission on ENA: ena.md
+          - Public Data Repositories: public-data.md
         #  - Data Submission on SRA: sra.md
-    - Coding Knowledge Base:
-          - VScode: vscode.md
-          - R: r.md
-          - Command Line: bash.md
-          - Source Control with Git and VScode: github.md
     - IBU:
             - How to access: ibu-intro.md
         #     - Data on IBU: ibu-data.md
         #     - Snakemake: ibu-snakemake.md
         #     - Conda: ibu-conda.md
+    - Coding Knowledge Base:
+          - VScode: vscode.md
+          - R: r.md
+          - Command Line: bash.md
+          - Source Control with Git and VScode: github.md
     - snakeGATK sequencing workflow:
             - Overview: pipeline-overview.md
         #     - QC pipeline: pipeline-readQC.md
