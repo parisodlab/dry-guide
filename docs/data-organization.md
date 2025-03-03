@@ -50,9 +50,9 @@ The **p910** server serves **only** as a gateway to access the following UniFR n
 
 - **Do not store data long-term** on the `/media/Data` drives.  
 - These drives are intended **only** for:  
-  - Testing scripts  
-  - Temporary storage for short-term users (or those without IBU access)  
-  - Managing data transfers between sequencing servers and BigData  
+    - Testing scripts  
+    - Temporary storage for short-term users (or those without IBU access)  
+    - Managing data transfers between sequencing servers and BigData  
 
 #### **Documentation Management**  
 
