@@ -1,9 +1,3 @@
----
-runme:
-  id: 01JN60JQ09H23FTBXSVBJ7TVPT
-  version: v3
----
-
 # Getting Started with Unix
 
 Unix is a powerful operating system used widely in servers, workstations, and mobile devices. This tutorial will guide you through the basics of Unix, including loops, creating basic scripts, and executing scripts.

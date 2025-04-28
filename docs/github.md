@@ -17,7 +17,7 @@
 
 ## Using Git and Github
 
-The Parisod Lab Github can be found [here](https://github.com/parisodlab). As of the writing of this page, we have 165 "repositories" (or projects). Notice some projects are workflow like `snakeGATK4_v2` and others are shared projects (`codeclub`) or manuscripts (`mbe_manuscript_2024`). Anything can be a repo!
+The Parisod Lab Github can be found [here](https://github.com/parisodlab). As of the writing of this page, we have 11 "repositories" (or projects). Notice some projects are workflow like `snakeGATK4_v2` and others are shared students projects (`Pangenome_mapping`) or even codes used to prepare manuscript figures and tables (`mbe_manuscript_2024`). Anything can be a repo!
 
 There are two main ways to use Git: on the command line (aka Terminal on Macs) or with a GUI (graphical user interface). Both are good and neither are "wrong". For new users, it is usually easier to start with a GUI like the Source control extension in VSCode. However, only a few basic commands are really necessary to get started using git on the command line, so don't be nervous!
 

@@ -1,9 +1,4 @@
 ---
-runme:
-  id: 01JN60JQ0C3NTSY4DMRFW49QB8
-  version: v3
----
-
 These guidelines outline the steps for uploading your sequence data (FASTQ files) to NCBI's Sequence Read Archive (SRA) or ENA. All submissions should be associated with our work on the genome of **Biscutella laevigata**. Follow these instructions carefully to ensure your submission is linked to the correct bioproject and that all metadata is complete.
 
 ---

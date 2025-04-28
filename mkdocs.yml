@@ -27,7 +27,7 @@ nav:
             - How to access: ibu-intro.md
         #     - Data on IBU: ibu-data.md
         #     - Snakemake: ibu-snakemake.md
-        #     - Conda: ibu-conda.md
+            - Conda: ibu-conda.md
     - Coding Knowledge Base:
           - VScode: vscode.md
           - R: r.md

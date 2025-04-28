@@ -1,9 +1,3 @@
----
-runme:
-  id: 01JNDTC8A46CMPNNQ5HN419VDE
-  version: v3
----
-
 # Data Organization Guidelines
 
 This page outlines how to handle, store, and back up your NGS data so that everyone in the lab has access to well-organized and secure data.
@@ -63,7 +57,7 @@ The **p910** server is also used by the system administrator for managing lab do
 ## 4. Backup Guidelines on p910
 
 !!! important "Precious Data"
-If you have valuable data that is not considered temporary, please move it to **BigData** as soon as possible.
+    If you have valuable data that is not considered temporary, please move it to **BigData** as soon as possible.
 
 * **BACKUP Folder (for p910):**
    - A folder named **"BACKUP"** is provided at the base of each drive on the **p910** server.
@@ -74,8 +68,8 @@ If you have valuable data that is not considered temporary, please move it to **
    - We **do not guarantee backups** for any data stored elsewhere.
 
 !!! important "Backup Quota"
-Each user is allowed a maximum backup of **1TB**. You will be notified if you exceed this limit. Keep your data organized and remove unnecessary files to avoid exceeding the limit.  
-If you require additional storage space, please contact the lab administrator.
+    Each user is allowed a maximum backup of **1TB**. You will be notified if you exceed this limit. Keep your data organized and remove unnecessary files to avoid exceeding the limit.  
+    If you require additional storage space, please contact the lab administrator.
 
 ---
 

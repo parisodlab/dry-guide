@@ -1,22 +1,20 @@
 # Information for all members of the Parisod lab
 
-
 !!! Important
-    Address: Department of Biology, University of Fribourg
-    PER23-Ecology & Evolution building, Chemin du Musée 15  
-    PI : Prof. Christian Parisod, PER23-102, 0 26 300 88 52, [christian.parisod@unifr.ch](mailto:christian.parisod@unifr.ch)  
-    Dry-lab manager: Dr. Rimjhim Roy Choudhury, PER23-001, 026 300 8686, [rimjhim.choudhury@unifr.ch](mailto:rimjhim.choudhury@unifr.ch)
-    Administrative assistant: Eirini Maikanti, PER23-001, 026 300 88 50, [eirini.maikanti@unifr.ch](mailto:eirini.maikanti@unifr.ch)  
-    Tech assistants: Dr. Boris Egger (PER05-0.340G, [boris.egger@unifr.ch](mailto:boris.egger@unifr.ch))  
-    Alain Werro (PER04-01.117, 026 300 88 12)  
-    Gardner: Alain Müller([alain.mueller@unifr.ch](mailto:alain.mueller@unifr.ch)), Benoît Clément (Alpine Plants, [benoit.clement@unifr.ch](mailto:benoit.clement@unifr.ch))  
-
+Address: Department of Biology, University of Fribourg
+PER23-Ecology & Evolution building, Chemin du Musée 15  
+PI : Prof. Christian Parisod, PER23-102, 0 26 300 88 52, [christian.parisod@unifr.ch](mailto:christian.parisod@unifr.ch)  
+Dry-lab manager: Dr. Rimjhim Roy Choudhury, PER23-001, 026 300 8686, [rimjhim.choudhury@unifr.ch](mailto:rimjhim.choudhury@unifr.ch)  
+Administrative assistant: Eirini Maikanti, PER23-001, 026 300 88 50, [eirini.maikanti@unifr.ch](mailto:eirini.maikanti@unifr.ch)  
+Tech assistants: Dr. Boris Egger (PER05-0.340G, [boris.egger@unifr.ch](mailto:boris.egger@unifr.ch))  
+Alain Werro (PER04-01.117, 026 300 88 12)  
+Gardner: Alain Müller([alain.mueller@unifr.ch](mailto:alain.mueller@unifr.ch)), Benoît Clément (Alpine Plants, [benoit.clement@unifr.ch](mailto:benoit.clement@unifr.ch))
 
 All HR-related matter as well as room authorizations must be coordinated with the administrative assistant. An access to **my.unifr.ch** through your campus account will simplify many administrative tasks. Also see <https://www.unifr.ch/campus/en/personal-support/administrative.html>
 
 Our lab deals with molecular, computational and living resources. It involves your contribution by keeping things updated and through lab/greenhouse duties planned in advance. Christian will introduce you to the necessary infrastructures for your project and our elabFTW database for the storage of data and procedures (see §3.6ff). Start your stay by being known in our system and continue it with zealous updates.
 
-We use lab meetings to promote general coordination in the lab. A google-calendar (<labparisod@gmail.com>) and Slack (Parisod Lab) is used to make a note about your vacation plans ahead of time, as to organize replacement if necessary. If you must unexpectedly take day(s) off (e.g. illness or unanticipated circumstances), notify Christian directly by e-mail. E-mails to all lab members can be sent through [biol-parisodgp@unifr.ch](mailto:biol-parisodgp@unifr.ch).
+We use lab meetings to promote general coordination in the lab. A google-calendar (<mailto:labparisod@gmail.com>) and Slack (Parisod Lab) is used to make a note about your vacation plans ahead of time, as to organize replacement if necessary. If you must unexpectedly take day(s) off (e.g. illness or unanticipated circumstances), notify Christian directly by e-mail. E-mails to all lab members can be sent through [biol-parisodgp@unifr.ch](mailto:biol-parisodgp@unifr.ch).
 
 Two series of scientific seminars are taking place during semesters: Departmental seminars with mostly external guests every Tuesdays (11.15 am, PER04-0.110) and Environmental Biology seminars by internal collaborators every Thursdays (15.15 pm, PER04-0.110). Your attendance and participation are welcome! Register to to such and other teaching-related activities and get information through <https://moodle.unifr.ch/>
 
@@ -40,7 +38,7 @@ If you have an issue with another lab member that cannot be solved through direc
 
 Before quitting the lab for new adventures, sort and archive your documents appropriately, clean your lab and office space, make sure that your samples are properly stored (labelled with your name and a date!) and referenced in our database. Check with your direct supervisor. See § 4 for further details.
 
-### _1.2 PI (<christian.parisod@unifr.ch>)_
+### _1.2 PI (<mailto:christian.parisod@unifr.ch>)_
 
 All of the above, plus you can expect me to:
 
@@ -192,6 +190,6 @@ Parisod:Experimental: Samples from experimental populations (crossings...). Each
 
 A detailed protocol is to be followed across labs at PER23. It must be read and signed beforehand. Note that the lab 305 is PCR free.
 
-Programming of conditions in the LED growth chamber (PER23-104) and growth cabinets (PER23-205a): 
+Programming of conditions in the LED growth chamber (PER23-104) and growth cabinets (PER23-205a):
 
 Greenhouses: Keys available PER23-008. Programming of conditions: Alain Werro.
