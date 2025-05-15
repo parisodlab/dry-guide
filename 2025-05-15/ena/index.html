@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Data Submission on ENA - Parisod Lab Dry Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data Submission on ENA";
+        var mkdocs_page_input_path = "ena.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Parisod Lab Dry Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Lab Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Management</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../data-organization/">Data Organization Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../best_practices/">Folder Organization Best Practices</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Data Submission on ENA</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#steps_to_upload_data_to_ena">Steps to Upload Data to ENA</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#important_metadata_for_dna_and_rna_samples">Important Metadata for DNA and RNA Samples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#basic_metadata_for_both_dna_and_rna">Basic Metadata (For Both DNA and RNA)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#additional_metadata_from_the_ena_plant_sample_checklist">Additional Metadata (From the ENA Plant Sample Checklist)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#extended_metadata_optional_but_recommended">Extended Metadata (Optional but Recommended)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sequencing_library_metadata_mandatory_fields">Sequencing Library Metadata (Mandatory Fields)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#additional_library_metadata_optional">Additional Library Metadata (Optional)</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../public-data/">Public Data Repositories</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IBU</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-intro/">How to access</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-conda/">Conda</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Coding Knowledge Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../vscode/">VScode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../r/">R</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Source Control with Git and VScode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">snakeGATK sequencing workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-trimming/">Trim pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-mapping/">Alignment pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other things</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../labsite/">Parisod Labsite</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Parisod Lab Dry Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Data Management</li>
+      <li class="breadcrumb-item active">Data Submission on ENA</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/ena.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="uploading_sequence_data_to_ena">Uploading sequence data to ENA<a class="headerlink" href="#uploading_sequence_data_to_ena" title="Permanent link">&para;</a></h1>
+<p>For each project, it is important to also upload the FASTQ files and other raw sequncing files to ENA or SRA (See: <strong>sra.md</strong>) as soon as the sequencing data arrives. <strong>If the study ID already exists, you can create a new sample ID link to the existing study ID</strong>. If there is no previous study ID, you can create a new study ID and add all relevant data. See below for more instructions.</p>
+<h2 id="steps_to_upload_data_to_ena">Steps to Upload Data to ENA<a class="headerlink" href="#steps_to_upload_data_to_ena" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Create a New Study:</strong></p>
+<ul>
+<li>Log in to the ENA Webin submission system. The user id is Webin-60428. Ask the system administrator for the password.</li>
+<li>Click on the "Submit Data" tab.</li>
+<li>Click on "Create a new study."</li>
+<li>Fill in the required fields (e.g., study title, abstract, etc.).</li>
+<li>Click "Save."</li>
+</ul>
+</li>
+<li>
+<p><strong>Batch Upload Samples:</strong></p>
+<ul>
+<li>Click on the "Samples" tab.</li>
+<li>Click on "Download spreadsheet to register samples."</li>
+<li>Select the spreadsheet for plant samples.</li>
+<li>Fill in the required metadata fields for each sample.</li>
+<li>Save the spreadsheet.</li>
+</ul>
+</li>
+<li>
+<p><strong>Upload Samples:</strong></p>
+<ul>
+<li>Click on "Upload filled spreadsheet to register samples."</li>
+<li>Select the spreadsheet you filled out.</li>
+<li>Click "Upload."</li>
+</ul>
+</li>
+<li>
+<p><strong>Upload Sequencing Files using CLI:</strong></p>
+<ul>
+<li>Use the ENA Webin CLI tool to upload sequencing files.</li>
+<li>The script <code>upload_ftp.sh</code> is the main script, use it like so:
+  <code>sh
+  ./upload_ftp.sh $HOST $USER $PASS $FILE $DIR</code>
+  Where <code>$HOST</code> is the host address (starting with <code>ftp</code>), <code>$USER</code> is the username, <code>$PASS</code> the password, <code>$FILE</code> the file you are uploading, and dir in which directory of the ftp server you want to upload (use <code>./</code> if you want to upload to the base directory).  </li>
+</ul>
+</li>
+<li>
+<p><strong>Embargo Data:</strong></p>
+<ul>
+<li>If needed, set an embargo date for the data.</li>
+<li>Click "Save."</li>
+</ul>
+</li>
+<li>
+<p><strong>Check Submission Status:</strong></p>
+<ul>
+<li>Monitor the submission status in the ENA Webin submission system.</li>
+<li>Once the submission is complete, you will receive a confirmation email.</li>
+</ul>
+</li>
+</ol>
+<h2 id="important_metadata_for_dna_and_rna_samples">Important Metadata for DNA and RNA Samples<a class="headerlink" href="#important_metadata_for_dna_and_rna_samples" title="Permanent link">&para;</a></h2>
+<p>For plant ecology and evolution studies, providing detailed metadata is crucial. Below are recommended metadata fields:</p>
+<h3 id="basic_metadata_for_both_dna_and_rna">Basic Metadata (For Both DNA and RNA)<a class="headerlink" href="#basic_metadata_for_both_dna_and_rna" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sample ID:</strong> Unique identifier for each sample.</li>
+<li><strong>Collection Date:</strong> Date when the sample was collected.</li>
+<li><strong>Collection Location:</strong> GPS coordinates (latitude and longitude) and a brief description.</li>
+<li><strong>Collected By:</strong> Name of the person(s) who collected the sample.</li>
+<li><strong>Species Information:</strong> Scientific name, common name, and additional taxonomic details.</li>
+<li><strong>Subspecies Information:</strong> Information on subspecies, variety.</li>
+<li><strong>Population Information:</strong> Details about the population from which the sample originates.</li>
+<li><strong>Subspecific Genetic Lineage Rank &amp; Name:</strong> Further details on infraspecific classification (e.g., ecotype, cultivar).</li>
+<li><strong>Altitude:</strong> Altitude of the collection site (in meters).</li>
+<li><strong>Geographic Location (Region and Locality):</strong> Detailed geographic origin of the sample.</li>
+<li><strong>Tissue Type:</strong> Type of tissue sampled (e.g., leaf, root, stem).</li>
+<li><strong>Developmental Stage:</strong> Growth or developmental stage of the organism.</li>
+<li><strong>Storage Conditions:</strong> How and where the sample was stored (e.g., temperature, preservation method).</li>
+<li><strong>Extraction Method:</strong> Protocol or kit used for DNA/RNA extraction.</li>
+<li><strong>Ploidy:</strong> Ploidy level of the genome (e.g., diploid, triploid, tetraploid).</li>
+<li><strong>Library Preparation:</strong> Details on how the sequencing library was prepared (including kit information).</li>
+</ul>
+<h3 id="additional_metadata_from_the_ena_plant_sample_checklist">Additional Metadata (From the ENA Plant Sample Checklist)<a class="headerlink" href="#additional_metadata_from_the_ena_plant_sample_checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Propagation:</strong> Type of reproduction from the parent stock (e.g., sexual/asexual).</li>
+<li><strong>Soil Classification (FAO):</strong> Soil type based on the FAO World Reference Database for Soil Resources.</li>
+<li><strong>Soil pH:</strong> pH measurement of the soil at the collection site (e.g., 6.2).</li>
+<li><strong>Growth Facility:</strong> Type of facility where the plant was grown.</li>
+<li><strong>Sample Health State:</strong> Overall health status of the subject at the time of collection.</li>
+<li><strong>Sample Disease Status:</strong> List any diseases diagnosed at the time of collection.</li>
+<li><strong>Estimated Genome Size:</strong> Estimated size of the genome (in base pairs).</li>
+<li><strong>Source Material Identifiers:</strong> Unique identifiers assigned to the material sample for traceability, Check the Sample collection list of ParisodLab.</li>
+</ul>
+<hr />
+<h3 id="extended_metadata_optional_but_recommended">Extended Metadata (Optional but Recommended)<a class="headerlink" href="#extended_metadata_optional_but_recommended" title="Permanent link">&para;</a></h3>
+<p>When available, include the following additional fields to capture detailed environmental, collection, and treatment information:</p>
+<ul>
+<li><strong>Observed Biotic Relationship:</strong> Describe interactions between the subject organism and other organisms (e.g., parasite on species X; mutualist with species Y).</li>
+<li><strong>Sample Collection Method:</strong> The method employed for collecting the sample (can include a PMID, DOI, URL, or descriptive text).</li>
+<li><strong>Sample Storage Temperature:</strong> Temperature at which the sample was stored (e.g., -80°C).</li>
+<li><strong>Sample Storage Location:</strong> Name of the freezer or storage room.</li>
+<li><strong>Soil Taxonomic / Local Classification:</strong> Local soil classification details.</li>
+<li><strong>Soil Taxonomic / Local Classification Method:</strong> Reference or method used for local soil classification.</li>
+<li><strong>Soil Type &amp; Method:</strong> Soil classification using accepted terms (e.g., from ENVO) and the method used.</li>
+<li><strong>Soil Texture Measurement &amp; Method:</strong> Proportions of sand, silt, and clay (e.g., 40% sand, 30% silt, 30% clay) along with the method used.</li>
+<li><strong>Sampled Age:</strong> Age of the subject at the time of collection.</li>
+<li><strong>Sample Disease Stage:</strong> Stage of disease at the time of collection (if applicable).</li>
+<li><strong>Broad-scale Environmental Context:</strong> Major environmental system of the sample site (e.g., desert, rainforest).</li>
+<li><strong>Local Environmental Context:</strong> Immediate environmental conditions or influencing entities.</li>
+<li><strong>Amount or Size of Sample Collected:</strong> Total volume, mass, or area of the sample.</li>
+<li><strong>Sampling Time Point:</strong> Date/time of collection (ISO 8601 format recommended).</li>
+<li><strong>Biological Status:</strong> Nature of the sample (e.g., wild, natural, inbred, hybrid).</li>
+<li><strong>Growth Habit:</strong> General growth form or habit of the plant.</li>
+<li><strong>Climate, Gaseous, &amp; Seasonal Environment:</strong> Details on the climate, gas concentrations, and season at the time of sampling.</li>
+<li><strong>Source Material Description:</strong> Additional context clarifying the nature of the source material.</li>
+<li><strong>Organism Phenotype:</strong> Key phenotypic traits of the organism.</li>
+<li><strong>Sample Material Processing:</strong> Any processing applied to the sample after collection.</li>
+<li><strong>Treatment Regimens:</strong>  </li>
+<li><strong>Treatment Type:</strong> Type of treatment applied to the sample.
+        - <strong>Treatment Duration:</strong> Duration of the treatment.
+        - <strong>Treatment Concentration:</strong> Concentration of the treatment.
+        - <strong>Treatment Timing:</strong> Timing of the treatment.
+        - <strong>Treatment Description:</strong> Detailed description of the treatment.</li>
+</ul>
+<hr />
+<h3 id="sequencing_library_metadata_mandatory_fields">Sequencing Library Metadata (Mandatory Fields)<a class="headerlink" href="#sequencing_library_metadata_mandatory_fields" title="Permanent link">&para;</a></h3>
+<p>For ENA/NCBI submissions, the following sequencing and library metadata fields are <strong>mandatory</strong>:</p>
+<ul>
+<li><strong>sample:</strong> Unique identifier for the sample.</li>
+<li><strong>study:</strong> Identifier for the study.</li>
+<li><strong>instrument_model:</strong> Model of the instrument used for sequencing (permitted values as specified by ENA).</li>
+<li><strong>library_name:</strong> Name of the sequencing library.</li>
+<li><strong>library_source:</strong> Source of the library (permitted values).</li>
+<li><strong>library_selection:</strong> Method used for library selection (permitted values).</li>
+<li><strong>library_strategy:</strong> Strategy used for library preparation (permitted values).</li>
+<li><strong>library_layout:</strong> Layout of the library (permitted values).</li>
+<li><strong>file_name:</strong> File name for reads.</li>
+<li><strong>file_md5:</strong> MD5 checksum for the file.</li>
+</ul>
+<h3 id="additional_library_metadata_optional">Additional Library Metadata (Optional)<a class="headerlink" href="#additional_library_metadata_optional" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>library_design:</strong> Details regarding the library design.</li>
+<li><strong>library_construction_protocol:</strong> Protocol used for library construction.</li>
+<li><strong>design_description:</strong> Description of the experimental design.</li>
+<li><strong>insert_size:</strong> Insert size of the library.</li>
+</ul>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../best_practices/" class="btn btn-neutral float-left" title="Folder Organization Best Practices"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../public-data/" class="btn btn-neutral float-right" title="Public Data Repositories">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/parisodlab/dry-guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../best_practices/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../public-data/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
