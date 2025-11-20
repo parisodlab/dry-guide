@@ -1,9 +1,3 @@
----
-runme:
-  id: 01JN61R4BVS38SRW3EXS44G0BX
-  version: v3
----
-
 # [Parisod Lab Dry Guide](https://parisodlab.github.io/dry-guide/latest/)
 
 The Parisod lab [dry-lab computing guide](https://parisodlab.github.io/dry-guide/latest/). The guide is built with [mkdocs](http://www.mkdocs.org/).
