@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>VScode - Parisod Lab Dry Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "VScode";
+        var mkdocs_page_input_path = "vscode.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Parisod Lab Dry Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Lab Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Management</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../data-organization/">Data Organization Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../best_practices/">Folder Organization Best Practices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ena/">Data Submission on ENA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../public-data/">Public Data Repositories</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IBU</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-intro/">How to access</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-conda/">Conda</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Coding Knowledge Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">VScode</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#steps">Steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1_install_the_remote_-_ssh_extension">1. Install the Remote - SSH extension</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2_connect_to_the_remote_server">2. Connect to the remote server</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3_set_keybindings_to_run_code_on_the_remote_server">3. Set keybindings to run code on the remote server</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4_passwordless_ssh_access_in_vs_code">4. Passwordless SSH Access in VS Code</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../r/">R</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Source Control with Git and VScode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">snakeGATK sequencing workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-trimming/">Trim pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-mapping/">Alignment pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other things</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../labsite/">Parisod Labsite</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Parisod Lab Dry Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Coding Knowledge Base</li>
+      <li class="breadcrumb-item active">VScode</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/vscode.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="code_in_vscode">Code in VScode<a class="headerlink" href="#code_in_vscode" title="Permanent link">&para;</a></h1>
+<div class="toc">
+<ul>
+<li><a href="#code_in_vscode">Code in VScode</a><ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#steps">Steps</a><ul>
+<li><a href="#1_install_the_remote_-_ssh_extension">1. Install the Remote - SSH extension</a></li>
+<li><a href="#2_connect_to_the_remote_server">2. Connect to the remote server</a></li>
+<li><a href="#3_set_keybindings_to_run_code_on_the_remote_server">3. Set keybindings to run code on the remote server</a></li>
+<li><a href="#4_passwordless_ssh_access_in_vs_code">4. Passwordless SSH Access in VS Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This guide will walk you through how to connect to a remote server using Visual Studio Code (VScode). This is useful if you want to edit files on a remote server without having to use a terminal or a text editor like <code>vim</code> or <code>nano</code>. You can also setup keybindings to run code on the remote server, which is useful to document your code while you are creating and testing it.</p>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<h3 id="1_install_the_remote_-_ssh_extension">1. Install the Remote - SSH extension<a class="headerlink" href="#1_install_the_remote_-_ssh_extension" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open VScode</li>
+<li>Click on the Extensions icon on the left-hand side of the window</li>
+<li>Search for <code>Remote - SSH</code> in the search bar</li>
+<li>Click on the green <code>Install</code> button</li>
+</ol>
+<h3 id="2_connect_to_the_remote_server">2. Connect to the remote server<a class="headerlink" href="#2_connect_to_the_remote_server" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click on the <code>Remote Explorer</code> icon on the left-hand side of the window (it looks like a little monitor)</li>
+<li>Click on the <code>+</code> icon at the top of the window</li>
+<li>Enter the username and IP address/server id of the server you want to connect to (e.g. <code>username@ip_address</code>, e.g. <code>&lt;user_id&gt;@login8.hpc.binf.unibe.ch</code> -IBU or <code>&lt;user_id&gt;@biolpc045604</code> - p910)</li>
+<li>Select the SSH configuration file you want to use and update (e.g. <code>~/.ssh/config</code>)</li>
+<li>Once you receive Host added message, click <code>Connect</code>, you will be prompted to enter your password</li>
+<li>Once connected you need to open a folder on the remote server. Click on the <code>Open Folder</code> button and select the folder you want to open. You will be prompted to enter your password again.</li>
+<li>You can now Open a terminal on the remote server by clicking on the <code>Terminal</code> menu and selecting <code>New Terminal</code>. Now you can run commands on the remote server, while saving and editing files (e.g. README.md) in VScode.</li>
+</ol>
+<h3 id="3_set_keybindings_to_run_code_on_the_remote_server">3. Set keybindings to run code on the remote server<a class="headerlink" href="#3_set_keybindings_to_run_code_on_the_remote_server" title="Permanent link">&para;</a></h3>
+<p><strong>Unix/Linux</strong>:<br />
+This step is useful if you want to document your code while you are creating and testing it.<br />
+1. Click on the <code>File</code> menu and select <code>Preferences</code> -&gt; <code>Keyboard Shortcuts</code><br />
+2. Search for <code>Terminal: Run Selected Text in Active Terminal</code> and click on the pen icon to add a keybinding<br />
+3. Enter the keybinding you want to use (e.g. <code>Ctrl+Enter</code>)</p>
+<p><strong>R</strong>:</p>
+<ol>
+<li>Create a dedicated R environment on the remote server using <code>conda</code> to install packages and run R code.</li>
+<li>install.packages("languageserver") in the above R to enable code completion and syntax highlighting in VScode.</li>
+<li>Install the <code>R</code> extension <code>REditorSupport.r</code> in VScode to run R code on the remote server.</li>
+<li>Click on the <code>File</code> menu and select <code>Preferences</code> -&gt; <code>Settings</code> and search for <code>@ext:REditorSupport.r R: Always use Active Terminal</code> and check the box.</li>
+<li>Follow the <a href="https://github.com/REditorSupport/vscode-R/wiki/Installation:-Linux">steps here:</a> to make vscode mimic RStudio.</li>
+</ol>
+<h3 id="4_passwordless_ssh_access_in_vs_code">4. Passwordless SSH Access in VS Code<a class="headerlink" href="#4_passwordless_ssh_access_in_vs_code" title="Permanent link">&para;</a></h3>
+<p>If you want to avoid entering your password every time you connect to the remote server, you can set up passwordless SSH access. This involves generating SSH keys and configuring your local and remote machines to use them for authentication.</p>
+<p><strong>1. Configure Your Local SSH Client</strong>  </p>
+<ol>
+<li>
+<p>Open your SSH configuration file, from vscode. Go to Yiew -&gt; Command Palette -&gt; type <code>Remote-SSH: Open SSH Configuration File</code> and select the file you want to edit.<br />
+   If the file doesn't exist, create it.</p>
+</li>
+<li>
+<p>Add the following configuration for your remote server:
+   <code>plaintext
+   Host &lt;host&gt;
+     HostName &lt;host&gt;
+     User &lt;username&gt;
+     IdentityFile "path/to/.ssh/keys/&lt;host&gt;_rsa"</code>
+   Replace the placeholders:
+   - <code>&lt;host&gt;</code>: The remote server's hostname or IP address.
+   - <code>&lt;username&gt;</code>: Your username on the remote server.</p>
+</li>
+</ol>
+<p><strong>2. Generate SSH Keys</strong>  </p>
+<ol>
+<li>
+<p>Generate a public/private key pair:
+   <code>bash
+   ssh-keygen -q -b 2048 -P "" -f path/to/.ssh/keys/&lt;host&gt;_rsa -t rsa</code>
+   This creates:
+   - <code>path/to/.ssh/keys/&lt;host&gt;_rsa</code> (private key)
+   - <code>path/to/.ssh/keys/&lt;host&gt;_rsa.pub</code> (public key)</p>
+</li>
+<li>
+<p>Ensure the keys are stored securely:
+   <code>bash
+   chmod 700 path/to/.ssh
+   chmod 600 path/to/.ssh/keys/&lt;host&gt;_rsa</code></p>
+</li>
+</ol>
+<p><strong>3. Copy the Public Key to the Remote Server</strong>  </p>
+<p>You can use any method to transfer the public key to the remote server:  </p>
+<p><strong>Using <code>scp</code></strong><br />
+<code>bash
+   scp path/to/.ssh/keys/&lt;host&gt;_rsa.pub &lt;username&gt;@&lt;host&gt;:~/</code></p>
+<p><strong>4. Configure the Remote Server</strong>  </p>
+<ol>
+<li>
+<p>Log in to the remote server:
+   <code>bash
+   ssh &lt;username&gt;@&lt;host&gt;</code></p>
+</li>
+<li>
+<p>Set up the public key for SSH authentication:
+   <code>bash
+   mkdir -p ~/.ssh
+   cat ~/host_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+   chmod 700 ~/.ssh
+   chmod 600 ~/.ssh/authorized_keys</code></p>
+</li>
+</ol>
+<p>If <code>authorized_keys</code> doesn’t exist:
+   <code>bash
+   mv ~/host_rsa.pub ~/.ssh/authorized_keys
+   chmod 600 ~/.ssh/authorized_keys</code></p>
+<p><strong>5. Test SSH Connection</strong>  </p>
+<ol>
+<li>On your local machine, test the connection:
+   <code>bash
+   ssh &lt;username&gt;@&lt;host&gt;</code>
+   If configured correctly, you should log in without entering a password.</li>
+</ol>
+<p><strong>6. Set Up VS Code</strong>  </p>
+<ol>
+<li>
+<p>Open VS Code and install the <strong>Remote - SSH</strong> extension from the Extensions Marketplace.</p>
+</li>
+<li>
+<p>Open the Command Palette (<code>Ctrl+Shift+P</code> or <code>Cmd+Shift+P</code>) and select:
+   <code>Remote-SSH: Connect to Host...</code></p>
+</li>
+<li>
+<p>Choose the host configured in <code>path/to/.ssh/config</code>. You should connect to your server without entering a password.</p>
+</li>
+</ol>
+<p><strong>Troubleshooting</strong>  </p>
+<ul>
+<li><strong>Permission Issues:</strong> Ensure that <code>.ssh</code> and key files have the correct permissions:</li>
+<li><code>.ssh</code>: <code>700</code></li>
+<li>Private key: <code>600</code></li>
+<li><code>authorized_keys</code>: <code>600</code></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ibu-conda/" class="btn btn-neutral float-left" title="Conda"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../r/" class="btn btn-neutral float-right" title="R">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/parisodlab/dry-guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../ibu-conda/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../r/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
