@@ -5,6 +5,7 @@ Address: Department of Biology, University of Fribourg
 PER23-Ecology & Evolution building, Chemin du Musée 15  
 PI : Prof. Christian Parisod, PER23-102, 0 26 300 88 52, [christian.parisod@unifr.ch](mailto:christian.parisod@unifr.ch)  
 Dry-lab manager: Dr. Rimjhim Roy Choudhury, PER23-001, 026 300 8686, [rimjhim.choudhury@unifr.ch](mailto:rimjhim.choudhury@unifr.ch)  
+Wet-lab manager: Prof. Christian Parisod  
 Administrative assistant: Eirini Maikanti, PER23-001, 026 300 88 50, [eirini.maikanti@unifr.ch](mailto:eirini.maikanti@unifr.ch)  
 Tech assistants: Dr. Boris Egger (PER05-0.340G, [boris.egger@unifr.ch](mailto:boris.egger@unifr.ch))  
 Alain Werro (PER04-01.117, 026 300 88 12)  
@@ -12,25 +13,32 @@ Gardner: Alain Müller([alain.mueller@unifr.ch](mailto:alain.mueller@unifr.ch)),
 
 All HR-related matter as well as room authorizations must be coordinated with the administrative assistant. An access to **my.unifr.ch** through your campus account will simplify many administrative tasks. Also see <https://www.unifr.ch/campus/en/personal-support/administrative.html>
 
-Our lab deals with molecular, computational and living resources. It involves your contribution by keeping things updated and through lab/greenhouse duties planned in advance. Christian will introduce you to the necessary infrastructures for your project and our elabFTW database for the storage of data and procedures (see §3.6ff). Start your stay by being known in our system and continue it with zealous updates.
+Our lab deals with molecular, computational and living resources. It involves your contribution by keeping things updated and through lab/greenhouse duties planned in advance. Christian will introduce you to the necessary infrastructures for your project and our [**Sharepoint database**](https://unifrch.sharepoint.com/sites/ParisodLab/SitePages/Lab-Resources.aspx) and **Lab archives** for the storage of data and procedures (see §3.6ff). Start your stay by being known in our system and continue it with zealous updates. For dry-lab members, please contact Rimjhim to get access to the IBU HPC cluster and lab servers. A detailed dry-lab guide is available at <https://parisodlab.github.io/dry-guide/latest/>.
 
-We use lab meetings to promote general coordination in the lab. A google-calendar (<mailto:labparisod@gmail.com>) and Slack (Parisod Lab) is used to make a note about your vacation plans ahead of time, as to organize replacement if necessary. If you must unexpectedly take day(s) off (e.g. illness or unanticipated circumstances), notify Christian directly by e-mail. E-mails to all lab members can be sent through [biol-parisodgp@unifr.ch](mailto:biol-parisodgp@unifr.ch).
+We use lab meetings to promote general coordination in the lab. We use **MS Teams** to organize and communicate on a daily basis. If you must unexpectedly take day(s) off (e.g. illness or unanticipated circumstances), notify Christian directly by e-mail. E-mails to all lab members can be sent through [biol-parisodgp@unifr.ch](mailto:biol-parisodgp@unifr.ch).
 
-Two series of scientific seminars are taking place during semesters: Departmental seminars with mostly external guests every Tuesdays (11.15 am, PER04-0.110) and Environmental Biology seminars by internal collaborators every Thursdays (15.15 pm, PER04-0.110). Your attendance and participation are welcome! Register to to such and other teaching-related activities and get information through <https://moodle.unifr.ch/>
+Two series of scientific seminars are taking place during semesters: Departmental seminars with mostly external guests every Tuesdays (11.15 am, PER04-0.110) and Environmental Biology seminars by internal collaborators every Thursdays (15.15 pm, PER04-0.110). Your attendance and participation are welcome! Register to such and other teaching-related activities and get information through <https://moodle.unifr.ch/>
 
+Contents
+====
 [TOC]
 
 ## 1\. Lab member expectations & responsibilities
 
 ### _1.1 Everyone (full-time, part-time, and undergraduate internship members)_
 
+**Detailed protocol should be followed across labs at PER23. It must be read and signed beforehand.** Note that the lab 305 is PCR free.
+
 Keep your lab and office space tidy on a daily basis. Take your share for team-level activities.
+Follow safety rules. Here you will find the contact persons for safety in the Department of Biology <https://www.unifr.ch/scimed/en/safety/commissions>
+
+In the wet-lab, when you open reagents or consumables, please label them with the date of opening. This helps to keep track of stock and avoid contamination. Main consumables are ordered by the lab manager, but please inform him/her if you notice that something is running low. Please send an e-mail to Christian <mailto:christian.parisod@unifr.ch> when a reagent or consumable needs to be reordered.
 
 Do work that you are proud of. Do work that others will care about. Double-check your work (good science builds on solid evidence). Would you feel your work does not meet these standards, let’s discuss possible solutions.
 
 Science is a marathon. Academia has a specific flavor, but it is still a job. Be professional. Do not come into the lab if you are sick. Take personal time and vacation when needed and cultivate a life outside of the lab. There may be times that you have to work longer or harder to finish something, but you should feel it balanced out over time.
 
-We are a team. Be supportive of your lab mates. Attend lab meetings and group activities. Respect each others' strengths, weaknesses, differences... Communicate openly. Work independently when you can, but make the best of working next to peers and ask for help when you need it. Share your knowledge. Typical workflow in the face of a question: (i) consult documentation, (ii) ask google, (iii) ask peers, (iv) ask direct mentor, (v) ask PI. It can be shortcut.
+We are a team. Be supportive of your lab mates. Attend lab meetings and group activities. Respect each others' strengths, weaknesses, differences... Communicate openly. Work independently when you can, but make the best of working next to peers and ask for help when you need it. Share your knowledge. Typical workflow in the face of a question: (i) consult documentation, (ii) ask google, (iii) ask Chat-GPT (making sure it is not hallucinating), (iv) ask peers, (v) ask direct mentor, (vi) ask PI. It can be shortcut.
 
 We work within an academic system that is fundamentally self-driven. Participate to it with curiosity. Among the several educational events that target a broad audience, regular series of seminars shall normally be attended. An overview is to be found on moodle (register as participant) and in a weekly newsletter.
 
@@ -86,13 +94,13 @@ Question the type of career you want to pursue (e.g. research-focused or teachin
 
 All of the above, plus you will be expected to:
 
-Maintain the list of lab members updated (including the biol-parisodgp mailing list, elabWTF, slack et al, and access to lab infrastructures through magnetic locks by informing Eirini with name and duration, ...)
+Maintain the list of lab members updated (including access to the biol-parisodgp mailing list, Sharepoint database, Teams et al, and access to lab infrastructures through magnetic locks by informing the administrative assistant with the name and expected duration of the project in the lab, ...)
 
 Maintain the lab internal database and routines updated, with proper archiving of samples and protocols. Order main consumables. Keep this manual up to date.
 
 Help to maintain an atmosphere of professionalism within the lab. Oversee the scheduling and training of newcomers in the lab. Ensures proper reporting before the leaving of a lab member.
 
-Assist other lab members with data collection, storage or analysis. Work on your own research project.
+Assist other lab members with data collection, storage or analysis. Work on own research project.
 
 ### _1.7 Undergraduate students and research assistants (s.l.)_
 
@@ -120,7 +128,7 @@ Scientific integrity <https://www.unifr.ch/scimed/en/integrity>
 
 Authorship credit should reflect the individual's contribution to the study. An author is considered anyone contributing with initial research design, data collection and analysis, manuscript drafting, and final approval. All authors assume responsibility for the publication, making sure that the data they contributed are accurate. The submitting author makes sure that all deserving authors have been credited, that all authors have given their approval; and handles responses to inquiries during and after publication.
 
-Authorship will usually be discussed prior to the beginning of a new project to clearly set expectations. Changes to authorship may occur over the course of a project if new collaborators become involved or if someone is not fulfilling their planned role. In general, I expect that PhD candidates and postdocs in the lab will be first authors on publications on which they are the primary lead, and I will be the last author.
+Authorship will usually be discussed prior to the beginning of a new project to clearly set expectations. Changes to authorship may occur over the course of a project if new collaborators become involved or if someone is not fulfilling their planned role. In general, I expect that PhD candidates and postdocs in the lab will be first authors on publications on which they are the primary lead, and the PI will be the last author.
 
 As for publications out of the lab, we generally try to avoid thin slices and tend to privilege integrative evidence supporting a complete story as much as possible. Would you feel that our targeted high-hanging fruits can hardly get harvested, let’s discuss how to handle the situation to possibly avoid starvation.
 
@@ -144,7 +152,7 @@ In addition to poking my head into the lab or your office regularly, I will be w
 
 As I may turn my “notifications” off when concentrating on something else, you can always send me an e-mail. I do my best to shortly answer and will not mind receiving a reminder after more than 48h. If you need something by a particular deadline, please indicate it. Early information (at least, one week beforehand) should enable me to allocate sufficient time and meet your deadline.
 
-Recommendation letters: I will usually write a letter for any lab member having spent multiple months in the lab. Your request (ideally, two weeks ahead of time) should include the deadline and your current CV as well as any relevant instruction. To ensure that I do not miss any important details, I may ask you for a draft, which I would then revise consistently.
+Recommendation letters: I will usually write a letter for any lab member having spent significant time in the lab. Your request (ideally, two weeks ahead of time) should include the deadline and your current CV as well as any relevant instruction. To ensure that I do not miss any important details, I may ask you for a draft, which I would then revise consistently.
 
 ### _3.4 Lab meetings_
 
@@ -156,8 +164,7 @@ To ensure effective lab meetings, it is recommended to adequately prepare, espec
 
 The lab will typically pay for full-time lab members to work in the lab of collaborators or to present their work at conferences (e.g. National, such as Biology’2i; International). In general, presented work should be original and appropriate for the targeted conference. Wishes must be discussed beforehand as they may depend on the availability of funds. Transparent reimbursement of your work-related costs must in all cases be justified by invoices and must be coordinated with administrative assistant based on founding source). Lab members can apply for other sources of funding available to them (e.g. Swiss Botanical Society).
 
-### _3.6 Lab archives & elabFTW_
-
+### _3.6 Lab archives & Sharepoint database_
 We have three alternatives for data storage:
 
 \-Common server of Biology, for light data
@@ -174,22 +181,10 @@ MacOS/linux: smb://bigdata.unifr.ch/science/biol/groupe_parisod/
 
 Windows: [\\\\bigdata.unifr.ch\\science\\biol\\groupe_parisod\\](file:///\\bigdata.unifr.ch\science\biol\groupe_parisod\)
 
-You can find the main folders Archives (to put all data that are currently in a server such as NCBI or EMBL-EBI or data that are not used anymore), Raw_data (to put data that are still being used), Shared (contains protocols, results and software automatically stored from ElabFTW), Users (space to store your own data).
+You can find the main folders Archives (to put all data that are currently in a server such as NCBI or EMBL-EBI or data that are not used anymore), Raw_data (to put data that are still being used), Shared (contains protocols, results and software), Users (space to store your own data).
 
-\-Electronic lab notebook, to document experiments and data stored in the bigdata server
+You can find a [**Sharepoint database**](https://unifrch.sharepoint.com/sites/ParisodLab/SitePages/Lab-Resources.aspx) with [Seeds and Tissue Stock Inventory](https://unifrch.sharepoint.com/sites/ParisodLab/Lists/Field%20Sample%20Collection/AllItems.aspx), to store metadata of seeds and tissue samples collected in the field or from experimental populations. You should try to keep it updated as much as possible and try to enter new samples as soon as they are collected. For experimental populations, please make sure to keep track of the crossing design and parental information (Parent seed sample ID).
 
-<https://parisodlab.unifr.ch:8888> use login and password of the UNIFR (LDAP) once registered (ask Patrick Favre for subscription)
+Each sample included in our collection should be recorded as "Field" in the Origin column with the following fields: Collected By, Collection date, Locality, Latitude, Longitude, possibly some comments on subsequent fate (e.g. RNA/DNA extraction).
 
-ElabFTW allows to record your experiments and can be shared (or not) with others. It allows important lab information, such as chemicals, protocols and scripts, to be stored in a database. All contents can be linked to one another (e.g. experiment to databases, experiment to experiments).
-
-Parisod:Pop: Samples from natural population (collected in the wild). Each sample included in our collection should be recorded in Parisod Natural with the following fields: collector’s name, date, locality, coordinates, possibly some comments on subsequent fate (e.g. RNA/DNA extraction).
-
-Parisod:Experimental: Samples from experimental populations (crossings...). Each cross samples should be recorded in Parisod experimental with fields (collactor name, date, crossing…).
-
-### _3.7 Lab rules_
-
-A detailed protocol is to be followed across labs at PER23. It must be read and signed beforehand. Note that the lab 305 is PCR free.
-
-Programming of conditions in the LED growth chamber (PER23-104) and growth cabinets (PER23-205a):
-
-Greenhouses: Keys available PER23-008. Programming of conditions: Alain Werro.
+Samples from experimental populations (crossings...). Each cross samples should be recorded with the Study name in the "Origin" fields and Collected by, Collection date, Seed family source- to indicate the Parents, Seed family generation- to indicate the generation of the cross (e.g. F1, F2), and possibly some comments on Selfing/Outcrossing.

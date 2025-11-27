@@ -97,7 +97,7 @@ If you have ever tried to run a pipeline or script that takes a long time (think
 Perhaps the most common way to deal with scripts that run for a long time is [`screen`](https://linuxize.com/post/how-to-use-linux-screen/). For the most simple case use, type `screen` to open a new screen session and then run your script like normal. Below are some more intermediate commands for taking full advantage of `screen`:
 
 * `screen -R <some_descriptive_name>`: Use this command to name your screen session. Especially useful if you have several scren sessions running and/or want to get back to this particular one later.
-* `Ctrl+a` follwed by `Ctrl+d` to detach from the current screen session (NOT `Ctrl+a+d`!)
+* `Ctrl+a+d` to detach from the current screen session
 * `exit` to end the current screen session
 * `screen -ls` lists the IDs of all screen sessions currently running 
 * `screen -R <screen_id>`: Use this command to resume a particular screen session. 

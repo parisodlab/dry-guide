@@ -1,9 +1,3 @@
----
-runme:
-  id: 01JN61R4BVS38SRW3EXS44G0BX
-  version: v3
----
-
 # [Parisod Lab Dry Guide](https://parisodlab.github.io/dry-guide/latest/)
 
 The Parisod lab [dry-lab computing guide](https://parisodlab.github.io/dry-guide/latest/). The guide is built with [mkdocs](http://www.mkdocs.org/).
@@ -12,13 +6,13 @@ The Parisod lab [dry-lab computing guide](https://parisodlab.github.io/dry-guide
 
 1. Clone the repo
 
-```sh {"id":"01JN61R4BVS38SRW3EXE73R62A"}
+```sh 
 git clone https://github.com/ParisodLab/dry-guide.git
 ```
 
 2. Install `mkdocs` and `mike=0.4.2`, with conda and pip (both)
 
-```sh {"id":"01JN61R4BVS38SRW3EXGNP9D8A"}
+```sh 
 conda activate dry-guide
 
 ```
@@ -28,7 +22,7 @@ conda activate dry-guide
 
 If you are making minor changes, use the same version:
 
-```bash {"id":"01JN61R4BVS38SRW3EXHX79SKZ"}
+```bash 
 mike deploy [current date version] latest --update-aliases --ignore --push
 ```
 
@@ -38,7 +32,7 @@ If you have made substantial changes to the site, like adding new sections or re
 
 Get today's date with `date +%Y-%m-%d`.
 
-```bash {"id":"01JN61SBMWNGADK7AKSFTRSYPP","interactive":"true"}
+```bash 
 conda activate dry-guide
 TODAY=$(date +%Y-%m-%d)
 echo $TODAY
