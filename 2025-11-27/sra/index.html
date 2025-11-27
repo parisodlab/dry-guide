@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Sra - Parisod Lab Dry Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Sra";
+        var mkdocs_page_input_path = "sra.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Parisod Lab Dry Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">Lab Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Management</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../data-organization/">Data Organization Guidelines</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../best_practices/">Folder Organization Best Practices</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ena/">Data Submission on ENA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../public-data/">Public Data Repositories</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">IBU</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-intro/">How to access</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ibu-conda/">Conda</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Coding Knowledge Base</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../vscode/">VScode</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../r/">R</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bash/">Command Line</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Source Control with Git and VScode</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">snakeGATK sequencing workflow</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-trimming/">Trim pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipeline-mapping/">Alignment pipeline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other things</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../labsite/">Parisod Labsite</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Parisod Lab Dry Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Sra</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/parisodlab/dry-guide/edit/master/docs/sra.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <hr />
+<p>These guidelines outline the steps for uploading your sequence data (FASTQ files) to NCBI's Sequence Read Archive (SRA) or ENA. All submissions should be associated with our work on the genome of <strong>Biscutella laevigata</strong>. Follow these instructions carefully to ensure your submission is linked to the correct bioproject and that all metadata is complete.</p>
+<hr />
+<h2 id="1_preparing_your_submission">1. Preparing Your Submission<a class="headerlink" href="#1_preparing_your_submission" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Upload FASTQ Files:</strong><br />
+   For each dataset, upload the FASTQ files to <strong>NCBI SRA</strong> or <strong>ENA</strong>.</li>
+<li>If a bioproject already exists, create a new submission and link it to the previous bioproject.</li>
+<li>
+<p>If no bioproject exists, create a new one and add all relevant data.</p>
+</li>
+<li>
+<p><strong>Organism Information:</strong><br />
+   In all metadata templates, ensure that the <strong>organism</strong> field is set to <strong>Biscutella laevigata</strong>.</p>
+</li>
+<li>See <a href="../ena/">ena.md</a> for detailed instructions on submitting data to ENA.</li>
+</ul>
+<hr />
+<h2 id="2_creating_the_biosample_sheet_for_ncbi">2. Creating the Biosample Sheet for NCBI<a class="headerlink" href="#2_creating_the_biosample_sheet_for_ncbi" title="Permanent link">&para;</a></h2>
+<p>A well-prepared biosample sheet is essential for a successful submission. Follow these steps to create a clear and complete biosample sheet:</p>
+<ol>
+<li><strong>Download the Template:</strong></li>
+</ol>
+<ul>
+<li>In the SRA submission portal, select <strong>Upload file using Excel</strong> to download the biosample sheet template provided by NCBI.</li>
+</ul>
+<ol start="2">
+<li><strong>Fill in Mandatory Columns:</strong></li>
+</ol>
+<ul>
+<li>
+<p><strong>Sample ID:</strong></p>
+<ul>
+<li>Assign a unique identifier for each sample (e.g., <code>BL_001</code>, <code>BL_002</code>). This will serve as the sample name.</li>
+</ul>
+</li>
+<li>
+<p><strong>Strain:</strong></p>
+<ul>
+<li>Provide the strain name for the sample. If there are multiple library preps for the same strain, append a suffix (e.g., <code>-2</code>, <code>-3</code>) to ensure uniqueness.</li>
+</ul>
+</li>
+<li>
+<p><strong>Bioproject:</strong></p>
+<ul>
+<li>Enter the bioproject ID if available. If creating a new bioproject, you can leave this blank for now.</li>
+</ul>
+</li>
+<li>
+<p><strong>Organism:</strong></p>
+<ul>
+<li>Enter <code>Biscutella laevigata</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Developmental Stage:</strong></p>
+<ul>
+<li>Specify the developmental stage (e.g., <code>seedling</code>, <code>flowering</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Tissue:</strong></p>
+<ul>
+<li>Specify the tissue type sampled (e.g., <code>leaf</code>, <code>root</code>, <code>stem</code>).</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><strong>Include Additional Metadata:</strong></li>
+</ol>
+<ul>
+<li>
+<p><strong>Collected By:</strong></p>
+<ul>
+<li>Enter the name(s) of the person(s) or institution that collected the sample.</li>
+</ul>
+</li>
+<li>
+<p><strong>Collection Date:</strong></p>
+<ul>
+<li>Provide the date of collection in <code>YYYY-MM-DD</code> format.</li>
+</ul>
+</li>
+<li>
+<p><strong>Latitude/Longitude:</strong></p>
+<ul>
+<li>Combine latitude and longitude into one column using the format:<br />
+<code>34.89 S 56.15 W</code><br />
+<em>(Note: Use the appropriate signs/directions, with North and East being positive.)</em></li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li><strong>Data Consistency and Formatting:</strong></li>
+</ol>
+<ul>
+<li>Ensure that all mandatory columns are filled out for every sample.</li>
+<li>Avoid spaces or special characters in sample IDs.</li>
+<li>Verify that the coordinate format is consistent across all entries.</li>
+</ul>
+<ol start="5">
+<li><strong>Review and Save:</strong></li>
+</ol>
+<ul>
+<li>Double-check the biosample sheet for accuracy.</li>
+<li>Save the completed file as an Excel or CSV file as per NCBI guidelines.</li>
+</ul>
+<ol start="6">
+<li><strong>Upload the Biosample Sheet:</strong></li>
+</ol>
+<ul>
+<li>Return to the SRA submission portal and upload the completed biosample sheet.</li>
+</ul>
+<hr />
+<h2 id="3_sra_metadata_sheet_creation">3. SRA Metadata Sheet Creation<a class="headerlink" href="#3_sra_metadata_sheet_creation" title="Permanent link">&para;</a></h2>
+<p>After completing the biosample sheet, create the SRA metadata sheet as follows:</p>
+<ol>
+<li><strong>Download the SRA Metadata Template:</strong></li>
+</ol>
+<ul>
+<li>In the SRA portal, choose <strong>Upload file using Excel</strong> to download the metadata sheet template.</li>
+</ul>
+<ol start="2">
+<li><strong>Populate Mandatory Fields:</strong></li>
+</ol>
+<ul>
+<li>
+<p><strong>Sample ID:</strong></p>
+<ul>
+<li>Use the same unique identifier as in the biosample sheet.</li>
+</ul>
+</li>
+<li>
+<p><strong>Library ID:</strong></p>
+<ul>
+<li>Assign a unique library ID (if not already provided, you can use a similar naming convention as for sample IDs).</li>
+</ul>
+</li>
+<li>
+<p><strong>Forward and Reverse File Names:</strong></p>
+<ul>
+<li>Fill in the <code>fq1</code> and <code>fq2</code> columns with the respective FASTQ file names.</li>
+</ul>
+</li>
+<li>
+<p><strong>Additional Columns:</strong></p>
+<ul>
+<li>Include other required fields such as <code>title</code> and <code>instrument_model</code>.</li>
+<li>Determine the instrument model by referencing the sequencing folder details in the Sequencing Runs Google Sheet.</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><strong>Save and Upload:</strong></li>
+</ol>
+<ul>
+<li>Verify the formatting and save the file as a TSV.</li>
+<li>Upload the completed metadata sheet to the SRA submission portal.</li>
+</ul>
+<hr />
+<h2 id="4_pre-upload_fastq_files_using_ftp">4. Pre-upload FASTQ Files Using FTP<a class="headerlink" href="#4_pre-upload_fastq_files_using_ftp" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Prepare the File List:</strong></li>
+</ol>
+<ul>
+<li>Combine the <code>filename1</code> and <code>filename2</code> columns from your SRA metadata sheet to create a list of files for upload.</li>
+</ul>
+<ol start="2">
+<li><strong>FTP Upload Steps:</strong></li>
+</ol>
+<ul>
+<li><strong>Log in to NCBI:</strong></li>
+<li>
+<p>Create (or sign in to) your NCBI account and access the SRA submission portal.</p>
+</li>
+<li>
+<p><strong>Establish an FTP Connection:</strong></p>
+</li>
+</ul>
+<p>```bash {"id":"01JN6044GWK4H4ZFSM425WYXJT"}
+ftp ftp-private.ncbi.nlm.nih.gov</p>
+<pre><code>
+- **Navigate to Your Account Folder:**
+
+```bash {&quot;id&quot;:&quot;01JN6044GWK4H4ZFSM4391YQWG&quot;}
+cd uploads/your_username_submission_folder
+</code></pre>
+<ul>
+<li><strong>Create a New Folder for the Submission:</strong></li>
+</ul>
+<p>```bash {"id":"01JN6044GWK4H4ZFSM4531NPZN"}
+mkdir 20210121_submission</p>
+<pre><code>
+- **Exit the FTP Session:**
+
+```bash {&quot;id&quot;:&quot;01JN6044GWK4H4ZFSM460MVGMN&quot;}
+exit
+</code></pre>
+<ul>
+<li><strong>Upload Files from Terminal (on QUEST):</strong></li>
+</ul>
+<p><code>bash {"id":"01JN6044GWK4H4ZFSM48B2RZ1K"}
+module load parallel
+parallel --verbose lftp -e "put -O /uploads/your_username_submission_folder/20210121_submission {} ; bye" -u subftp,password ftp-private.ncbi.nlm.nih.gov &lt; files_to_upload.tsv</code></p>
+<ol start="3">
+<li><strong>Important:</strong><br />
+   Ensure the FTP upload is completely finished before you complete your SRA submission.</li>
+</ol>
+<hr />
+<h2 id="5_completing_the_submission">5. Completing the Submission<a class="headerlink" href="#5_completing_the_submission" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Select the Upload Folder:</strong></li>
+<li>
+<p>In the SRA portal, choose the folder from which you want to pull your files.</p>
+</li>
+<li>
+<p><strong>Review &amp; Submit:</strong></p>
+</li>
+<li>Carefully review all submission details.</li>
+<li>Submit the data and wait for confirmation; any issues will be reported by the portal.</li>
+</ul>
+<hr />
+<h2 id="6_current_bioprojects_associated_with_the_parisod_lab">6. Current Bioprojects Associated with the Parisod Lab<a class="headerlink" href="#6_current_bioprojects_associated_with_the_parisod_lab" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Example Bioproject:</strong></li>
+<li>Biscutella laevigata Genome FASTQ - PRJNA646339<br />
+<a href="#">Link to Bioproject</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/parisodlab/dry-guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

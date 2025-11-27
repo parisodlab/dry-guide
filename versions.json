@@ -3,9 +3,15 @@
     "version": "[current",
     "title": "[current",
     "aliases": [
-      "latest",
-      "date",
-      "version]"
+      "version]",
+      "date"
+    ]
+  },
+  {
+    "version": "2025-11-27",
+    "title": "2025-11-27",
+    "aliases": [
+      "latest"
     ]
   },
   {
