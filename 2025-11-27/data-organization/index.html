@@ -52,27 +52,95 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Data Organization Guidelines</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1_data_submission">1. Data Submission</a>
+    <li class="toctree-l2"><a class="reference internal" href="#overview_storage_infrastructure">Overview: Storage Infrastructure</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2_data_storage_requirements">2. Data Storage Requirements</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3_server_usage_guidelines">3. Server Usage Guidelines</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1_getting_started_required_accounts">1. Getting Started: Required Accounts</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#using_p910">Using p910</a>
+    <li class="toctree-l3"><a class="reference internal" href="#for_long-term_lab_members">For Long-Term Lab Members</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for_short-term_users">For Short-Term Users</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2_data_storage_workflow">2. Data Storage Workflow</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#purpose">Purpose</a>
+    <li class="toctree-l3"><a class="reference internal" href="#step_1_receiving_raw_data">Step 1: Receiving Raw Data</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#usage_restrictions">Usage Restrictions</a>
+    <li class="toctree-l3"><a class="reference internal" href="#step_2_data_analysis">Step 2: Data Analysis</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#documentation_management">Documentation Management</a>
+    <li class="toctree-l3"><a class="reference internal" href="#step_3_final_results">Step 3: Final Results</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3_storage_locations_explained">3. Storage Locations Explained</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ibu_account_primary_workspace">IBU Account (Primary Workspace)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bigdata_server_permanent_storage">BigData Server (Permanent Storage)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#how_to_connect">How to Connect</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#folder_structure">Folder Structure</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#common_server_shared_lab_resources">Common Server (Shared Lab Resources)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#how_to_connect_1">How to Connect</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#whats_available">What's Available</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#p910_server_gateway_temporary_workspace">p910 Server (Gateway &amp; Temporary Workspace)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what_p910_is_used_for">What p910 IS Used For</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#what_p910_is_not_used_for">What p910 IS NOT Used For</a>
     </li>
         </ul>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4_backup_guidelines_on_p910">4. Backup Guidelines on p910</a>
+    <li class="toctree-l2"><a class="reference internal" href="#4_backup_system_on_p910">4. Backup System on p910</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#how_backups_work">How Backups Work</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5_key_takeaways">5. Key Takeaways</a>
+    <li class="toctree-l3"><a class="reference internal" href="#setting_up_your_backup">Setting Up Your Backup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what_to_back_up">What to Back Up</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5_quick_reference_guide">5. Quick Reference Guide</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common_scenarios">Common Scenarios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data_storage_decision_tree">Data Storage Decision Tree</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#storage_capacity_guidelines">Storage Capacity Guidelines</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6_best_practices_checklist">6. Best Practices Checklist</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#for_all_lab_members">For All Lab Members</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for_long-term_members">For Long-Term Members</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for_data_management">For Data Management</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7_getting_help">7. Getting Help</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common_issues">Common Issues</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#contacts">Contacts</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8_summary">8. Summary</a>
     </li>
     </ul>
                   </li>
@@ -141,95 +209,511 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="data_organization_guidelines">Data Organization Guidelines<a class="headerlink" href="#data_organization_guidelines" title="Permanent link">&para;</a></h1>
-<p>This page outlines how to handle, store, and back up your NGS data so that everyone in the lab has access to well-organized and secure data.</p>
+<p>This guide explains the lab's data management workflow, from receiving NGS data to long-term storage and backup. Following these guidelines ensures data accessibility, security, and compliance with best practices.</p>
 <hr />
-<h2 id="1_data_submission">1. Data Submission<a class="headerlink" href="#1_data_submission" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Submit Raw Data Promptly:</strong><br />
-   When you receive raw data from the NGS facility, submit it to either <strong>ENA</strong> or <strong>NCBI</strong>.</li>
-<li><strong>Include Metadata:</strong> Attach all necessary metadata.</li>
-<li>
-<p><strong>Set an Embargo:</strong> Apply an embargo if needed, as soon as possible.</p>
-</li>
-<li>
-<p>Check out <a href="../ena/">ENA Guidelines</a> for detailed instructions on how to submit data to ENA.</p>
-</li>
-</ul>
+<h2 id="overview_storage_infrastructure">Overview: Storage Infrastructure<a class="headerlink" href="#overview_storage_infrastructure" title="Permanent link">&para;</a></h2>
+<p>The lab uses a three-tier storage system:</p>
+<table>
+<thead>
+<tr>
+<th>Storage Location</th>
+<th>Purpose</th>
+<th>Access Level</th>
+<th>Backup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IBU Account</strong></td>
+<td>Primary workspace for active analysis</td>
+<td>Long-term users</td>
+<td>User-managed</td>
+</tr>
+<tr>
+<td><strong>BigData Server</strong></td>
+<td>Permanent storage for raw and final data</td>
+<td>Long-term users</td>
+<td>User-managed</td>
+</tr>
+<tr>
+<td><strong>Common Server</strong></td>
+<td>Shared lab resources and light data</td>
+<td>All lab members</td>
+<td>User-managed</td>
+</tr>
+<tr>
+<td><strong>p910 Server</strong></td>
+<td>Gateway and temporary workspace</td>
+<td>All lab members</td>
+<td>BACKUP folder only</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="2_data_storage_requirements">2. Data Storage Requirements<a class="headerlink" href="#2_data_storage_requirements" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>BigData Server:</strong></li>
-<li>Store <strong>raw data</strong> and <strong>final unfiltered results</strong> (e.g., unfiltered VCF files and other outputs) on the BigData server as soon as they are ready.</li>
-<li>
-<p>Move <strong>final filtered results</strong> to the BigData server promptly.</p>
-</li>
-<li>
-<p><strong>IBU Account for Long-Term Users:</strong></p>
-</li>
-<li>All long-term users of the Parisod lab should obtain an <strong>IBU account</strong> as soon as possible.</li>
-<li><strong>Transfer raw data</strong> to your IBU account.</li>
-<li>Create and maintain analysis scripts and pipelines, and always use <strong>version control on the ParisodLab GitHub</strong>.</li>
-</ul>
-<hr />
-<h2 id="3_server_usage_guidelines">3. Server Usage Guidelines<a class="headerlink" href="#3_server_usage_guidelines" title="Permanent link">&para;</a></h2>
-<h3 id="using_p910">Using p910<a class="headerlink" href="#using_p910" title="Permanent link">&para;</a></h3>
-<h4 id="purpose"><strong>Purpose</strong><a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h4>
-<p>The <strong>p910</strong> server serves <strong>only</strong> as a gateway to access the following UniFR network drives:  </p>
-<ul>
-<li><strong>BigData</strong>  </li>
-<li><strong>Common</strong>  </li>
-<li><strong>OneCopy</strong>  </li>
-<li>Other designated network drives  </li>
-</ul>
-<h4 id="usage_restrictions"><strong>Usage Restrictions</strong><a class="headerlink" href="#usage_restrictions" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>Do not store data long-term</strong> on the <code>/media/Data</code> drives.  </li>
-<li>These drives are intended <strong>only</strong> for:  <ul>
-<li>Testing scripts  </li>
-<li>Temporary storage for short-term users (or those without IBU access)  </li>
-<li>Managing data transfers between sequencing servers and BigData  </li>
-</ul>
-</li>
-</ul>
-<h4 id="documentation_management"><strong>Documentation Management</strong><a class="headerlink" href="#documentation_management" title="Permanent link">&para;</a></h4>
-<p>The <strong>p910</strong> server is also used by the system administrator for managing lab documentation, which is version-controlled on the <strong>ParisodLab GitHub</strong>.  </p>
-<hr />
-<h2 id="4_backup_guidelines_on_p910">4. Backup Guidelines on p910<a class="headerlink" href="#4_backup_guidelines_on_p910" title="Permanent link">&para;</a></h2>
+<h2 id="1_getting_started_required_accounts">1. Getting Started: Required Accounts<a class="headerlink" href="#1_getting_started_required_accounts" title="Permanent link">&para;</a></h2>
+<h3 id="for_long-term_lab_members">For Long-Term Lab Members<a class="headerlink" href="#for_long-term_lab_members" title="Permanent link">&para;</a></h3>
 <div class="admonition important">
-<p class="admonition-title">Precious Data</p>
-<p>If you have valuable data that is not considered temporary, please move it to <strong>BigData</strong> as soon as possible.</p>
+<p class="admonition-title">Priority Setup</p>
+<p>Obtain these accounts as soon as you join the lab:</p>
 </div>
+<p><strong>IBU Account</strong> (Required for all long-term users)
+- <strong>Purpose:</strong> Primary workspace for data analysis and pipeline development
+- <strong>How to get it:</strong> Contact the lab administrator
+- <strong>What to use it for:</strong>
+    - Store and analyze raw data
+    - Develop and test analysis scripts
+    - Run computational pipelines</p>
+<p><strong>GitHub Access</strong>
+- <strong>Purpose:</strong> Version control for all analysis code
+- <strong>Organization:</strong> <a href="https://github.com/parisodlab">ParisodLab GitHub</a>
+- <strong>Requirement:</strong> All scripts and pipelines must be version-controlled</p>
+<h3 id="for_short-term_users">For Short-Term Users<a class="headerlink" href="#for_short-term_users" title="Permanent link">&para;</a></h3>
+<p>If you don't have IBU access, you can use:
+- <strong>p910 server</strong> for temporary storage and testing
+- <strong>BigData server</strong> for data storage (read/write access)</p>
+<hr />
+<h2 id="2_data_storage_workflow">2. Data Storage Workflow<a class="headerlink" href="#2_data_storage_workflow" title="Permanent link">&para;</a></h2>
+<h3 id="step_1_receiving_raw_data">Step 1: Receiving Raw Data<a class="headerlink" href="#step_1_receiving_raw_data" title="Permanent link">&para;</a></h3>
+<p>When you receive raw NGS data from the sequencing facility:</p>
+<ol>
+<li>
+<p><strong>Immediate Actions:</strong></p>
 <ul>
-<li><strong>BACKUP Folder (for p910):</strong></li>
-<li>A folder named <strong>"BACKUP"</strong> is provided at the base of each drive on the <strong>p910</strong> server.</li>
-<li><strong>Important:</strong> Only data stored in this BACKUP folder on p910 will be automatically backed up.</li>
-<li>Create a subfolder within <strong>BACKUP</strong> with your name and place all critical files there.</li>
-<li>Organize your data within the subfolder, you should have a clear structure for your data.</li>
-<li>An <strong>automatic backup script</strong> will copy data from the BACKUP folder to BigData every evening at <strong>5 PM</strong>.</li>
-<li>We <strong>do not guarantee backups</strong> for any data stored elsewhere.</li>
+<li>Submit data to <strong>ENA</strong> or <strong>NCBI</strong> with complete metadata</li>
+<li>Apply embargo if needed (typically 2 years for unpublished data)</li>
+<li>See <a href="../ena/">ENA Guidelines</a> for detailed submission instructions</li>
 </ul>
+</li>
+<li>
+<p><strong>Storage:</strong></p>
+<ul>
+<li>Transfer raw data to your <strong>IBU account</strong> for analysis</li>
+<li>Upload a copy to <strong>BigData server</strong> → <code>Raw_data/</code> folder</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Metadata Requirements</p>
+<p>Always include comprehensive metadata:</p>
+<ul>
+<li><strong>Sample information:</strong> Population, subspecies, elevation, collection date</li>
+<li><strong>ENA checklist fields:</strong> Propagation method, soil properties, health status</li>
+<li><strong>Sequencing library:</strong> Instrument model, library prep details, file checksums</li>
+<li><strong>Environmental context:</strong> When available, include collection methods and conditions</li>
+</ul>
+</div>
+<h3 id="step_2_data_analysis">Step 2: Data Analysis<a class="headerlink" href="#step_2_data_analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Primary Analysis Location: IBU Account</strong></p>
+<ul>
+<li>Store working copies of data on your IBU account</li>
+<li>Develop analysis scripts and pipelines</li>
+<li>Test and refine your workflows</li>
+<li>Use version control (Git) for all code</li>
+</ul>
+<p><strong>Temporary Testing: p910 Server</strong></p>
+<ul>
+<li>Use <code>/media/Data/</code> drives for script testing only</li>
+<li><strong>Not for long-term storage</strong></li>
+<li>Clean up after testing</li>
+</ul>
+<h3 id="step_3_final_results">Step 3: Final Results<a class="headerlink" href="#step_3_final_results" title="Permanent link">&para;</a></h3>
+<p>When analysis is complete:</p>
+<ol>
+<li>
+<p><strong>Upload to BigData Server:</strong></p>
+<ul>
+<li><strong>Unfiltered results</strong> (e.g., complete VCF files) → <code>Raw_data/</code> or <code>Users/your_name/</code></li>
+<li><strong>Filtered results</strong> (final datasets) → <code>Users/your_name/</code> or <code>Shared/</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Archive After Publication:</strong></p>
+<ul>
+<li>Move published data to <code>Archives/</code> folder</li>
+<li>Include a README with publication DOI and description</li>
+</ul>
+</li>
+</ol>
+<hr />
+<hr />
+<h2 id="3_storage_locations_explained">3. Storage Locations Explained<a class="headerlink" href="#3_storage_locations_explained" title="Permanent link">&para;</a></h2>
+<h3 id="ibu_account_primary_workspace">IBU Account (Primary Workspace)<a class="headerlink" href="#ibu_account_primary_workspace" title="Permanent link">&para;</a></h3>
+<p><strong>Who needs it:</strong> All long-term lab members</p>
+<p><strong>Use for:</strong>
+- Active data analysis
+- Pipeline development and testing
+- Temporary storage of working datasets
+- Computational jobs</p>
+<p><strong>Best Practices:</strong>
+- Keep organized project folders
+- Clean up completed projects regularly
+- Version control all scripts on GitHub
+- Transfer important data to BigData for permanent storage</p>
+<hr />
+<h3 id="bigdata_server_permanent_storage">BigData Server (Permanent Storage)<a class="headerlink" href="#bigdata_server_permanent_storage" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Long-term storage following "write once, read many" principle</p>
+<h4 id="how_to_connect">How to Connect<a class="headerlink" href="#how_to_connect" title="Permanent link">&para;</a></h4>
+<p>=== "macOS / Linux"
+    <code>smb://bigdata.unifr.ch/science/biol/groupe_parisod/</code></p>
+<p>=== "Windows"
+    <code>\\bigdata.unifr.ch\science\biol\groupe_parisod\</code></p>
+<h4 id="folder_structure">Folder Structure<a class="headerlink" href="#folder_structure" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Purpose</th>
+<th>What to Store</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Archives/</code></td>
+<td>Published or archived data</td>
+<td>Data already on NCBI/ENA, old projects no longer in use</td>
+</tr>
+<tr>
+<td><code>Raw_data/</code></td>
+<td>Active raw datasets</td>
+<td>NGS data currently being analyzed or used in ongoing projects</td>
+</tr>
+<tr>
+<td><code>Shared/</code></td>
+<td>Lab-wide resources</td>
+<td>Protocols, reference genomes, software, shared results</td>
+</tr>
+<tr>
+<td><code>Users/your_name/</code></td>
+<td>Personal storage</td>
+<td>Your analysis results, processed data, project-specific files</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition important">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li><strong>Archive promptly:</strong> Move data to <code>Archives/</code> after publication or public deposition</li>
+<li><strong>Stay organized:</strong> Include README files explaining folder contents</li>
+<li><strong>Clean regularly:</strong> Remove obsolete files from <code>Raw_data/</code></li>
+<li><strong>Follow naming conventions:</strong> Use descriptive, consistent file and folder names</li>
+<li><strong>Document everything:</strong> Future you (and others) will thank you!</li>
+</ul>
+</div>
+<hr />
+<h3 id="common_server_shared_lab_resources">Common Server (Shared Lab Resources)<a class="headerlink" href="#common_server_shared_lab_resources" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Lightweight data and collaborative resources</p>
+<h4 id="how_to_connect_1">How to Connect<a class="headerlink" href="#how_to_connect_1" title="Permanent link">&para;</a></h4>
+<p>=== "macOS / Linux"
+    <code>smb://common.unifr.ch/biol/_Ecologie/Parisod_group/</code></p>
+<p>=== "Windows"
+    <code>\\common.unifr.ch\biol\_Ecologie\Parisod_group\</code></p>
+<h4 id="whats_available">What's Available<a class="headerlink" href="#whats_available" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Greenhouse/</code></td>
+<td>Environmental monitoring data (temperature, light, humidity)</td>
+</tr>
+<tr>
+<td><code>Lab_meetings/</code></td>
+<td>Meeting reports and notes</td>
+</tr>
+<tr>
+<td><code>Presentations/</code></td>
+<td>Lab posters, talks, and presentation materials</td>
+</tr>
+<tr>
+<td><code>Research_doc/Projects/</code></td>
+<td>Project documentation and plans</td>
+</tr>
+<tr>
+<td><code>Research_doc/Protocols/</code></td>
+<td>Lab protocols and methods</td>
+</tr>
+<tr>
+<td><code>Research_doc/Publications/</code></td>
+<td>Published papers and manuscripts</td>
+</tr>
+<tr>
+<td><code>Research_doc/Scripts/</code></td>
+<td>Shared analysis scripts</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Contribute!</p>
+<p>Help build our shared knowledge base:</p>
+<ul>
+<li>Upload your presentations after talks or posters</li>
+<li>Share useful protocols you've developed</li>
+<li>Document your projects for future reference</li>
+<li>Add scripts that others might find useful</li>
+</ul>
+</div>
+<hr />
+<h3 id="p910_server_gateway_temporary_workspace">p910 Server (Gateway &amp; Temporary Workspace)<a class="headerlink" href="#p910_server_gateway_temporary_workspace" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Access point to network drives and temporary testing environment</p>
+<h4 id="what_p910_is_used_for">What p910 IS Used For<a class="headerlink" href="#what_p910_is_used_for" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>Network Drive Gateway</strong>
+- Accessing BigData, Common, and other UniFR drives
+- Managing data transfers between servers</p>
+<p>✅ <strong>Temporary Testing</strong>
+- Testing scripts before running on IBU
+- Short-term storage for users without IBU access
+- Data transfers between sequencing facilities and BigData</p>
+<p>✅ <strong>Documentation Management</strong>
+- Lab documentation (version-controlled on GitHub)
+- System administration tasks</p>
+<h4 id="what_p910_is_not_used_for">What p910 IS NOT Used For<a class="headerlink" href="#what_p910_is_not_used_for" title="Permanent link">&para;</a></h4>
+<p>❌ <strong>Long-term data storage</strong> on <code>/media/Data/</code> drives<br />
+❌ <strong>Primary analysis workspace</strong><br />
+❌ <strong>Permanent project storage</strong>  </p>
+<div class="admonition warning">
+<p class="admonition-title">Storage Limitations</p>
+<p>The <code>/media/Data/</code> drives on p910 are <strong>NOT</strong> for permanent storage. Move valuable data to BigData or IBU as soon as possible.</p>
+</div>
+<hr />
+<hr />
+<h2 id="4_backup_system_on_p910">4. Backup System on p910<a class="headerlink" href="#4_backup_system_on_p910" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Critical Information</p>
+<p>Only data in the <strong>BACKUP folder</strong> on p910 will be automatically backed up. Data stored elsewhere on p910 is <strong>NOT backed up</strong> and may be lost.</p>
+</div>
+<h3 id="how_backups_work">How Backups Work<a class="headerlink" href="#how_backups_work" title="Permanent link">&para;</a></h3>
+<p><strong>Automated Backup Schedule</strong>
+- Runs <strong>every evening at 5:00 PM</strong>
+- Copies data from p910 BACKUP folder to BigData server
+- Automatic and requires no user action</p>
+<h3 id="setting_up_your_backup">Setting Up Your Backup<a class="headerlink" href="#setting_up_your_backup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Create your personal backup folder:</strong>
+   <code>/media/Data/BACKUP/your_name/</code></p>
+</li>
+<li>
+<p><strong>Organize your data:</strong>
+   - Create a clear folder structure
+   - Use descriptive names
+   - Include README files</p>
+</li>
+<li>
+<p><strong>Monitor your usage:</strong>
+   - Maximum quota: <strong>1 TB per user</strong>
+   - You'll be notified if you exceed the limit</p>
+</li>
+</ol>
+<h3 id="what_to_back_up">What to Back Up<a class="headerlink" href="#what_to_back_up" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>Do back up:</strong>
+- Critical scripts not yet on GitHub
+- Important results not yet on BigData
+- Data you're actively working on
+- Temporary files needed for ongoing analysis</p>
+<p>❌ <strong>Don't back up:</strong>
+- Data already on BigData or IBU
+- Large raw datasets (store on BigData instead)
+- Temporary test files
+- Duplicate copies of existing data</p>
+<div class="admonition warning">
 <p class="admonition-title">Backup Quota</p>
-<p>Each user is allowed a maximum backup of <strong>1TB</strong>. You will be notified if you exceed this limit. Keep your data organized and remove unnecessary files to avoid exceeding the limit.<br />
-If you require additional storage space, please contact the lab administrator.</p>
+<p><strong>1 TB maximum per user.</strong> Keep your backup folder clean:</p>
+<ul>
+<li>Remove files once safely stored on BigData</li>
+<li>Delete obsolete analysis outputs</li>
+<li>Archive completed projects elsewhere</li>
+<li>Contact the lab administrator if you need additional space</li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Data Safety</p>
+<p>For valuable data:</p>
+<ol>
+<li><strong>Primary copy:</strong> BigData server (permanent storage)</li>
+<li><strong>Working copy:</strong> IBU account (for analysis)</li>
+<li><strong>Temporary backup:</strong> p910 BACKUP folder (if needed)</li>
+</ol>
+<p>Never rely solely on p910 for important data storage!</p>
 </div>
 <hr />
-<h2 id="5_key_takeaways">5. Key Takeaways<a class="headerlink" href="#5_key_takeaways" title="Permanent link">&para;</a></h2>
+<h2 id="5_quick_reference_guide">5. Quick Reference Guide<a class="headerlink" href="#5_quick_reference_guide" title="Permanent link">&para;</a></h2>
+<h3 id="common_scenarios">Common Scenarios<a class="headerlink" href="#common_scenarios" title="Permanent link">&para;</a></h3>
+<p>??? question "I just received raw sequencing data. What do I do?"
+    1. Submit to ENA/NCBI with metadata (set embargo if unpublished)
+    2. Transfer to your IBU account for analysis
+    3. Upload a copy to BigData → <code>Raw_data/</code> folder
+    4. Start analysis on IBU, using version-controlled scripts</p>
+<p>??? question "Where should I run my analysis?"
+    - <strong>Primary:</strong> IBU account (best performance, designed for computation)
+    - <strong>Testing only:</strong> p910 server (test scripts, then move to IBU)
+    - <strong>Never:</strong> Directly on BigData (read-only access preferred)</p>
+<p>??? question "I finished my analysis. Where do I store the results?"
+    1. <strong>Unfiltered results:</strong> BigData → <code>Raw_data/</code> or <code>Users/your_name/</code>
+    2. <strong>Filtered final results:</strong> BigData → <code>Users/your_name/</code>
+    3. <strong>Shared results:</strong> BigData → <code>Shared/</code> (if useful to others)
+    4. <strong>Scripts:</strong> GitHub (version controlled)</p>
+<p>??? question "My paper was published. What should I do with the data?"
+    1. Ensure data is deposited in public repository (ENA/NCBI)
+    2. Move data to BigData → <code>Archives/</code> folder
+    3. Include README with publication DOI and description
+    4. Clean up working copies from IBU account
+    5. Remove from p910 BACKUP if applicable</p>
+<p>??? question "I need to share a protocol or presentation. Where do I put it?"
+    Upload to <strong>Common Server</strong> in the appropriate folder:</p>
+<pre><code>- Protocols → `Research_doc/Protocols/`
+- Presentations → `Presentations/`
+- Scripts → `Research_doc/Scripts/`
+</code></pre>
+<p>??? question "I'm running out of space on p910 backup. What do I do?"
+    1. Move completed data to BigData
+    2. Delete temporary/obsolete files
+    3. Check for duplicate files
+    4. If you genuinely need more space, contact the lab administrator</p>
+<h3 id="data_storage_decision_tree">Data Storage Decision Tree<a class="headerlink" href="#data_storage_decision_tree" title="Permanent link">&para;</a></h3>
+<pre><code class="language-mermaid">graph TD
+    A[I have data] --&gt; B{What type?}
+    B --&gt;|Raw NGS data| C[Submit to ENA/NCBI]
+    C --&gt; D[Store on IBU + BigData Raw_data/]
+    B --&gt;|Analysis results| E{Final or intermediate?}
+    E --&gt;|Final results| F[BigData Users/ or Shared/]
+    E --&gt;|Intermediate| G[Keep on IBU, backup if critical]
+    B --&gt;|Published data| H[BigData Archives/ + public repo]
+    B --&gt;|Protocols/Presentations| I[Common Server]
+    B --&gt;|Scripts/Code| J[GitHub + BigData Shared/]
+</code></pre>
+<h3 id="storage_capacity_guidelines">Storage Capacity Guidelines<a class="headerlink" href="#storage_capacity_guidelines" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Storage</th>
+<th>Recommended Use</th>
+<th>Typical Size</th>
+<th>Long-term?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IBU Account</td>
+<td>Active analysis</td>
+<td>Project-sized (10-100 GB)</td>
+<td>No - clean up completed projects</td>
+</tr>
+<tr>
+<td>BigData Raw_data/</td>
+<td>Raw datasets</td>
+<td>Dataset-sized (10-1000 GB)</td>
+<td>Yes - until archived</td>
+</tr>
+<tr>
+<td>BigData Archives/</td>
+<td>Published data</td>
+<td>Dataset-sized</td>
+<td>Yes - permanent</td>
+</tr>
+<tr>
+<td>BigData Users/</td>
+<td>Your results</td>
+<td>Variable</td>
+<td>Yes - organized storage</td>
+</tr>
+<tr>
+<td>p910 BACKUP</td>
+<td>Critical temp files</td>
+<td>&lt; 1 TB per user</td>
+<td>No - temporary only</td>
+</tr>
+<tr>
+<td>Common Server</td>
+<td>Light resources</td>
+<td>Small files (&lt; 100 MB each)</td>
+<td>Yes - shared resources</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6_best_practices_checklist">6. Best Practices Checklist<a class="headerlink" href="#6_best_practices_checklist" title="Permanent link">&para;</a></h2>
+<h3 id="for_all_lab_members">For All Lab Members<a class="headerlink" href="#for_all_lab_members" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Submit raw NGS data</strong> with complete metadata and embargo settings to ENA/NCBI as soon as possible.</li>
-<li><strong>Ensure metadata</strong> for DNA/RNA samples is detailed and includes:</li>
-<li>Basic information (population, subspecies, elevation, etc.)</li>
-<li>Additional fields from the ENA checklist (propagation, soil properties, health status, etc.)</li>
-<li>Extended metadata when available (environmental context, collection methods, treatment regimens, and sample measurements).</li>
-<li>
-<p><strong>Mandatory sequencing library metadata</strong> (sample, study, instrument model, library details, file names, checksums, and design specifications).</p>
-</li>
-<li>
-<p><strong>Store data on BigData</strong> and use your IBU account for transferring raw data and developing analysis pipelines.</p>
-</li>
-<li><strong>Use p910 only to access network drives;</strong> do not store long-term data on the <code>/media/Data</code> drives.</li>
-<li><strong>Back up important data</strong> using the BACKUP folder on p910 to ensure secure, automated backups.</li>
+<li>[ ] Submit all raw NGS data to ENA/NCBI with complete metadata</li>
+<li>[ ] Store permanent data copies on BigData server</li>
+<li>[ ] Use descriptive, consistent file naming conventions</li>
+<li>[ ] Include README files in all project folders</li>
+<li>[ ] Clean up temporary files regularly</li>
+<li>[ ] Contribute useful resources to Common Server</li>
 </ul>
+<h3 id="for_long-term_members">For Long-Term Members<a class="headerlink" href="#for_long-term_members" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Obtain IBU account for primary analysis work</li>
+<li>[ ] Set up GitHub account and join ParisodLab organization</li>
+<li>[ ] Version control all analysis scripts</li>
+<li>[ ] Organize projects clearly on IBU account</li>
+<li>[ ] Transfer final results to BigData promptly</li>
+<li>[ ] Archive published data with proper documentation</li>
+</ul>
+<h3 id="for_data_management">For Data Management<a class="headerlink" href="#for_data_management" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Check p910 BACKUP quota regularly (&lt; 1 TB)</li>
+<li>[ ] Move archived data to BigData Archives/ after publication</li>
+<li>[ ] Remove obsolete files from Raw_data/ folder</li>
+<li>[ ] Document data provenance and processing steps</li>
+<li>[ ] Use embargo settings appropriately for unpublished data</li>
+</ul>
+<hr />
+<h2 id="7_getting_help">7. Getting Help<a class="headerlink" href="#7_getting_help" title="Permanent link">&para;</a></h2>
+<h3 id="common_issues">Common Issues<a class="headerlink" href="#common_issues" title="Permanent link">&para;</a></h3>
+<p><strong>Can't access BigData or Common server:</strong>
+- Verify you're connected to UniFR network (or VPN)
+- Check the connection path for your operating system
+- Contact IT support if connection fails</p>
+<p><strong>Need more storage space:</strong>
+- Clean up temporary files first
+- Archive or delete obsolete data
+- Contact lab administrator if genuinely need more quota</p>
+<p><strong>Lost data or accidental deletion:</strong>
+- Check if data exists in BigData Archives/
+- Check p910 BACKUP folder (if backed up there)
+- Contact system administrator immediately</p>
+<h3 id="contacts">Contacts<a class="headerlink" href="#contacts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Lab administrator:</strong> For IBU accounts, storage questions, quota increases</li>
+<li><strong>System administrator:</strong> For p910 server issues, backup problems</li>
+<li><strong>IT support:</strong> For network drive connection issues</li>
+</ul>
+<hr />
+<h2 id="8_summary">8. Summary<a class="headerlink" href="#8_summary" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Key Takeaways</p>
+<p><strong>Data Lifecycle:</strong></p>
+<ol>
+<li><strong>Receive data</strong> → Submit to ENA/NCBI with metadata</li>
+<li><strong>Analyze</strong> → Use IBU account, version control scripts on GitHub</li>
+<li><strong>Store</strong> → Upload raw and final data to BigData</li>
+<li><strong>Publish</strong> → Move to BigData Archives/ with documentation</li>
+</ol>
+<p><strong>Storage Hierarchy:</strong></p>
+<ul>
+<li><strong>IBU:</strong> Your active workspace (temporary, high-performance)</li>
+<li><strong>BigData:</strong> Permanent storage (raw data, results, archives)</li>
+<li><strong>Common:</strong> Shared lab resources (protocols, presentations)</li>
+<li><strong>p910:</strong> Gateway and temporary testing only (&lt; 1 TB backup quota)</li>
+</ul>
+<p><strong>Golden Rules:</strong></p>
+<p>✅ Always include comprehensive metadata<br />
+✅ Version control all code on GitHub<br />
+✅ Document your data with README files<br />
+✅ Use p910 BACKUP folder for temporary critical files only<br />
+✅ Archive published data properly<br />
+✅ Clean up regularly to save space  </p>
+<p>❌ Never use p910 <code>/media/Data/</code> for long-term storage<br />
+❌ Never store important data without backups<br />
+❌ Never exceed your backup quota without contacting admin  </p>
+</div>
+<hr />
+<p><em>Last updated: November 2025</em></p>
               
             </div>
           </div><footer>
